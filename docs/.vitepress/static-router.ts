@@ -16,8 +16,7 @@ export const StaticRouter: PluginOption = {
 
 async function initialize() {
     const config = await resolveConfig();
-    const sourceDir = resolve(config.srcDir, "docs");
-    publicDir = resolve(sourceDir, "public");
+    publicDir = resolve(config.srcDir, "public");
 }
 
 function handleRequest(req: IncomingMessage, res: ServerResponse, next: Connect.NextFunction) {
