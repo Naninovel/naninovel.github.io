@@ -1,0 +1,11 @@
+~*
+.idea
+node_modules
+!*.dll
+
+docs/.vitepress/dist
+docs/.vitepress/cache
+docs/public/addressable
+docs/public/demo
+docs/public/editor
+docs/public/sandbox
