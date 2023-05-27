@@ -7,7 +7,6 @@ export default defineConfig({
     title: "Naninovel",
     description: "Writer-friendly visual novel engine.",
     appearance: "dark",
-    base: "/NextDocs/", // TODO: Remove this on release.
     head: [
         ["link", { rel: "icon", sizes: "any", href: "/assets/img/nani-logo.svg" }],
         ["meta", { name: "og:image", content: "/assets/img/og.jpg" }],
