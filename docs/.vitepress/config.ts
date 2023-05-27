@@ -1,5 +1,4 @@
 import { defineConfig } from "vitepress";
-import { StaticRouter } from "./static-router";
 
 // https://vitepress.dev/reference/site-config
 
@@ -40,6 +39,5 @@ export default defineConfig({
             { icon: "twitter", link: "https://twitter.com/naniengine" }
         ]
     },
-    cleanUrls: true,
-    vite: { plugins: [StaticRouter] }
+    cleanUrls: true
 });
