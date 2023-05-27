@@ -1,4 +1,5 @@
 import { defineConfig } from "vitepress";
+import { NavBarTitle } from "./override";
 
 // https://vitepress.dev/reference/site-config
 
@@ -13,7 +14,6 @@ export default defineConfig({
     ],
     themeConfig: {
         nav: [
-            { text: "Home", link: "/" },
             { text: "Examples", link: "/markdown-examples" }
         ],
         search: {
@@ -39,5 +39,6 @@ export default defineConfig({
             { icon: "twitter", link: "https://twitter.com/naniengine" }
         ]
     },
+    vite: { resolve: { alias: [NavBarTitle] } },
     cleanUrls: true
 });
