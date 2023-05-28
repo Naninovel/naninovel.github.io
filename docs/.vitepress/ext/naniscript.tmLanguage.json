@@ -1,0 +1,6 @@
+{
+    "name": "NaniScript",
+    "scopeName": "source.naniscript",
+    "fileTypes": ["nani"],
+    "patterns": []
+}
