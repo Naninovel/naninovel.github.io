@@ -15,10 +15,7 @@ export const Locales: LocaleConfig<DefaultTheme.Config> = {
             outline: { label: "On this page" },
             sidebar: { "/guide/": EnGuideSidebar },
             docFooter: { prev: "Previous page", next: "Next page" },
-            editLink: {
-                pattern: "https://github.com/Naninovel/Documentation/edit/master/docs/:path",
-                text: "Edit this page on GitHub"
-            },
+            editLink: buildEditLink("Edit this page on GitHub"),
             nav: [
                 { text: "FAQ", link: "/faq/" },
                 { text: "Guide", link: "/guide/" },
@@ -39,10 +36,7 @@ export const Locales: LocaleConfig<DefaultTheme.Config> = {
             outline: { label: "このページでは" },
             sidebar: { "/ja/guide/": JaGuideSidebar },
             docFooter: { prev: "前のページ", next: "次のページ" },
-            editLink: {
-                pattern: "https://github.com/Naninovel/Documentation/edit/master/docs/:path",
-                text: "GitHub でこのページを編集する"
-            },
+            editLink: buildEditLink("GitHub でこのページを編集する"),
             nav: [
                 { text: "FAQ", link: "/ja/faq/" },
                 { text: "ガイド", link: "/ja/guide/" },
@@ -63,10 +57,7 @@ export const Locales: LocaleConfig<DefaultTheme.Config> = {
             outline: { label: "在本页" },
             sidebar: { "/zh/guide/": ZnGuideSidebar },
             docFooter: { prev: "上一页", next: "下一页" },
-            editLink: {
-                pattern: "https://github.com/Naninovel/Documentation/edit/master/docs/:path",
-                text: "在 GitHub 上编辑此页面"
-            },
+            editLink: buildEditLink("在 GitHub 上编辑此页面"),
             nav: [
                 { text: "常见问题", link: "/zh/faq/" },
                 { text: "指南", link: "/zh/guide/" },
@@ -87,10 +78,7 @@ export const Locales: LocaleConfig<DefaultTheme.Config> = {
             outline: { label: "На этой странице" },
             sidebar: { "/ru/guide/": RuGuideSidebar },
             docFooter: { prev: "Предыдущая страница", next: "Следующая страница" },
-            editLink: {
-                pattern: "https://github.com/Naninovel/Documentation/edit/master/docs/:path",
-                text: "Редактировать эту страницу на GitHub"
-            },
+            editLink: buildEditLink("Редактировать эту страницу на GitHub"),
             nav: [
                 { text: "FAQ", link: "/ru/faq/" },
                 { text: "Руководство", link: "/ru/guide/" },
@@ -224,3 +212,7 @@ export const SearchLocales: Record<string, Partial<DocSearchProps>> = {
         }
     }
 };
+
+function buildEditLink(text: string): DefaultTheme.EditLink {
+    return { pattern: "https://github.com/Naninovel/Documentation/edit/master/docs/:path", text };
+}
