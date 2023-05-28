@@ -105,7 +105,9 @@ You can make the engine's camera render to a custom [render texture](https://doc
 
 While it heavily depends on the project, following is an abstract example (based on the integration project mentioned previously) on how you can implement switching between "adventure" and "novel" modes via custom commands.
 
-```csharp
+::: code-group
+
+```csharp [SwitchToNovelMode.cs]
 [CommandAlias("novel")]
 public class SwitchToNovelMode : Command
 {
@@ -138,7 +140,7 @@ public class SwitchToNovelMode : Command
 }
 ```
 
-```csharp
+```csharp [SwitchToAdventureMode.cs]
 [CommandAlias("adventure")]
 public class SwitchToAdventureMode : Command
 {
@@ -168,6 +170,8 @@ public class SwitchToAdventureMode : Command
     }
 }
 ```
+
+:::
 
 The commands can then be used in naninovel scripts:
 
