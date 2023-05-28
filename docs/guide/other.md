@@ -1,1 +1,0 @@
-﻿Other guide. [index](index)
