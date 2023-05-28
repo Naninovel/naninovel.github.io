@@ -16,7 +16,7 @@ export const Locales: LocaleConfig<DefaultTheme.Config> = {
             sidebar: { "/guide/": EnGuideSidebar },
             docFooter: { prev: "Previous page", next: "Next page" },
             editLink: {
-                pattern: "https://github.com/Naninovel/Documentation/edit/main/docs/:path",
+                pattern: "https://github.com/Naninovel/Documentation/edit/master/docs/:path",
                 text: "Edit this page on GitHub"
             },
             nav: [
@@ -40,7 +40,7 @@ export const Locales: LocaleConfig<DefaultTheme.Config> = {
             sidebar: { "/ja/guide/": JaGuideSidebar },
             docFooter: { prev: "前のページ", next: "次のページ" },
             editLink: {
-                pattern: "https://github.com/Naninovel/Documentation/edit/main/docs/:path",
+                pattern: "https://github.com/Naninovel/Documentation/edit/master/docs/:path",
                 text: "GitHub でこのページを編集する"
             },
             nav: [
@@ -64,7 +64,7 @@ export const Locales: LocaleConfig<DefaultTheme.Config> = {
             sidebar: { "/zh/guide/": ZnGuideSidebar },
             docFooter: { prev: "上一页", next: "下一页" },
             editLink: {
-                pattern: "https://github.com/Naninovel/Documentation/edit/main/docs/:path",
+                pattern: "https://github.com/Naninovel/Documentation/edit/master/docs/:path",
                 text: "在 GitHub 上编辑此页面"
             },
             nav: [
@@ -88,7 +88,7 @@ export const Locales: LocaleConfig<DefaultTheme.Config> = {
             sidebar: { "/ru/guide/": RuGuideSidebar },
             docFooter: { prev: "Предыдущая страница", next: "Следующая страница" },
             editLink: {
-                pattern: "https://github.com/Naninovel/Documentation/edit/main/docs/:path",
+                pattern: "https://github.com/Naninovel/Documentation/edit/master/docs/:path",
                 text: "Редактировать эту страницу на GitHub"
             },
             nav: [
