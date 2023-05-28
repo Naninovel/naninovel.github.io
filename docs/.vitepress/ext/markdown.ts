@@ -15,6 +15,6 @@ export function configureMarkdown(md: MarkdownRenderer) {
         return `<video class="video" loop autoplay muted><source src="https://i.gyazo.com/${match[1]}.mp4" type="video/mp4"></video>`;
     }));
     md.use(require("markdown-it-regexp")(/\[!!(.+?)]/, function (match, _) {
-        return `<div class="video-container"><iframe src="https://www.youtube-nocookie.com/embed/${match[1]}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>`;
+        return `<div class="video-container"><iframe src="https://www.youtube-nocookie.com/embed/${match[1]}" allowfullscreen></iframe></div>`;
     }));
 }
