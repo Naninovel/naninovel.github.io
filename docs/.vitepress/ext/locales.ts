@@ -15,13 +15,8 @@ export const Locales: LocaleConfig<DefaultTheme.Config> = {
             outline: { label: "On this page" },
             sidebar: { "/guide/": EnGuideSidebar },
             docFooter: { prev: "Previous page", next: "Next page" },
-            editLink: buildEditLink("Edit this page on GitHub"),
-            nav: [
-                { text: "FAQ", link: "/faq/" },
-                { text: "Guide", link: "/guide/" },
-                { text: "Commands", link: "/api/" },
-                { text: "Support", link: "/support/" }
-            ]
+            nav: buildNav(["FAQ", "Guide", "Commands", "Support"]),
+            editLink: buildEditLink("Edit this page on GitHub")
         }
     },
     ja: {
@@ -36,13 +31,8 @@ export const Locales: LocaleConfig<DefaultTheme.Config> = {
             outline: { label: "このページでは" },
             sidebar: { "/ja/guide/": JaGuideSidebar },
             docFooter: { prev: "前のページ", next: "次のページ" },
-            editLink: buildEditLink("GitHub でこのページを編集する"),
-            nav: [
-                { text: "FAQ", link: "/ja/faq/" },
-                { text: "ガイド", link: "/ja/guide/" },
-                { text: "コマンド", link: "/ja/api/" },
-                { text: "サポート", link: "/ja/support/" }
-            ]
+            nav: buildNav(["FAQ", "ガイド", "コマンド", "サポート"], "ja"),
+            editLink: buildEditLink("GitHub でこのページを編集する")
         }
     },
     zh: {
@@ -57,13 +47,8 @@ export const Locales: LocaleConfig<DefaultTheme.Config> = {
             outline: { label: "在本页" },
             sidebar: { "/zh/guide/": ZnGuideSidebar },
             docFooter: { prev: "上一页", next: "下一页" },
-            editLink: buildEditLink("在 GitHub 上编辑此页面"),
-            nav: [
-                { text: "常见问题", link: "/zh/faq/" },
-                { text: "指南", link: "/zh/guide/" },
-                { text: "指令", link: "/zh/api/" },
-                { text: "技术支持", link: "/zh/support/" }
-            ]
+            nav: buildNav(["常见问题", "指南", "指令", "技术支持"], "zh"),
+            editLink: buildEditLink("在 GitHub 上编辑此页面")
         }
     },
     ru: {
@@ -78,13 +63,8 @@ export const Locales: LocaleConfig<DefaultTheme.Config> = {
             outline: { label: "На этой странице" },
             sidebar: { "/ru/guide/": RuGuideSidebar },
             docFooter: { prev: "Предыдущая страница", next: "Следующая страница" },
-            editLink: buildEditLink("Редактировать эту страницу на GitHub"),
-            nav: [
-                { text: "FAQ", link: "/ru/faq/" },
-                { text: "Руководство", link: "/ru/guide/" },
-                { text: "Команды", link: "/ru/api/" },
-                { text: "Поддержка", link: "/ru/support/" }
-            ]
+            nav: buildNav(["FAQ", "Руководство", "Команды", "Поддержка"], "ru"),
+            editLink: buildEditLink("Редактировать эту страницу на GitHub")
         }
     }
 };
@@ -195,8 +175,8 @@ export const SearchLocales: Record<string, Partial<DocSearchProps>> = {
                     removeFavoriteSearchButtonTitle: "Удалить"
                 },
                 errorScreen: {
-                    titleText: "Ошибка",
-                    helpText: "Подсказка ошибки"
+                    titleText: "Невозможно выполнить поиск",
+                    helpText: "Проверьте соединение с сетью"
                 },
                 footer: {
                     selectText: "Выбрать",
@@ -212,6 +192,20 @@ export const SearchLocales: Record<string, Partial<DocSearchProps>> = {
         }
     }
 };
+
+function buildNav(text: string[], lang?: string): DefaultTheme.NavItem[] {
+    return [
+        { text: text[0], link: buildLink("faq") },
+        { text: text[1], link: buildLink("guide"), activeMatch: "/guide/" },
+        { text: text[2], link: buildLink("api") },
+        { text: text[3], link: buildLink("support") }
+    ];
+
+    function buildLink(baseUri: string) {
+        if (lang == null) return `/${baseUri}/`;
+        return `/${lang}/${baseUri}/`;
+    }
+}
 
 function buildEditLink(text: string): DefaultTheme.EditLink {
     return { pattern: "https://github.com/Naninovel/Documentation/edit/master/docs/:path", text };
