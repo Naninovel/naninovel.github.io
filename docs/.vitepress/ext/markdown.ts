@@ -1,7 +1,8 @@
 ﻿import { MarkdownRenderer } from "vitepress";
+import regexp from "markdown-it-regexp";
 
 export function configureMarkdown(md: MarkdownRenderer) {
-    md.use(require("markdown-it-regexp")(/\[@(\w+?)]/, function (match, _) {
+    md.use(regexp(/\[@(\w+?)]/, function (match, _) {
         let url = `/api/#${match[1].toLowerCase()}`;
         if (md["links"] !== undefined) {
             let route = md["links"][0];
@@ -11,10 +12,10 @@ export function configureMarkdown(md: MarkdownRenderer) {
         }
         return `<a href="${url}" class="" target="_blank"><code>@${match[1]}</code></a>`;
     }));
-    md.use(require("markdown-it-regexp")(/\[!(\w+?)]/, function (match, _) {
+    md.use(regexp(/\[!(\w+?)]/, function (match, _) {
         return `<video class="video" loop autoplay muted><source src="https://i.gyazo.com/${match[1]}.mp4" type="video/mp4"></video>`;
     }));
-    md.use(require("markdown-it-regexp")(/\[!!(.+?)]/, function (match, _) {
+    md.use(regexp(/\[!!(.+?)]/, function (match, _) {
         return `<div class="video-container"><iframe src="https://www.youtube-nocookie.com/embed/${match[1]}" allowfullscreen></iframe></div>`;
     }));
 }
