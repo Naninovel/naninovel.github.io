@@ -28,6 +28,6 @@ public class UniTaskCommand : Command
 }
 ```
 
-:::example
+::: tip EXAMPLE
 Find an example on using full standalone UniTask v2 installation with Naninovel in the following GitHub repository: [github.com/Naninovel/UniTask](https://github.com/Naninovel/UniTask).
 :::

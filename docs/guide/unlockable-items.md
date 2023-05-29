@@ -91,7 +91,7 @@ The system can be used to build an in-game vocabulary/encyclopedia or achievemen
 
 [!!CRZuS1u_J4c]
 
-:::note
+::: info NOTE
 Video above is demonstrating inline managed text document format, which is not the default for tips in modern Naninovel versions; see below on the current default (multiline) format and how to switch to inline.
 :::
 
