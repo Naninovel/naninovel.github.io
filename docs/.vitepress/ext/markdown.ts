@@ -19,11 +19,11 @@ function buildCommandTags(md: MarkdownRenderer, match: string) {
 }
 
 function buildVideoTags(md: MarkdownRenderer, match: string) {
-    const source = `<source src="https://i.gyazo.com/${match[1]}.mp4" type="video/mp4"/>`;
+    const source = `<source src="https://i.gyazo.com/${match[1]}.mp4" type="video/mp4">`;
     return `<video class="video" loop autoplay muted>${source}</video>`;
 }
 
 function buildYouTubeTags(md: MarkdownRenderer, match: string) {
-    const iframe = `<iframe src="https://www.youtube-nocookie.com/embed/${match[1]}" allowfullscreen/>`;
+    const iframe = `<iframe src="https://www.youtube-nocookie.com/embed/${match[1]}" allowfullscreen></iframe>`;
     return `<div class="video-container">${iframe}</div>`;
 }
