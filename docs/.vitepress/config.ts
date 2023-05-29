@@ -32,5 +32,6 @@ export default defineConfig({
     },
     locales: Locales,
     vite: { resolve: { alias: [NavBarTitle] } },
-    markdown: { config: configureMarkdown, languages: [NaniScript] }
+    // https://github.com/vuejs/vitepress/issues/2440#issuecomment-1566981354
+    markdown: { config: configureMarkdown, languages: [NaniScript], attrs: { disable: true } }
 });
