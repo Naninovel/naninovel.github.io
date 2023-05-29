@@ -1,5 +1,5 @@
 import { defineConfig } from "vitepress";
-import { Override, Locale, NaniScript, rewriteTags } from "./ext";
+import { Override, Locale, NaniScript, configureMarkdown } from "./ext";
 
 // https://vitepress.dev/reference/site-config
 
@@ -33,6 +33,5 @@ export default defineConfig({
     locales: Locale.Config,
     vite: { resolve: { alias: [Override.NavBarTitle, Override.NotFound] } },
     // Disable markdown attributes due to https://github.com/vuejs/vitepress/issues/2440
-    markdown: { languages: [NaniScript], attrs: { disable: true } },
-    transformHtml: rewriteTags
+    markdown: { config: configureMarkdown, languages: [NaniScript], attrs: { disable: true } }
 });
