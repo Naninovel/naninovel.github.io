@@ -3,7 +3,8 @@ import { fileURLToPath } from "url";
 
 // https://vitepress.dev/guide/extending-default-theme#overriding-internal-components
 
-export const NavBarTitle = override("VPNavBarTitle", "title");
+export const NavBarTitle = override("VPNavBarTitle", "nav-title");
+export const NotFound = override("NotFound", "not-found");
 
 function override(original: string, override: string): Alias {
     return {

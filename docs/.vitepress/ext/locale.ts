@@ -2,7 +2,7 @@
 import { DocSearchProps } from "vitepress/types/docsearch";
 import { EnGuideSidebar, JaGuideSidebar, ZnGuideSidebar, RuGuideSidebar } from "./sidebars";
 
-export const Locales: LocaleConfig<DefaultTheme.Config> = {
+export const Config: LocaleConfig<DefaultTheme.Config> = {
     root: {
         lang: "en-US",
         label: "English",
@@ -69,7 +69,7 @@ export const Locales: LocaleConfig<DefaultTheme.Config> = {
     }
 };
 
-export const SearchLocales: Record<string, Partial<DocSearchProps>> = {
+export const Search: Record<string, Partial<DocSearchProps>> = {
     ja: {
         placeholder: "文書を検索する",
         translations: {
