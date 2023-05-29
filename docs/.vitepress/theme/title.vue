@@ -1,7 +1,12 @@
 <!-- https://github.com/vuejs/vitepress/blob/main/src/client/theme-default/components/VPNavBarTitle.vue -->
 
+<script setup lang="ts">
+import { useSidebar } from "vitepress/dist/client/theme-default/composables/sidebar.js";
+const { hasSidebar } = useSidebar();
+</script>
+
 <template>
-  <div class="VPNavBarTitle">
+  <div class="VPNavBarTitle" :class="{ 'has-sidebar': hasSidebar }">
     <a class="title" href="https://naninovel.com">Naninovel</a>
   </div>
 </template>
@@ -25,7 +30,7 @@
     flex-shrink: 0;
   }
 
-  .VPNavBarTitle .title {
+  .VPNavBarTitle.has-sidebar .title {
     border-bottom-color: var(--vp-c-divider);
   }
 }
