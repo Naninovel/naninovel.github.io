@@ -198,7 +198,13 @@ function buildNav(text: string[], lang?: string): DefaultTheme.NavItem[] {
         { text: text[0], link: buildLink("faq") },
         { text: text[1], link: buildLink("guide"), activeMatch: "/guide/" },
         { text: text[2], link: buildLink("api") },
-        { text: text[3], link: buildLink("support") }
+        { text: text[3], link: buildLink("support") },
+        {
+            text: "v1.19", items: [
+                { text: "Changelog", link: "https://github.com/Naninovel/Documentation/releases/tag/v1.19" },
+                { text: "Contributing", link: "https://github.com/Naninovel/naninovel.github.io/blob/main/CONTRIBUTING.md" }
+            ]
+        }
     ];
 
     function buildLink(baseUri: string) {
