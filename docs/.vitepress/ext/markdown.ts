@@ -1,20 +1,17 @@
 ﻿import { MarkdownRenderer } from "vitepress";
-import regexp from "markdown-it-regexp";
+import { Plugin } from "./md-regex";
 
 export function configureMarkdown(md: MarkdownRenderer) {
-    md.use(regexp(/\[@(\w+?)]/, m => buildCommandTags(md, m)));
-    md.use(regexp(/\[!(\w+?)]/, buildVideoTags));
-    md.use(regexp(/\[!!(.+?)]/, buildYouTubeTags));
+    md.use(Plugin(/\[@(\w+?)]/, (match, page) => buildCommandTags(match, page)));
+    md.use(Plugin(/\[!(\w+?)]/, buildVideoTags));
+    md.use(Plugin(/\[!!(.+?)]/, buildYouTubeTags));
 }
 
-function buildCommandTags(md: MarkdownRenderer, match: string) {
+function buildCommandTags(match: string, page: string) {
     let url = `/api/#${match[1].toLowerCase()}`;
-    if (md["links"] !== undefined) {
-        let route = md["links"][0];
-        if (route.startsWith("/ja/")) url = "/ja" + url;
-        else if (route.startsWith("/zh/")) url = "/zh" + url;
-        else if (route.startsWith("/ru/")) url = "/ru" + url;
-    }
+    if (page.startsWith("ja/")) url = "/ja" + url;
+    else if (page.startsWith("zh/")) url = "/zh" + url;
+    else if (page.startsWith("ru/")) url = "/ru" + url;
     return `<a href="${url}" target="_blank"><code>@${match[1]}</code></a>`;
 }
 
