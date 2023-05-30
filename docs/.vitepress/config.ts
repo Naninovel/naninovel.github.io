@@ -32,6 +32,6 @@ export default defineConfig({
     },
     locales: Locale.Config,
     vite: { resolve: { alias: [Override.NavBarTitle, Override.NotFound] } },
-    // Disable markdown attributes due to https://github.com/vuejs/vitepress/issues/2440
-    markdown: { config: configureMarkdown, languages: [NaniScript as never], attrs: { disable: true } }
+    // disable markdown attributes due to https://github.com/vuejs/vitepress/issues/2440
+    markdown: { config: configureMarkdown, languages: [NaniScript], attrs: { disable: true } }
 });
