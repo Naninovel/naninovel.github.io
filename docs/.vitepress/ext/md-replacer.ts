@@ -6,7 +6,7 @@ import { inherits } from "util";
 let id = 0;
 
 export function Replacer(regexp: RegExp, replace: (match: string[], env: MarkdownEnv) => string) {
-    let self: unknown = (md: MarkdownRenderer) => {
+    let self: any = (md: MarkdownRenderer) => {
         self.init(md);
     };
     self.__proto__ = Replacer.prototype;
