@@ -21,6 +21,6 @@ function buildVideoTags(match: string) {
 }
 
 function buildYouTubeTags(match: string) {
-    const iframe = `<iframe src="https://www.youtube-nocookie.com/embed/${match[1]}" allowfullscreen></iframe>`;
-    return `<div class="video-container">${iframe}</div>`;
+    const source = `https://www.youtube-nocookie.com/embed/${match[1]}`;
+    return `<span class="youtube"><iframe src="${source}" allowfullscreen></iframe></span>`;
 }

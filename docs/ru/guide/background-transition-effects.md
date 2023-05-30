@@ -436,6 +436,4 @@
 
 Посмотрите следующее видео для примеров использования:
 
-<div class="video-container">
-    <iframe src="https://www.youtube-nocookie.com/embed/HZjey6M2-PE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</div>
+[!!HZjey6M2-PE]

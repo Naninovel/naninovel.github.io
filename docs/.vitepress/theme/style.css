@@ -65,16 +65,17 @@
     width: 100%;
 }
 
-.video-container {
+.youtube {
+    display: block;
     position: relative;
     padding-bottom: 56.25%;
     height: 0;
     overflow: hidden;
 }
 
-.video-container iframe,
-.video-container object,
-.video-container embed {
+.youtube iframe,
+.youtube object,
+.youtube embed {
     position: absolute;
     top: 0;
     left: 0;
