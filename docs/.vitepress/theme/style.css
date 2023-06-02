@@ -69,8 +69,10 @@
     --docsearch-primary-color: var(--vp-c-brand) !important;
 }
 
-.DocSearch--active {
-    overflow: unset !important;
+@media (min-width: 769px) {
+    .DocSearch--active {
+        overflow: unset !important;
+    }
 }
 
 .DocSearch-Container {
