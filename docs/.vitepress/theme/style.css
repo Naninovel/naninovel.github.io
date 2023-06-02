@@ -34,6 +34,18 @@
 }
 
 /**
+ * Component: NavBar
+ * -------------------------------------------------------------------------- */
+
+:root {
+    --nav-c-bg: rgba(255, 255, 255, 0.5);
+}
+
+.dark {
+    --nav-c-bg: rgba(30, 30, 32, 0.5);
+}
+
+/**
  * Component: Custom Block
  * -------------------------------------------------------------------------- */
 
@@ -60,6 +72,36 @@
 /**
  * Custom
  * -------------------------------------------------------------------------- */
+
+.curtain {
+    display: none !important;
+}
+
+.fill {
+    background: transparent !important;
+}
+
+.content-body {
+    background: var(--nav-c-bg) !important;
+}
+
+.content-body::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    backdrop-filter: saturate(180%) blur(5px);
+    z-index: -1;
+}
+
+.external-link-icon {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    margin-right: 1px;
+}
 
 .video {
     width: 100%;
