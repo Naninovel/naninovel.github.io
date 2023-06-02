@@ -1,10 +1,12 @@
 ﻿import { MarkdownRenderer, MarkdownEnv } from "vitepress";
 import { Replacer } from "./md-replacer";
+import { AppendIconToExternalLinks } from "./md-link";
 
 export function configureMarkdown(md: MarkdownRenderer) {
     md.use(Replacer(/\[@(\w+?)]/, buildCommandTags));
     md.use(Replacer(/\[!(\w+?)]/, buildVideoTags));
     md.use(Replacer(/\[!!(.+?)]/, buildYouTubeTags));
+    md.use(AppendIconToExternalLinks);
 }
 
 function buildCommandTags(match: string[], env: MarkdownEnv) {
