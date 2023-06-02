@@ -12,6 +12,7 @@ export const Config: LocaleConfig<DefaultTheme.Config> = {
             lastUpdatedText: "Last Updated",
             sidebarMenuLabel: "Menu",
             darkModeSwitchLabel: "Appearance",
+            returnToTopLabel: "Return to top",
             outline: { label: "On this page" },
             sidebar: { "/guide/": EnGuideSidebar },
             docFooter: { prev: "Previous page", next: "Next page" },
@@ -28,6 +29,7 @@ export const Config: LocaleConfig<DefaultTheme.Config> = {
             lastUpdatedText: "最終更新 日",
             sidebarMenuLabel: "メニュー",
             darkModeSwitchLabel: "外観",
+            returnToTopLabel: "トップに戻る",
             outline: { label: "このページでは" },
             sidebar: { "/ja/guide/": JaGuideSidebar },
             docFooter: { prev: "前のページ", next: "次のページ" },
@@ -44,6 +46,7 @@ export const Config: LocaleConfig<DefaultTheme.Config> = {
             lastUpdatedText: "最近更新时间",
             sidebarMenuLabel: "菜单",
             darkModeSwitchLabel: "外貌",
+            returnToTopLabel: "返回顶部",
             outline: { label: "在本页" },
             sidebar: { "/zh/guide/": ZnGuideSidebar },
             docFooter: { prev: "上一页", next: "下一页" },
@@ -60,6 +63,7 @@ export const Config: LocaleConfig<DefaultTheme.Config> = {
             lastUpdatedText: "Обновлено",
             sidebarMenuLabel: "Меню",
             darkModeSwitchLabel: "Оформление",
+            returnToTopLabel: "Вернуться наверх",
             outline: { label: "На этой странице" },
             sidebar: { "/ru/guide/": RuGuideSidebar },
             docFooter: { prev: "Предыдущая страница", next: "Следующая страница" },
@@ -100,7 +104,7 @@ export const Search: Record<string, Partial<DocSearchProps>> = {
                     selectText: "選ぶ",
                     navigateText: "切り替える",
                     closeText: "閉鎖",
-                    searchByText: ""
+                    searchByText: "で検索"
                 },
                 noResultsScreen: {
                     noResultsText: "結果がありません",
@@ -141,7 +145,7 @@ export const Search: Record<string, Partial<DocSearchProps>> = {
                     selectText: "选择",
                     navigateText: "切换",
                     closeText: "关闭",
-                    searchByText: ""
+                    searchByText: "搜索依据"
                 },
                 noResultsScreen: {
                     noResultsText: "无法找到相关结果",
@@ -182,7 +186,7 @@ export const Search: Record<string, Partial<DocSearchProps>> = {
                     selectText: "Выбрать",
                     navigateText: "Навигация",
                     closeText: "Закрыть",
-                    searchByText: ""
+                    searchByText: "Поиск предоставлен"
                 },
                 noResultsScreen: {
                     noResultsText: "Ничего не найдено",
