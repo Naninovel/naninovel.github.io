@@ -69,6 +69,46 @@
     --docsearch-primary-color: var(--vp-c-brand) !important;
 }
 
+.DocSearch--active {
+    overflow: unset !important;
+}
+
+.DocSearch-Container {
+    background-color: transparent !important;
+    transition: background-color .2s ease;
+}
+
+.DocSearch--active .DocSearch-Container {
+    background-color: var(--nav-c-bg) !important;
+}
+
+.DocSearch-Modal {
+    opacity: 0;
+    transform: translateY(-15%) scale(0.95);
+    transition: opacity, transform .2s ease;
+}
+
+.DocSearch--active .DocSearch-Modal {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.DocSearch-Container::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    transition: backdrop-filter .2s ease;
+    backdrop-filter: blur(5px) opacity(0);
+}
+
+.DocSearch--active .DocSearch-Container::after {
+    backdrop-filter: blur(5px) opacity(1);
+}
+
 /**
  * Custom
  * -------------------------------------------------------------------------- */
