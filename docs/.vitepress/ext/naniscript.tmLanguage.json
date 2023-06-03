@@ -2,5 +2,146 @@
     "name": "NaniScript",
     "scopeName": "source.naniscript",
     "fileTypes": ["nani"],
-    "patterns": []
+
+    "patterns": [
+        {
+            "include": "#command"
+        },
+        {
+            "patterns": [
+                {
+                    "comment": "Comment - ;...",
+                    "name": "naniscript.comment",
+                    "match": "^[\\t ]*(;.*)$"
+                },
+                {
+                    "comment": "Label - #...",
+                    "name": "naniscript.label",
+                    "match": "^[\\t ]*(#[\\t ]*\\w+)[\\t ]*$"
+                }
+            ]
+        },
+        {
+            "include": "#generic-text"
+        }
+    ],
+
+    "repository": {
+        "command": {
+            "patterns": [
+                {
+                    "comment": "Command - @...",
+                    "match": "^[\\t ]*(@.+)[\\t ]*$",
+                    "name": "naniscript.command.parameter.value",
+                    "captures": {
+                        "1": {
+                            "comment": "@Command [remaining text]",
+                            "patterns": [
+                                {
+                                    "comment": "@Command",
+                                    "name": "naniscript.command",
+                                    "match": "@\\w+"
+                                },
+                                {
+                                    "include": "#params"
+                                }
+                            ]
+                        }
+                    }
+                }
+            ]
+        },
+        "inline-command": {
+            "patterns": [
+                {
+                    "comment": "Inline command - [command paramters]",
+                    "name": "naniscript.command.parameter.value",
+                    "match": "(\\[[\\t ]*\\w+)([^\\r\\n\\[\\]]*)(\\])",
+                    "captures": {
+                        "1": {
+                            "name": "naniscript.command.inline"
+                        },
+                        "2": {
+                            "include": "#params",
+                            "comment": "@TODO: needs work"
+                        },
+                        "3": {
+                            "name": "naniscript.command.inline"
+                        }
+                    }
+                }
+            ]
+        },
+        "expression": {
+            "patterns": [
+                {
+                    "comment": "Expression - {expr}",
+                    "name": "naniscript.expression",
+                    "match": "\\{[^\\r\\n\\[\\]{}]*\\}"
+                }
+            ]
+        },
+        "text-identifier": {
+            "patterns": [
+                {
+                    "comment": "Text Identifier - |#Textid|",
+                    "name": "naniscript.textidentifier",
+                    "match": "\\|#\\w+\\|"
+                }
+            ]
+        },
+        "params": {
+            "patterns": [
+                {
+                    "include": "#expression"
+                },
+                {
+                    "include": "#text-identifier"
+                },
+                {
+                    "comment": "Quoted String",
+                    "name": "naniscript.quoted-text",
+                    "match": "\"(?:[^\"\\\\]|\\\\.)*\"",
+                    "captures": {
+                        "0": {
+                            "patterns": [
+                                {
+                                    "include": "#text-identifier"
+                                }
+                            ]
+                        }
+                    }
+                },
+                {
+                    "comment": "Parameter:",
+                    "name": "naniscript.command.parameter.id",
+                    "match": "(\\s)\\w+:"
+                }
+            ]
+        },
+        "generic-text": {
+            "name": "naniscript.generic-text",
+            "match": "^[ \\t]*([^#@;\\s].*)[ \\t]*$",
+            "captures": {
+                "1": {
+                    "patterns": [
+                        {
+                            "name": "naniscript.generic-text.escaped-char",
+                            "comment": "Escaped characters",
+                            "match": "\\\\[{}\\[\\]\"]"
+                        },
+                        {
+                            "include": "#expression"
+                        },
+                        {
+                            "include": "#text-identifier"
+                        },
+                        {
+                            "include": "#inline-command"
+                        }
+                    ]
+                }
+            }
+        }
+    }
 }
