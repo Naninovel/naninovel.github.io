@@ -26,7 +26,7 @@ function buildCommandTags(match: string[], env: MarkdownEnv) {
 
 function buildVideoTags(match: string[], _: MarkdownEnv) {
     const source = `<source src="${match[1]}" type="video/mp4">`;
-    return `<video class="video" loop autoplay muted>${source}</video>`;
+    return `<video class="video" loop autoplay muted playsinline>${source}</video>`;
 }
 
 function buildYouTubeTags(match: string[], _: MarkdownEnv) {
