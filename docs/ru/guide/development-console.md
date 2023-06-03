@@ -15,7 +15,7 @@ public static void ToggleDebugInfo () => UI.DebugInfoGUI.Toggle();
 
 В консоли введите полное имя метода или короткую ссылку (если она применяется) и нажмите клавишу `Enter` для выполнения метода.
 
-[!bd41a9a8fff91eb575b235a6b641dcce]
+[!https://i.gyazo.com/bd41a9a8fff91eb575b235a6b641dcce.mp4]
 
 Следующие команды доступны на данный момент:
 

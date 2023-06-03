@@ -14,4 +14,4 @@ When actor is represented as a sprite on a scene, `Custom Sprite Shader` propert
 Check the project on GitHub for an example on how to create and use [texture shader](https://github.com/Naninovel/CustomShader/blob/main/Assets/Shaders/CustomTexture.shader) for adding custom transition effects and [sprite shader](https://github.com/Naninovel/CustomShader/blob/main/Assets/Shaders/CustomSprite.shader) with lighting and self-illumination support to simulate time of day for a background actor: [github.com/Naninovel/CustomShader](https://github.com/Naninovel/CustomShader).
 :::
 
-[!a9d7fb29d5e076245ac515d673cc155e]
+[!https://i.gyazo.com/a9d7fb29d5e076245ac515d673cc155e.mp4]

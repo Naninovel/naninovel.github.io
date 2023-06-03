@@ -34,7 +34,7 @@ Text ID mode associates voice clips with localizable text identifiers. The assoc
 
 When Text ID mode is selected, an "Open Voice Map Utility" button will appear in the audio configuration menu; you can also access the utility via `Naninovel -> Tools -> Voice Map` editor menu.
 
-[!3c8fad99f7a18e3f0eaf419c9be92277]
+[!https://i.gyazo.com/3c8fad99f7a18e3f0eaf419c9be92277.mp4]
 
 First, select script file for which to map the voice clips. If the selected script contains any print commands (or generic text lines), they will be listed in pairs with audio clip fields. Drop (or select) a voice clip via the field to associate voice with the text. It's also possible to auto-map the clips; for this name the clip assets equal to the start of the voiced line text and drag the clips (or folder with the clips) to the voice map utility.
 

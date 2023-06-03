@@ -1,11 +1,18 @@
-﻿import { MarkdownRenderer, MarkdownEnv } from "vitepress";
-import { Replacer } from "./md-replacer";
+﻿import { MarkdownRenderer, MarkdownEnv, MarkdownOptions } from "vitepress";
 import { AppendIconToExternalLinks } from "./md-link";
+import { Replacer } from "./md-replacer";
+import { NaniScript } from "./language";
 
-export function configureMarkdown(md: MarkdownRenderer) {
+export const Markdown: MarkdownOptions = {
+    config: installPlugins,
+    languages: [NaniScript],
+    attrs: { disable: true } // https://github.com/vuejs/vitepress/issues/2440
+};
+
+function installPlugins(md: MarkdownRenderer) {
     md.use(Replacer(/\[@(\w+?)]/, buildCommandTags));
-    md.use(Replacer(/\[!(\w+?)]/, buildVideoTags));
     md.use(Replacer(/\[!!(.+?)]/, buildYouTubeTags));
+    md.use(Replacer(/\[!(\S+?)]/, buildVideoTags));
     md.use(AppendIconToExternalLinks);
 }
 
@@ -18,7 +25,7 @@ function buildCommandTags(match: string[], env: MarkdownEnv) {
 }
 
 function buildVideoTags(match: string[], _: MarkdownEnv) {
-    const source = `<source src="https://i.gyazo.com/${match[1]}.mp4" type="video/mp4">`;
+    const source = `<source src="${match[1]}" type="video/mp4">`;
     return `<video class="video" loop autoplay muted>${source}</video>`;
 }
 

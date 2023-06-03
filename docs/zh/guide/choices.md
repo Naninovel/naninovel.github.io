@@ -91,12 +91,12 @@ Don't forget about cucumbers!
 您可以基于内置模板添加自定义选择处理程序，也可以从头开始创建新的处理程序。例如，现在自定义内置 `ButtonArea` 模板。
 
 使用 `Create -> Naninovel -> Choice Handler -> ButtonArea` 菜单在Naninovel包之外的某个位置（例如在Assets/ChoiceHandlers文件夹中）创建一个按钮区域处理预制体。
- 
+
 编辑处理程序：更改字体，纹理，添加动画等。有关可用UI构建工具的更多信息，请查看[Unity文档](https://docs.unity3d.com/Packages/com.unity.ugui@latest) 。
 
 通过Naninovel -> Resources -> Choice Handlers菜单，用选择处理程序管理器GUI将选择处理程序公开给引擎资源。使用 `+` （加号）按钮添加新记录，输入元素 ID（可以与预制名称不同），然后双击记录以打开设置。拖放处理程序预制到 `Resource` 区域。如下图所示：
 
-[!cb3a0ff7f22b22cec6546acb388719fc]
+[!https://i.gyazo.com/cb3a0ff7f22b22cec6546acb388719fc.mp4]
 
 现在，可以在 [@choice] 命令的`handler` 参数中指定新的选择处理程序的ID来使用它。
 

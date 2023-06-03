@@ -228,7 +228,7 @@ Built with an open source [SpriteDicing](https://github.com/Elringus/SpriteDicin
 
 Install the package via [Unity package manager](https://docs.unity3d.com/Manual/upm-ui.html): open package manager window (Window -> Package Manager), click "+" button, choose "Add package from git URL", enter `https://github.com/Elringus/SpriteDicing.git#package` to the input field and click "Add".
 
-[!b54e9daa9a483d9bf7f74f0e94b2d38a]
+[!https://i.gyazo.com/b54e9daa9a483d9bf7f74f0e94b2d38a.mp4]
 
 ::: info NOTE
 Before installing a package from a Git repository, make sure a [Git client](https://git-scm.com/downloads) is installed on your machine and Git executable path is set to the [PATH system environment variable](https://en.wikipedia.org/wiki/PATH_(variable)) (usually performed automatically during the installation).
@@ -347,7 +347,7 @@ It's possible to map composition expressions to keys via `Composition Map` prope
 
 While editing layered character prefab, it's possible to preview mapped composition expressions by right-clicking a map record and selecting "Preview Composition". Another menu item — "Paste Current Composition" — will generate current composition expression string of the character (based on enabled/disabled sprite renderers in the hierarchy) and paste it to the inspected record; use it to quickly map current prefab state to a composition item.
 
-[!84a2f8e51997cdccbfb8321d58586d2a]
+[!https://i.gyazo.com/84a2f8e51997cdccbfb8321d58586d2a.mp4]
 
 Be aware, that the layer objects are not directly rendered by Unity cameras at runtime; instead, they're rendered once upon each composition (appearance) change to a temporary render texture, which is then fed to a custom mesh visible to the Naninovel camera. This setup is required to prevent semi-transparency overdraw issues and to support transition animation effects.
 
@@ -397,7 +397,7 @@ To prevent specific appearance from looping, append `NoLoop` (case-insensitive) 
 
 Live2D character implementation uses assets created with [Live2D Cubism](https://www.live2d.com) 2D modeling and animation software.
 
-[!b81df72fc7afaed569520496cbee09f0]
+[!https://i.gyazo.com/b81df72fc7afaed569520496cbee09f0.mp4]
 
 In order to be able to use this implementation you have to first install [Live2D Cubism SDK for Unity](https://live2d.github.io/#unity). Consult official Live2D docs for the installation and usage instructions.
 
@@ -425,7 +425,7 @@ In case the model appears too small or large, set an initial scale for the root 
 
 Internally, Live2D model is rendered to a texture, which is then projected to the screen. This is required to prevent semi-transparency overdraw artifacts when fading the character. Naninovel will attempt to evaluate size of the render canvas automatically, but in case the model contains animated parts that are moved outside of the initial bounds, the parts will be clipped. To prevent that, add `Render Canvas` component to the root game object of the Live2D prefab and set the desired size of the canvas manually. Enable [gizmos](https://docs.unity3d.com/Manual/GizmosMenu.html) to preview current render canvas size while in prefab mode.
 
-[!23f916ae104f57828914221333e42dbf]
+[!https://i.gyazo.com/23f916ae104f57828914221333e42dbf.mp4]
 
 Be aware, that larger the size, the more memory will the texture consume, so keep it as small, as possible.
 
@@ -441,7 +441,7 @@ Check out an [example project on GitHub](https://github.com/Naninovel/Live2D), w
 
 Spine character implementation uses assets created with [Spine](http://esotericsoftware.com) 2D modeling and animation software.
 
-[!08b04de115d97427d152cb5f37065d2d]
+[!https://i.gyazo.com/08b04de115d97427d152cb5f37065d2d.mp4]
 
 In order to be able to use this implementation you have to first install [Spine runtime for Unity](http://esotericsoftware.com/spine-unity-download). Consult [the official docs](http://esotericsoftware.com/spine-unity) for the installation and usage instructions.
 

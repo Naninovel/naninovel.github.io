@@ -1,5 +1,5 @@
 import { defineConfig } from "vitepress";
-import { Override, Locale, NaniScript, configureMarkdown } from "./ext";
+import { Locales, Markdown, Vite } from "./ext";
 
 // https://vitepress.dev/reference/site-config
 
@@ -21,7 +21,7 @@ export default defineConfig({
                 appId: "4PDIF5MCBA",
                 apiKey: "61d68d300d7651efc10f2ff65fbbc047",
                 indexName: "naninovel",
-                locales: Locale.Search
+                locales: Locales.Search
             }
         },
         socialLinks: [
@@ -30,8 +30,7 @@ export default defineConfig({
             { icon: "twitter", link: "https://twitter.com/naniengine" }
         ]
     },
-    locales: Locale.Config,
-    vite: { resolve: { alias: [Override.NavBarTitle, Override.NotFound] } },
-    // disable markdown attributes due to https://github.com/vuejs/vitepress/issues/2440
-    markdown: { config: configureMarkdown, languages: [NaniScript], attrs: { disable: true } }
+    locales: Locales.Config,
+    markdown: Markdown,
+    vite: Vite
 });

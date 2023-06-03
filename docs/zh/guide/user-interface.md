@@ -9,13 +9,13 @@ naninovel由许多内置UI构成：标题菜单，游戏设置，保存加载菜
 
 所有内置UI都做了自适应。这使得UI能在各种平台和各种分辨率下都能够保持可用状态。
 
-[!b6bddf8a0c6f2ba68dcdc1bc65db0c09]
+[!https://i.gyazo.com/b6bddf8a0c6f2ba68dcdc1bc65db0c09.mp4]
 
 ## UI切换
 
 UI切换特性，能让用户整体隐藏/显示游戏内UI。
 
-[!e267c4ab3654efbfaf611011502de79f]
+[!https://i.gyazo.com/e267c4ab3654efbfaf611011502de79f.mp4]
 
 激活`ToggleUI`输入（个人电脑默认`Space`键）或使用控制面板下的`HIDE`按钮来隐藏/显示游戏内UI。
 

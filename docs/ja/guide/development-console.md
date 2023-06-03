@@ -16,7 +16,7 @@ public static void ToggleDebugInfo () => UI.DebugInfoGUI.Toggle();
 
 コンソールでメソッド名またはショートカット（適用されている場合）を入力し、Enterキーを押してメソッドを実行します。
 
-[!bd41a9a8fff91eb575b235a6b641dcce]
+[!https://i.gyazo.com/bd41a9a8fff91eb575b235a6b641dcce.mp4]
 
 現在以下のコマンドが利用できます:
 

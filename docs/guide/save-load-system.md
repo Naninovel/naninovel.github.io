@@ -2,7 +2,7 @@
 
 Game can be saved and loaded at any time by using save and load menus. User can select a save slot to use and delete any previously used slot.
 
-[!a7109097f6abbeea16d6fe773bfffb3f]
+[!https://i.gyazo.com/a7109097f6abbeea16d6fe773bfffb3f.mp4]
 
 Menu UIs can be customized or completely replaced using [UI Customization](/guide/user-interface.md#ui-customization) feature.
 

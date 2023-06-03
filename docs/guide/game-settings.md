@@ -2,7 +2,7 @@
 
 Game settings can be changed at any time using settings menu.
 
-[!8ef1044cb0b8429298af05e6275ff14d]
+[!https://i.gyazo.com/8ef1044cb0b8429298af05e6275ff14d.mp4]
 
 Available text font options are set up in the UI configuration menu.
 

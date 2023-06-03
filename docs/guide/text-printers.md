@@ -29,7 +29,7 @@ Be aware, that even though the built-in printers are implemented as UIs, they're
 
 Auto-advance feature allows to automatically continue script execution when handling [`i`](/api/#i) commands.
 
-[!e6f58f861fa18bd62591db9794e7641b]
+[!https://i.gyazo.com/e6f58f861fa18bd62591db9794e7641b.mp4]
 
 Wait for user input or "i" commands halt script execution until user activates a `Continue` input and are typically used after printing-out a text message. When in auto-advance mode, "i" commands will instead halt script execution for a period of time and then finish, allowing execution of the following command. Halt period depends on the length of the last printed text message and further modified by "Print speed" game setting.
 
@@ -39,7 +39,7 @@ Auto-advance mode can be toggled using `AutoPlay` input (`A` key by default for 
 
 Text skipping feature allows to fast-forward execution of the [@print] commands, effectively skipping text revealing (printing) process.
 
-[!9605a5c8cd1911217350d77712f47e7d]
+[!https://i.gyazo.com/9605a5c8cd1911217350d77712f47e7d.mp4]
 
 Skip mode can be toggled using `Skip` input (`Ctrl` key by default for standalone input module) or "SKIP" button in the control panel.
 
@@ -49,7 +49,7 @@ By default, skip mode is only available while executing commands that was alread
 
 Printer backlog is a feature allowing user to re-read previously printed text, revise selected choices, replay voiced lines and (optionally) rollback to the logged messages.
 
-[!cf9c11c242907e0eae7f5f1b4e2b9f38]
+[!https://i.gyazo.com/cf9c11c242907e0eae7f5f1b4e2b9f38.mp4]
 
 Backlog can be shown at any time during main game loop by activating `ShowBacklog` input (`L` key by default for standalone input module) or pressing "LOG" button in the control panel.
 
@@ -154,7 +154,7 @@ Edit the prefab: change font, textures, add animations, etc. For more informatio
 
 Expose the prefab to engine resources using the printer's manager GUI, which can be accessed with `Naninovel -> Resources -> Printers` context menu. Add a new record using `+` (plus) button, enter actor ID (can differ from the prefab name) and double click the record to open actor settings. Drag-drop printer prefab to the `Resource` field.
 
-[!3f51881fa554720b7a4092dca42fd15e]
+[!https://i.gyazo.com/3f51881fa554720b7a4092dca42fd15e.mp4]
 
 You can now use the new text printer by activating it via [@printer] command and specifying actor ID you've set in the manager.
 
@@ -178,7 +178,7 @@ To change the reveal effect intensity (how far the fade stretches), change `Leng
 
 When `Slack Opacity` is below 1, opacity of the text printed before the last append will fade to the specified value over `Slack Duration` seconds (enabled by default in built-in `Fullscreen` printer).
 
-[!29017ea20e8b7b95c3f7f25658b645f9]
+[!https://i.gyazo.com/29017ea20e8b7b95c3f7f25658b645f9.mp4]
 
 When text printer has constant dimensions and can't accommodate varying message length and/or font size, set TMPro's text overflow mode to "page" and add `Reveal Paginator` component, which will sync currently displayed page with the reveal progress. Find example setup in `Fullscreen` built-in printer.
 
@@ -219,7 +219,7 @@ Below is a video demonstration of the ruby tags in action.
 
 Supports for RTL text reveal effect can be enabled in all the built-in printers.
 
-[!38b9ec2bbf18dc6ee469c3fb452eae29]
+[!https://i.gyazo.com/38b9ec2bbf18dc6ee469c3fb452eae29.mp4]
 
 To use RTL text in a printer, do the following:
 1. Create custom text printer from any built-in template.

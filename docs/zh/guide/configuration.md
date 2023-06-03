@@ -6,7 +6,7 @@
 
 注意，所有配置菜单支持unity的预设保存功能如下图 [Unity预设特性](https://docs.unity3d.com/Manual/Presets). 在发布到不同平台的时候很方便。(如, 移动手机, 个人电脑, 主机, 等).
 
-[!55f5c74bfc16e1af2455034647525df3]
+[!https://i.gyazo.com/55f5c74bfc16e1af2455034647525df3.mp4]
 
 在项目运行的时候也可以修改或是添加新配置，或是改变读取配置信息的方式，（如，从远端读取json文档），详情参考 [自定义配置](/zh/guide/custom-configuration.md)。
 ::: info NOTE
