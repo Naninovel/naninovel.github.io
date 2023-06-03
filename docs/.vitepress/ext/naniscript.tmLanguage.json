@@ -62,8 +62,11 @@
                             "name": "naniscript.command.inline"
                         },
                         "2": {
-                            "include": "#params",
-                            "comment": "@TODO: needs work"
+                            "patterns": [
+                                {
+                                    "include": "#params"
+                                }
+                            ]
                         },
                         "3": {
                             "name": "naniscript.command.inline"
@@ -99,7 +102,12 @@
                     "include": "#text-identifier"
                 },
                 {
-                    "comment": "Quoted String",
+                    "comment": "Parameter ID - id:",
+                    "name": "naniscript.command.parameter.id",
+                    "match": "\\s\\w+:"
+                },
+                {
+                    "comment": "Quoted String - \"String\"",
                     "name": "naniscript.quoted-text",
                     "match": "\"(?:[^\"\\\\]|\\\\.)*\"",
                     "captures": {
@@ -111,11 +119,6 @@
                             ]
                         }
                     }
-                },
-                {
-                    "comment": "Parameter:",
-                    "name": "naniscript.command.parameter.id",
-                    "match": "(\\s)\\w+:"
                 }
             ]
         },
