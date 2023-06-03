@@ -45,6 +45,12 @@
     --nav-c-bg: rgba(30, 30, 32, 0.5);
 }
 
+@media (min-width: 961px) {
+    .VPNavBarTitle.has-sidebar {
+        background-color: var(--vp-c-bg-alt);
+    }
+}
+
 /**
  * Component: Custom Block
  * -------------------------------------------------------------------------- */
@@ -114,12 +120,6 @@
 /**
  * Custom
  * -------------------------------------------------------------------------- */
-
-@media (min-width: 961px) {
-    .has-sidebar .title {
-        background-color: var(--vp-c-bg-alt);
-    }
-}
 
 .curtain {
     display: none !important;
