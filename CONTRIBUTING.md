@@ -22,6 +22,6 @@ The easiest way to make a PR by editing pages directly in browser.
 3. Proceed with the edits and click "Commit changes" button
 4. Follow GitHub instructions on how to make a PR
 
-## Options 3: Ask for Edits
+## Option 3: Ask for Edits
 
 If you're not comfortable with GitHub, just let us know which edits are required either on [Discord](https://discord.gg/BfkNqem) or [forum](https://forum.naninovel.com/).
