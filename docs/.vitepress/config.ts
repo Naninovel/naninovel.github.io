@@ -5,7 +5,6 @@ import { Locales, Markdown, Vite } from "./ext";
 
 export default defineConfig({
     title: "Naninovel",
-    appearance: "dark",
     cleanUrls: true,
     lastUpdated: true,
     head: [

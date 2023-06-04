@@ -4,7 +4,7 @@
  */
 
 /**
- * Colors
+ * Brand
  * -------------------------------------------------------------------------- */
 
 :root {
@@ -37,11 +37,11 @@
  * Component: NavBar
  * -------------------------------------------------------------------------- */
 
-:root {
-    --nav-c-bg: rgba(255, 255, 255, 0.5);
+.VPNavBar {
+    --nav-c-bg: rgba(255, 255, 255, 0.75);
 }
 
-.dark {
+.dark .VPNavBar {
     --nav-c-bg: rgba(30, 30, 32, 0.5);
 }
 
@@ -68,11 +68,22 @@
 }
 
 /**
- * Component: Algolia
+ * Component: Algolia Search
  * -------------------------------------------------------------------------- */
 
 .DocSearch {
     --docsearch-primary-color: var(--vp-c-brand) !important;
+    --docsearch-bg-color: rgba(255, 255, 255, 0.5);
+    --docsearch-modal-shadow: 0 0 15px 0 var(--vp-c-border);
+}
+
+.dark .DocSearch {
+    --docsearch-modal-shadow: none;
+    --docsearch-bg-color: rgba(30, 30, 32, 0.5);
+}
+
+.dark .DocSearch-Modal {
+    border: solid 1px var(--vp-c-divider);
 }
 
 @media (min-width: 769px) {
@@ -87,7 +98,7 @@
 }
 
 .DocSearch--active .DocSearch-Container {
-    background-color: var(--nav-c-bg) !important;
+    background-color: var(--docsearch-bg-color) !important;
 }
 
 .DocSearch-Modal {
