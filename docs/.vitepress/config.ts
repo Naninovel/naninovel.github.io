@@ -9,7 +9,7 @@ export default defineConfig({
     cleanUrls: true,
     lastUpdated: true,
     head: [
-        ["link", { rel: "icon", sizes: "any", href: "/assets/img/nani-logo.svg" }],
+        ["link", { rel: "icon", href: "/favicon.svg" }],
         ["meta", { name: "theme-color", content: "#1baeea" }],
         ["meta", { name: "og:image", content: "/assets/img/og.jpg" }],
         ["meta", { name: "twitter:card", content: "summary_large_image" }]
