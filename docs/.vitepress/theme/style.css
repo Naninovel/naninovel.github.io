@@ -67,6 +67,10 @@
     --vp-custom-block-tip-bg: var(--vp-c-brand-dimm);
 }
 
+.danger .custom-block-title {
+    display: none;
+}
+
 /**
  * Component: Algolia Search
  * -------------------------------------------------------------------------- */
