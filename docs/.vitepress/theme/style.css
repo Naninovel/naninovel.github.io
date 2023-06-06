@@ -7,6 +7,8 @@
  * Brand
  * -------------------------------------------------------------------------- */
 
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap");
+
 :root {
     --vp-c-brand: #1baeea;
     --vp-c-brand-light: #42beef;
@@ -15,6 +17,7 @@
     --vp-c-brand-dark: #118dc0;
     --vp-c-brand-darker: #0e79a5;
     --vp-c-brand-dimm: rgba(27, 174, 234, 0.08);
+    --vp-font-family-mono: "JetBrains Mono", monospace;
 }
 
 /**
