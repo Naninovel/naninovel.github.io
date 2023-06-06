@@ -9,6 +9,8 @@
         "shiki": "^0.14.2",
         "axios": "^1.4.0",
         "magic-string": "^0.30.0",
+        "ffprobe": "^1.1.2",
+        "ffprobe-static": "^3.1.0",
         "typescript": "^5.0.4",
         "@types/node": "^20.2.5",
         "@types/markdown-it": "^12.2.3"

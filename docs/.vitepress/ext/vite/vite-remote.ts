@@ -15,6 +15,16 @@ export interface RemoteAssetsOptions {
     maxRetryDelay?: number;
 }
 
+type MediaInfo = {
+    streams: MediaStream[];
+}
+
+type MediaStream = {
+    index: number;
+    width: number;
+    height: number;
+}
+
 export function EmbedRemoteAssets(options?: RemoteAssetsOptions): Plugin {
     const regex = options?.regex ?? /\b(https?:\/\/[\w_#&?.\/-]*?\.(?:png|jpe?g|svg|gif|mp4))(?=[`'")\]])/ig;
     const assetsDir = path.resolve(options?.assetsDir ?? "./docs/.vitepress/cache/.remote-assets");
@@ -57,6 +67,7 @@ export function EmbedRemoteAssets(options?: RemoteAssetsOptions): Plugin {
 
             let newUrl = path.relative(path.dirname(id), `${assetsDir}/${hash}`).replace(/\\/g, "/");
             if (!newUrl.startsWith("./")) newUrl = "./" + newUrl;
+            newUrl += await buildMediaInfoUrlVars(filepath);
             magic.overwrite(start, end, newUrl);
         }
 
@@ -126,4 +137,15 @@ async function emptyDir(dir: string) {
 function ensureDir(dir: string) {
     if (!fs.existsSync(dir))
         fs.mkdirSync(dir, { recursive: true });
+}
+
+async function buildMediaInfoUrlVars(filepath: string) {
+    const info = await getMediaInfo(filepath);
+    const width = info.streams[0].width;
+    const height = info.streams[0].height;
+    return `?width=${width}&height=${height}`;
+}
+
+async function getMediaInfo(path: string): Promise<MediaInfo> {
+    return await require("ffprobe")(path, { path: require("ffprobe-static").path });
 }
