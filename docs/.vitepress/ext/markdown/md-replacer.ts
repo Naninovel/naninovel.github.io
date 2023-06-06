@@ -10,7 +10,7 @@ export function Replacer(regexp: RegExp, replace: (match: string[], env: Markdow
         self.init(md);
     };
     self.__proto__ = Replacer.prototype;
-    self.regexp = regexp;
+    self.regexp = new RegExp("^" + regexp.source, regexp.flags);
     self.replace = replace;
     self.id = `md-replacer-${id}`;
     id++;
