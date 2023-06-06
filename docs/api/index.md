@@ -4,7 +4,7 @@ sidebar: auto
 
 # API Reference
 
-Script commands API reference. Use the side bar to quickly navigate between available commands.
+Script commands API reference. Use the side bar to quickly navigate between available commands. 
 
 ~~Strikethrough~~ indicates a nameless parameter, and **bold** stands for required parameter; other parameters should be considered optional. Consult [naninovel scripts guide](/guide/naninovel-scripts) in case you have no idea what's this all about.
 
@@ -18,10 +18,6 @@ if | String |  A boolean [script expression](/guide/script-expressions), control
 wait | Boolean | Whether the script player should wait for the async command to finish execution before executing the next one. Has no effect when the command is executed instantly.
 
 </div>
-
-::: info NOTE
-This API reference is valid for [Naninovel v1.19](https://github.com/Naninovel/Documentation/releases).
-:::
 
 ## animate
 
@@ -99,7 +95,7 @@ author | string | ID of the actor, which should be associated with the appended 
 
 #### Example
 ```nani
-; Print first part of the sentence as usual (gradually revealing the message),
+; Print first part of the sentence as usual (with gradual reveal),
 ; then append the end of the sentence at once.
 Lorem ipsum
 @append " dolor sit amet."
@@ -209,14 +205,14 @@ time | decimal | Duration (in seconds) of the modification.
 ; Starts playing a music track with the name `Sanctuary` in a loop.
 @bgm Sanctuary
 
-; Same as above, but fades-in the volume over 10 seconds and plays only once.
+; Same as above, but fades-in the volume over 10 seconds and plays once.
 @bgm Sanctuary fade:10 loop:false
 
 ; Changes volume of all the played music tracks to 50% over 2.5 seconds
 ; and makes them play in a loop.
 @bgm volume:0.5 loop:true time:2.5
 
-; Plays `BattleThemeIntro` once and then immediately `BattleThemeMain` in a loop.
+; Plays `BattleThemeIntro` once, then loops `BattleThemeMain`.
 @bgm BattleThemeMain intro:BattleThemeIntro
 ```
 
@@ -273,7 +269,7 @@ time | decimal | How long it will take the parameters to reach the target values
 
 #### Example
 ```nani
-; Enable the effect with default parameters and lock focus to `Kohaku` game object.
+; Enable the effect with defaults and lock focus on `Kohaku` game object.
 @bokeh focus:Kohaku
 ; Fade-off (disable) the effect over 10 seconds.
 @bokeh power:0 time:10
@@ -336,7 +332,7 @@ time | decimal | Duration (in seconds) of the modification.
 
 #### Example
 ```nani
-; Offset over X-axis (pan) the camera by -3 units and offset over Y-axis by 1.5 units.
+; Offset the camera by -3 units over X-axis and by 1.5 units Y-axis.
 @camera offset:-3,1.5
 
 ; Set camera in perspective mode, zoom-in by 50% and move back by 5 units.
@@ -400,8 +396,9 @@ time | decimal | Duration (in seconds) of the modification.
 ; Same as above, but sets appearance to `Happy`.
 @char Sora.Happy
 
-; Same as above, but also positions the character 45% away from the left border
-; of the scene and 10% away from the bottom border; also makes him look to the left.
+; Same as above, but additionally positions the character 45% away 
+; from the left border of the scene and 10% away from the bottom border; 
+; also makes it look to the left.
 @char Sora.Happy look:left pos:45,10
 
 ; Make Sora appear at the bottom-center and in front of Felix.
@@ -445,9 +442,9 @@ time | decimal | Duration (in seconds) of the fade-in (reveal) animation.
 ; Print the text, then immediately show choices and stop script execution.
 Continue executing this script or ...?[skipInput]
 @choice "Continue"
-@choice "Load another script from start" goto:AnotherScript
-@choice "Load another script from \"MyLabel\" label" goto:AnotherScript.MyLabel
-@choice "Goto to \"MySub\" subroutine in another script" gosub:AnotherScript.MySub
+@choice "Load another script from start" goto:Another
+@choice "Load another script from \"Label\" label" goto:Another.Label
+@choice "Goto to \"Sub\" subroutine in another script" gosub:Another.Sub
 @stop
 
 ; You can also set custom variables based on choices.
@@ -472,7 +469,7 @@ Removes all the messages from [printer backlog](/guide/text-printers#printer-bac
 
 #### Example
 ```nani
-; Even though we're going to print some text, it will then be removed from the backlog.
+; Printed text will be removed from the backlog.
 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 @clearBacklog
 ```
@@ -529,7 +526,7 @@ params | string list | Parameters to set before destroying the prefab. Requires 
 
 #### Example
 ```nani
-; Given a `@spawn Rainbow` command was executed before, de-spawn (destroy) it.
+; Given `@spawn Rainbow` command was executed before, de-spawn (destroy) it.
 @despawn Rainbow
 ```
 
@@ -635,8 +632,8 @@ reset | string list | When specified, will reset the engine services state befor
 
 #### Example
 ```nani
-; Navigate the playback to the label `VictoryScene` in the currently played script,
-; executes the commands and navigates back to the command after the `gosub`.
+; Navigate to `VictoryScene` label in the currently played script, then
+; execute the commands and navigate back to the command after the `gosub`.
 @gosub .VictoryScene
 ...
 @stop
@@ -657,7 +654,7 @@ You are victorious!
 @gosub .Room
 @stop
 # Room
-@print "It's too early, I should visit this place when it's dark." if:time<21&time>6
+@print "It's too early, I should visit after sunset." if:time<21&time>6
 @print "I can sense an ominous presence!" if:time>21|time<6
 @return
 ```
@@ -680,13 +677,13 @@ reset | string list | When specified, will control whether to reset the engine s
 
 #### Example
 ```nani
-; Loads and starts playing a naninovel script with the name `Script001` from the start.
+; Loads and starts playing `Script001` script from the start.
 @goto Script001
 
 ; Save as above, but start playing from the label `AfterStorm`.
 @goto Script001.AfterStorm
 
-; Navigates the playback to the label `Epilogue` in the currently played script.
+; Navigates to `Epilogue` label in the currently played script.
 @goto .Epilogue
 ...
 # Epilogue
@@ -712,7 +709,7 @@ remove | boolean | Whether to remove (destroy) the actor after it's hidden. Use 
 
 #### Example
 ```nani
-; Given an actor with ID `Smoke` is visible, hide (fade-out) it over 3 seconds.
+; Given an actor with ID `Smoke` is visible, hide it over 3 seconds.
 @hide Smoke time:3
 
 ; Hide `Kohaku` and `Yuko` actors.
@@ -740,7 +737,7 @@ remove | boolean | Whether to remove (destroy) the actors after they are hidden.
 
 #### Example
 ```nani
-; Hide all the visible actors (chars, backs, printers, choice handlers) on scene.
+; Hide all the visible actors (chars, backs, printers, etc) on scene.
 @hideAll
 
 ; Same as above, but also remove all the actors after they're hidden.
@@ -882,9 +879,9 @@ play | boolean | Whether to automatically resume script playback when user submi
 
 #### Example
 ```nani
-; Allow player to enter an arbitrary text and assign it to `name` custom state variable.
+; Prompt to enter an arbitrary text and assign it to `name` custom variable.
 @input name summary:"Choose your name."
-; Stop command is required to halt script execution until user submits the input.
+; Halt the playback until player submits the input.
 @stop
 
 ; You can then inject the assigned `name` variable in naninovel scripts.
@@ -1337,8 +1334,9 @@ ID | Type | Description
 ; If `angle` is a number, assign its cosine to `foo` variable.
 @set foo=Cos(angle)
 
-; Get a random integer between -100 and 100, then raise to power of 4 and assign to
-; `foo` variable. Quotes required when whitespace is present inside the expression.
+; Get random number between -100 and 100, then raise to power of 4 
+; and assign to `foo` variable. Quotes are required when whitespace 
+; is present inside the expression.
 @set "foo = Pow(Random(-100, 100), 4)"
 
 ; If `foo` is a number, add 1 to its value (increment).
@@ -1347,11 +1345,13 @@ ID | Type | Description
 ; If `foo` is a number, subtract 1 from its value (decrement).
 @set foo--
 
-; Assign `foo` variable value of the `bar` variable, which is `Hello World!` string.
+; Assign `foo` variable value of the `bar` variable, 
+; which is `Hello World!` string.
 @set bar="Hello World!"
 @set foo=bar
 
-; Defining multiple set expressions in one line (the result will be the same as above).
+; Defining multiple set expressions in one line; 
+; the result will be the same as above.
 @set bar="Hello World!";foo=bar
 
 ; It's possible to inject variables to naninovel script command parameters.
@@ -1467,7 +1467,7 @@ ver | boolean | Whether to displace the actor vertically (by y-axis).
 ; Shake `Dialogue` text printer with default params.
 @shake Dialogue
 ;
-; Start shaking `Kohaku` character, show a choice to stop and act accordingly.
+; Start shaking `Kohaku` character, show choice to stop and act accordingly.
 @shake Kohaku count:0 wait:false
 @choice "Continue shaking" goto:.Continue
 @choice "Stop shaking" goto:.Stop
@@ -1499,7 +1499,7 @@ time | decimal | Duration (in seconds) of the fade animation.
 
 #### Example
 ```nani
-; Given an actor with ID `Smoke` is hidden, reveal (fade-in) it over 3 seconds.
+; Given an actor with ID `Smoke` is hidden, reveal it over 3 seconds.
 @show Smoke time:3
 
 ; Show `Kohaku` and `Yuko` actors.
@@ -1591,7 +1591,7 @@ Can be used in generic text lines to prevent activating `wait for input` mode wh
 
 #### Example
 ```nani
-; Script player won't wait for `continue` input before executing the `@sfx` command.
+; Script player won't wait for continue input before executing @sfx command.
 And the rain starts.[skipInput]
 @sfx Rain
 ```
@@ -1621,8 +1621,8 @@ time | decimal | Duration (in seconds) of the slide animation.
 
 #### Example
 ```nani
-; Given `Jenna` actor is not currently visible, reveal it with an `Angry` appearance
-; and slide to the center of the scene from either left or right border of the scene.
+; Given `Jenna` actor is not visible, reveal it with an `Angry` appearance
+; and slide to the center from either left or right border of the scene.
 @slide Jenna.Angry to:50
 
 ; Given `Sheba` actor is currently visible,
@@ -1707,7 +1707,7 @@ The UI will be hidden and user input blocked while the transition is in progress
 @back SunnyDay
 @spawn SunShafts
 @startTrans
-; The following modifications won't be visible until we finish the transition.
+; Following modifications won't be visible until the transition is finished.
 @hideChars time:0
 @char Jenna time:0
 @back RainyDay time:0
@@ -1753,7 +1753,7 @@ fade | decimal | Duration of the volume fade-out before stopping playback, in se
 
 #### Example
 ```nani
-; Fades-out the `Sanctuary` music track over 10 seconds and stops the playback.
+; Fades-out `Sanctuary` bgm track over 10 seconds and stops the playback.
 @stopBgm Sanctuary fade:10
 
 ; Stops all the currently played music tracks.
@@ -1991,24 +1991,25 @@ do | string list | Script commands to execute when the wait is over. Escape comm
 
 #### Example
 ```nani
-; `Thunder` SFX will play 0.5 seconds after the shake background effect finishes.
+; Thunder SFX will play 0.5 seconds after shake background effect finishes.
 @spawn ShakeBackground
 @wait 0.5
 @sfx Thunder
 
-; Print first two words, then wait for user input before printing the remaining phrase.
+; Print first 2 words, then wait for input before printing the rest.
 Lorem ipsum[wait i] dolor sit amet.
 ; You can also use the following shortcut (@i command) for this wait mode.
 Lorem ipsum[i] dolor sit amet.
 
-; Start a looped SFX, print a message and wait for a skippable 5 seconds delay,
+; Start looped SFX, print message and wait for a skippable 5 seconds delay,
 ; then stop the SFX.
 @sfx Noise loop:true
 Jeez, what a disgusting noise. Shut it down![wait i5][skipInput]
 @stopSfx Noise
 
-; The text is printed without delay, as the `wait` command is not awaited (wait:false).
+; The text is printed without delay, as the `wait` command is not awaited.
 ; The thunder effects are played after a random delay of 3 to 8 seconds.
-@wait {Random(3,8)} do:"@sfx Thunder, @spawn ShakeBackground params:\,1" wait:false
+@wait {Random(3,8)} do:"@sfx Thunder, @shake Camera" wait:false
 The thunder might go off any second...
 ```
+
