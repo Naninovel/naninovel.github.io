@@ -111,15 +111,12 @@
             }
         },
         {
-            "name": "NaniScript - Error",
             "scope": ["naniscript.error"],
             "settings": {
                 "foreground": "#d14e4e"
             }
         },
-        // ====================
-        // END OF NANISCRIPT
-        // ====================
+
         {
             "settings": {
                 "foreground": "#D4D4D4"
