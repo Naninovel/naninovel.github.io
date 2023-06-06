@@ -170,7 +170,7 @@
                 "keyword.operator.minus.exponent"
             ],
             "settings": {
-                "foreground": "#b5cea8"
+                "foreground": "#66CAFF"
             }
         },
         {
@@ -254,7 +254,7 @@
         {
             "scope": "markup.inserted",
             "settings": {
-                "foreground": "#b5cea8"
+                "foreground": "#66CAFF"
             }
         },
         {
@@ -311,7 +311,7 @@
         {
             "scope": "meta.preprocessor.numeric",
             "settings": {
-                "foreground": "#b5cea8"
+                "foreground": "#66CAFF"
             }
         },
         {
@@ -445,7 +445,7 @@
         {
             "scope": "keyword.other.unit",
             "settings": {
-                "foreground": "#b5cea8"
+                "foreground": "#66CAFF"
             }
         },
         {
@@ -467,7 +467,7 @@
         {
             "scope": "constant.sha.git-rebase",
             "settings": {
-                "foreground": "#b5cea8"
+                "foreground": "#66CAFF"
             }
         },
         {
@@ -680,7 +680,7 @@
         "newOperator": "#A8D0EC",
         "stringLiteral": "#E7D3AB",
         "customLiteral": "#FFC66D",
-        "numberLiteral": "#b5cea8"
+        "numberLiteral": "#66CAFF"
     },
     "colors": {
         "checkbox.border": "#6B6B6B",
