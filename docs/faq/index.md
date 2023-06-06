@@ -2,17 +2,17 @@
 
 ## Do I need to know programming to use Naninovel?
 
-Naninovel is designed to be friendly for non-programmers and doesn't require any programming knowledge in order to create basic visual novels. For example, our [WebGL demo](https://naninovel.com/demo) is created without any custom C# scripts. Check the [getting started guide](/guide/getting-started) and [video tutorial](https://youtu.be/wFil5vje3NE) for an example of the basic workflow. However, adding custom features (gameplay) or integrating with other third-party packages will require C# (or [visual](/guide/visual-scripting.md)) scripting in most cases. Specific features (eg, [UI customization](/guide/user-interface.html#ui-customization)) could also require some experience with the Unity editor.
+Naninovel is designed to be friendly for non-programmers and doesn't require any programming knowledge in order to create basic visual novels. For example, our [WebGL demo](https://naninovel.com/demo) is created without any custom C# scripts. Check the [getting started guide](/guide/getting-started) and [video tutorial](https://youtu.be/wFil5vje3NE) for an example of the basic workflow. However, adding custom features (gameplay) or integrating with other third-party packages will require C# (or [visual](/guide/visual-scripting)) scripting in most cases. Specific features (eg, [UI customization](/guide/user-interface.html#ui-customization)) could also require some experience with the Unity editor.
 
 ## Can I use Naninovel as a drop-in dialogue system for an existing game?
 
 While Naninovel is focused around traditional visual novel games the engine is designed to allow integration with existing projects. If you're making a 3D adventure game, RPG or game of any other genre — you can still use Naninovel as a drop-in dialogue system.
 
-Be aware, that in most cases such integration will require C# (or [visual](/guide/visual-scripting.md)) scripting in varying extent. See the [engine architecture overview](/guide/engine-architecture.md) to get a grasp of how Naninovel works and [integration guide](/guide/integration-options.md) for more information on the integration options.
+Be aware, that in most cases such integration will require C# (or [visual](/guide/visual-scripting)) scripting in varying extent. See the [engine architecture overview](/guide/engine-architecture) to get a grasp of how Naninovel works and [integration guide](/guide/integration-options) for more information on the integration options.
 
 ## Is it possible to embed a mini-game to Naninovel?
 
-Sure, you can freely "inject" any custom logic to the default Naninovel flow. In most cases, however, this will require using the engine's C# API (via either writing custom C# scripts or using a [visual scripting](/guide/visual-scripting.md) solution). Check the [engine services guide](/guide/engine-services.md) for the list of available open APIs, which allows interaction with the engine; you may also make use of [state outsourcing](/guide/state-management.md#custom-state), [custom actor implementations](/guide/custom-actor-implementations.md) and [custom commands](/guide/custom-commands.md) in the process.
+Sure, you can freely "inject" any custom logic to the default Naninovel flow. In most cases, however, this will require using the engine's C# API (via either writing custom C# scripts or using a [visual scripting](/guide/visual-scripting) solution). Check the [engine services guide](/guide/engine-services) for the list of available open APIs, which allows interaction with the engine; you may also make use of [state outsourcing](/guide/state-management#custom-state), [custom actor implementations](/guide/custom-actor-implementations) and [custom commands](/guide/custom-commands) in the process.
 
 ## Does it support a specific language?
 
@@ -36,13 +36,13 @@ We recommend purchasing Naninovel [directly from us](https://naninovel.com/), es
 
 ## Why the package doesn't contain any demo scenes?
 
-Naninovel is designed to be [scene-independent](/guide/engine-architecture.md#scene-independent) and doesn't use [Unity scenes](https://docs.unity3d.com/Manual/CreatingScenes.html) in any way, hence it's not possible to make any kind of example or demo scenes. The engine is automatically initialized when the game is started (can be switched to manual initialization in the engine configuration window) and scenarios are scripted via text documents called [naninovel scripts](/guide/naninovel-scripts.md).
+Naninovel is designed to be [scene-independent](/guide/engine-architecture#scene-independent) and doesn't use [Unity scenes](https://docs.unity3d.com/Manual/CreatingScenes.html) in any way, hence it's not possible to make any kind of example or demo scenes. The engine is automatically initialized when the game is started (can be switched to manual initialization in the engine configuration window) and scenarios are scripted via text documents called [naninovel scripts](/guide/naninovel-scripts).
 
-Please read through the [getting started](/guide/getting-started.md) guide to get a grasp on how to use the engine. You can find additional examples on using various engine features and script commands in the rest of the [guide](/guide/index.md) and [API command reference](/api/index.md). In case you'd like a complete working project, which can be used as a reference, take a look at the [demo project](/guide/getting-started.html#demo-project).
+Please read through the [getting started](/guide/getting-started) guide to get a grasp on how to use the engine. You can find additional examples on using various engine features and script commands in the rest of the [guide](/guide/index) and [API command reference](/api/index). In case you'd like a complete working project, which can be used as a reference, take a look at the [demo project](/guide/getting-started.html#demo-project).
 
 ## How to customize the title (main) menu: add background, music, effects, change buttons, etc?
 
-For the UI part (changing/adding buttons or panel layout and style) [modify the built-in Title UI prefab](/guide/user-interface.md#modifying-built-in-ui); for everything else set `Title Script` at the scripts configuration menu (`Naninovel -> Configuration -> Scripts`) and use script commands to set up the scene just like when writing a scenario. The title script will be automatically played when entering the title menu. An example of the entire customization process is shown in the following video tutorial: [youtu.be/hqhfhXzQkdk](https://youtu.be/hqhfhXzQkdk).
+For the UI part (changing/adding buttons or panel layout and style) [modify the built-in Title UI prefab](/guide/user-interface#modifying-built-in-ui); for everything else set `Title Script` at the scripts configuration menu (`Naninovel -> Configuration -> Scripts`) and use script commands to set up the scene just like when writing a scenario. The title script will be automatically played when entering the title menu. An example of the entire customization process is shown in the following video tutorial: [youtu.be/hqhfhXzQkdk](https://youtu.be/hqhfhXzQkdk).
 
 ## How to remove a sky background appearing by default in all the Unity scenes?
 
@@ -54,24 +54,24 @@ When you remove the skybox, camera's background color will be used instead to fi
 
 Built-in UIs bundled with Naninovel use a single default font. While you can easily specify additional fonts for the player to choose from (via `Font Options` property in the UI configuration menu), you'd probably like to change the default font as well.
 
-Font is an individual property of a [text component](https://docs.unity3d.com/Packages/com.unity.ugui@1.0/manual/script-Text.html); all the text components are part of specific UI prefabs. When [adding custom UIs](/guide/user-interface.md#adding-custom-ui), you're free to set any fonts you like; they'll be used when "Default" font option is selected by the player in the game settings menu. In order to change a font in the specific text component of a built-in UI, [modify it](/guide/user-interface.md#modifying-built-in-ui).
+Font is an individual property of a [text component](https://docs.unity3d.com/Packages/com.unity.ugui@1.0/manual/script-Text.html); all the text components are part of specific UI prefabs. When [adding custom UIs](/guide/user-interface#adding-custom-ui), you're free to set any fonts you like; they'll be used when "Default" font option is selected by the player in the game settings menu. In order to change a font in the specific text component of a built-in UI, [modify it](/guide/user-interface#modifying-built-in-ui).
 
 ## Why a background is cropped?
 
 Make sure aspect ratio of the background texture resolution is equal to the reference resolution set in the camera configuration. Also, ensure the texture is imported with the [correct settings](https://docs.unity3d.com/Manual/class-TextureImporter) (eg, `Max Size` is high enough).
 
-When screen aspect ratio is different from the reference resolution ratio, background actor will attempt to match by default, which could cause cropping; see [match mode guide](/guide/backgrounds.md#match-mode) for more information.
+When screen aspect ratio is different from the reference resolution ratio, background actor will attempt to match by default, which could cause cropping; see [match mode guide](/guide/backgrounds#match-mode) for more information.
 
 ## How to add a line break to the message?
 
-Check out [`[br]` command](/api/#br). Alternatively, `<br>` tag will work with [TMPro printers](/guide/text-printers.md#textmesh-pro), eg:
+Check out [`[br]` command](/api/#br). Alternatively, `<br>` tag will work with [TMPro printers](/guide/text-printers#textmesh-pro), eg:
 ```nani
 First line.<br>Second line.
 ```
 
 ## How to inject a command in the midst of a printed text message?
 
-Use [command inlining](/guide/naninovel-scripts.md#command-inlining).
+Use [command inlining](/guide/naninovel-scripts#command-inlining).
 
 ## Hot to run commands concurrently?
 
@@ -104,8 +104,8 @@ Set `visible:false` for the character you wish to hide; the avatar will remain v
 
 In case you're constantly changing avatars while the character itself should remain hidden, consider disabling `Auto Show On Modify` in the characters configuration menu; when disabled, you won't have to specify `visible:false` to change any parameters of the character while it's hidden.
 
-Alternatively, check out [render actor to texture](/guide/characters.md#render-to-texture) feature.
+Alternatively, check out [render actor to texture](/guide/characters#render-to-texture) feature.
 
 ## How to run a custom C# code from naninovel scripts?
 
-To invoke a C# behaviour (eg, access a game object on scene), use [custom commands](/guide/custom-commands.md); to get value from a C# method and use it in naninovel script, use [expression functions](/guide/script-expressions.md#adding-custom-functions).
+To invoke a C# behaviour (eg, access a game object on scene), use [custom commands](/guide/custom-commands); to get value from a C# method and use it in naninovel script, use [expression functions](/guide/script-expressions#adding-custom-functions).

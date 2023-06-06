@@ -23,10 +23,10 @@ Naninovel是 [Unity游戏引擎](https://unity.com/) 扩展资源，所以确保
 
 演出元素（Actor） | 额外参数 | 描述
 --- | --- | ---
-[人物](/zh/guide/characters.md) | Look Direction | 场景中人物立绘
-[背景](/zh/guide/backgrounds.md) | None | 场景中背景，默认置于人物例会之后显示
-[打字机](/zh/guide/text-printers.md) | 随时间显示文字
-[选择处理器](/zh/guide/choices.md) | Choices | 让玩家选择选项
+[人物](/zh/guide/characters) | Look Direction | 场景中人物立绘
+[背景](/zh/guide/backgrounds) | None | 场景中背景，默认置于人物例会之后显示
+[打字机](/zh/guide/text-printers) | 随时间显示文字
+[选择处理器](/zh/guide/choices) | Choices | 让玩家选择选项
 
 典型VN游戏，由人物和其背景组成。在Naninovel规范里，由以下方式呈现。
 
@@ -34,13 +34,13 @@ Naninovel是 [Unity游戏引擎](https://unity.com/) 扩展资源，所以确保
 
 现在，我们想让"Kohaku" 呈现高兴的样子。我们有不同表情的立绘。在 Naninovel这种图像的元素，称为演出元素（Actor）的*外观appearances*。 要达到这个目的，我们就得改变人物演出元素的外观，背景演出元素同理。
 
-演出元素（Actor）直接由 [naninovel 脚本](/zh/guide/naninovel-scripts.md) 来控制。
+演出元素（Actor）直接由 [naninovel 脚本](/zh/guide/naninovel-scripts) 来控制。
 
-另一个广泛使用的概念是演出元素，[UI界面](/zh/guide/user-interface.md) (UI)。包含玩家和演出元素的交互，有各种各样的菜单（标题画面，保存读取窗口，设置窗口等），以及控制面板（自动阅读切换，跳过文本等）。UI元素默认置于所有演出元素之上。
+另一个广泛使用的概念是演出元素，[UI界面](/zh/guide/user-interface) (UI)。包含玩家和演出元素的交互，有各种各样的菜单（标题画面，保存读取窗口，设置窗口等），以及控制面板（自动阅读切换，跳过文本等）。UI元素默认置于所有演出元素之上。
 
 打字机和选择处理两个元素可视为UI元素，可以由Naninovel 脚本控制，用于玩家和游戏的交互。
 
-如果你熟悉编程，可以参阅：[引擎结构](/zh/guide/engine-architecture.md) 了解本资源的程序设计理念。
+如果你熟悉编程，可以参阅：[引擎结构](/zh/guide/engine-architecture) 了解本资源的程序设计理念。
 
 ## 创建新Unity项目：
 
@@ -99,7 +99,7 @@ Hello World!
 
 ::: info NOTE
 
-所有可用内置命令，参数，示例参考[API 参考](/zh/api/) 。你也可以添加自定义命令，参考[自定义命令](/zh/guide/custom-commands.md) 。
+所有可用内置命令，参数，示例参考[API 参考](/zh/api/) 。你也可以添加自定义命令，参考[自定义命令](/zh/guide/custom-commands) 。
 
 :::
 
@@ -173,7 +173,7 @@ Naninovel -> Resources -> Backgrounds在此菜单内添加新背景，默认打�
 @back City
 ```
 
-切换时会使用默认切换效果，详情参考[切换效果](/zh/guide/transition-effects.md) 。调用如下，使用径向模糊:
+切换时会使用默认切换效果，详情参考[切换效果](/zh/guide/transition-effects) 。调用如下，使用径向模糊:
 
 ```nani
 @back City

@@ -430,7 +430,7 @@ It's possible to add a completely custom transition effect via a custom actor [s
 The topic requires graphic programming skills in Unity. We're not providing any support or tutorials on writing custom shaders; consult the [support page](/support/#unity-support) for more information.
 :::
 
-Create a new shader and assign it to `Custom Texture Shader` property of the actors, which are supposed to use the custom transition effects; see [custom actor shader](/guide/custom-actor-shader.md) guide for more information on how to create and assign custom actor shaders.
+Create a new shader and assign it to `Custom Texture Shader` property of the actors, which are supposed to use the custom transition effects; see [custom actor shader](/guide/custom-actor-shader) guide for more information on how to create and assign custom actor shaders.
 
 When a transition name is specified in a script command, [shader keyword](https://docs.unity3d.com/ScriptReference/Shader.EnableKeyword.html) with the same name (prefixed with `NANINOVEL_TRANSITION_`) is enabled in the material used by the actor.
 
@@ -472,4 +472,4 @@ You'll then be able to invoke the added transitions in the same way as the built
 @back River.Custom2
 ```
 
-For the complete shader example see [custom actor shader](/guide/custom-actor-shader.md) guide.
+For the complete shader example see [custom actor shader](/guide/custom-actor-shader) guide.

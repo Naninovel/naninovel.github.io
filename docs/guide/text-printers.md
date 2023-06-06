@@ -2,7 +2,7 @@
 
 Text printers are actors used to present text messages, that can be revealed (printed) over time.
 
-Printers' behavior can be configured using `Naninovel -> Configuration -> Printers` context menu; for available options see [configuration guide](/guide/configuration.md#printers). The printers' resources manager can be accessed using `Naninovel -> Resources -> Printers` context menu.
+Printers' behavior can be configured using `Naninovel -> Configuration -> Printers` context menu; for available options see [configuration guide](/guide/configuration#printers). The printers' resources manager can be accessed using `Naninovel -> Resources -> Printers` context menu.
 
 In naninovel scripts, text printers are mostly controlled with [@print] and [@printer] commands:
 
@@ -57,7 +57,7 @@ Various backlog UI properties are customizable via component attached to the roo
 
 ![](https://i.gyazo.com/40e44a4ed69f75fa5fb9c36cdae6226a.png)
 
-Consult [built-in UI customization guide](/guide/user-interface.md#modifying-built-in-ui) for more info now how to customize and configure the UI.
+Consult [built-in UI customization guide](/guide/user-interface#modifying-built-in-ui) for more info now how to customize and configure the UI.
 
 It's possible to prevent specific text printers from adding messages to the backlog by disabling `Add To Backlog` property in the printer actor configuration. When `Split Backlog Messages` property is enabled, all the messages added to the backlog will be split (displayed as separate records).
 
@@ -81,7 +81,7 @@ Dialogue printers present text inside windows with a flexible height. They initi
 
 ## Wide Printer
 
-Wide printers are very like dialogue printers, except for some changes in the panel layout tailored for wide displays. Wide printers also support [character avatars](/guide/characters.md#avatar-textures) feature.
+Wide printers are very like dialogue printers, except for some changes in the panel layout tailored for wide displays. Wide printers also support [character avatars](/guide/characters#avatar-textures) feature.
 
 ![Wide Printer](https://i.gyazo.com/83c091c08846fa1cab8764a8d4dddeda.png)
 
@@ -118,11 +118,11 @@ Morbi ultrices dictum diam, in gravida neque vulputate in.
 
 ## Chat Printer
 
-Chat printer presents text inside message bubbles framed in a window with vertically-scrollable content, resembling a mobile messager app. Instead of revealing the printed message character by character, it shows "author is typing" animation for the duration of the reveal effect and then instantly shows the printed message. Chat printer supports [character avatars](/guide/characters.md#avatar-textures) feature.
+Chat printer presents text inside message bubbles framed in a window with vertically-scrollable content, resembling a mobile messager app. Instead of revealing the printed message character by character, it shows "author is typing" animation for the duration of the reveal effect and then instantly shows the printed message. Chat printer supports [character avatars](/guide/characters#avatar-textures) feature.
 
 ![Chat Printer](https://i.gyazo.com/3c04aecabe7f754ffc9ce5452eeba270.png)
 
-To embed choices inside the chat printer, see [ChatReply](/guide/choices.md#chatreply-choice-handler) choice handler. You can also specify custom handler via `Choice Handler Id` property found on `Chat Printer Panel` component.
+To embed choices inside the chat printer, see [ChatReply](/guide/choices#chatreply-choice-handler) choice handler. You can also specify custom handler via `Choice Handler Id` property found on `Chat Printer Panel` component.
 
 ## Bubble Printer
 
@@ -150,7 +150,7 @@ You can add custom text printers based on the built-in templates or create new p
 
 Use `Create -> Naninovel -> Text Printers -> Dialogue` asset context menu to create a dialogue prefab somewhere outside of the Naninovel package, e.g. at the `Assets/TextPrinters` folder.
 
-Edit the prefab: change font, textures, add animations, etc. For more information on the available UI building tools consult [Unity documentation for uGUI](https://docs.unity3d.com/Packages/com.unity.ugui@latest). There are also a couple of tutorial videos and an example project on working with uGUI in the [UI customization guide](/guide/user-interface.md#ui-customization).
+Edit the prefab: change font, textures, add animations, etc. For more information on the available UI building tools consult [Unity documentation for uGUI](https://docs.unity3d.com/Packages/com.unity.ugui@latest). There are also a couple of tutorial videos and an example project on working with uGUI in the [UI customization guide](/guide/user-interface#ui-customization).
 
 Expose the prefab to engine resources using the printer's manager GUI, which can be accessed with `Naninovel -> Resources -> Printers` context menu. Add a new record using `+` (plus) button, enter actor ID (can differ from the prefab name) and double click the record to open actor settings. Drag-drop printer prefab to the `Resource` field.
 
@@ -163,10 +163,10 @@ You can now use the new text printer by activating it via [@printer] command and
 ```
 
 ::: tip EXAMPLE
-Check out [demo project](/guide/getting-started.md#demo-project) for an example on adding a custom printer. The prefab is stored as `Assets/Prefabs/CustomPrinter.prefab`.
+Check out [demo project](/guide/getting-started#demo-project) for an example on adding a custom printer. The prefab is stored as `Assets/Prefabs/CustomPrinter.prefab`.
 :::
 
-It's also possible to create a printer from scratch by manually implementing `ITextPrinterActor` interface. See the guide on [custom actor implementations](/guide/custom-actor-implementations.md) for more information.
+It's also possible to create a printer from scratch by manually implementing `ITextPrinterActor` interface. See the guide on [custom actor implementations](/guide/custom-actor-implementations) for more information.
 
 ## Text Reveal Effect
 
@@ -262,4 +262,4 @@ Alternatively, you can set `Message Sound` in the character configuration menus 
 
 The text reveal sounds are played very often (depending on the message reveal speed) and are clipped when same sound is played in consequence, so make sure the corresponding audio clips are very short and sharp (without any pause/silence at the beginning).
 
-In case the reveal sounds are not working for you (eg, the sound is not short enough to play it on each char reveal), consider using `OnPrintTextStarted` and `OnPrintTextFinished` events of the `TextPrinterManager` [engine service](/guide/engine-services.md) to start/stop looping the sound accordingly. Those events are also exposed to PlayMaker, in case you prefer a [visual scripting](/guide/playmaker.md) solution.
+In case the reveal sounds are not working for you (eg, the sound is not short enough to play it on each char reveal), consider using `OnPrintTextStarted` and `OnPrintTextFinished` events of the `TextPrinterManager` [engine service](/guide/engine-services) to start/stop looping the sound accordingly. Those events are also exposed to PlayMaker, in case you prefer a [visual scripting](/guide/playmaker) solution.

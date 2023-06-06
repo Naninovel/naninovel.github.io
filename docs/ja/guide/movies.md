@@ -12,7 +12,7 @@
 
 [Unityでサポートされている](https://docs.unity3d.com/Manual/VideoSources-FileCompatibility) 動画フォーマットはどれも利用できます。
 
-ムービーの再生動作は、コンテキストメニュー `Naninovel -> Configuration -> Movies` から設定できます。利用可能なオプションは、[コンフィグガイド](/ja/guide/configuration.md#movies) をご覧ください。
+ムービーの再生動作は、コンテキストメニュー `Naninovel -> Configuration -> Movies` から設定できます。利用可能なオプションは、[コンフィグガイド](/ja/guide/configuration#movies) をご覧ください。
 
 naninovelスクリプトでムービーを再生するには、[@movie] コマンドに続けてビデオクリップ名を記述します:
 

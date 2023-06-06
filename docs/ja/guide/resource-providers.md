@@ -12,7 +12,7 @@
 
 `Log Resources Loading` が有効になっている場合、さまざまなプロバイダー関連のログメッセージがデフォルトの読み込み画面のUIにミラーリングされます。
 
-`Enable Build Processing` は、エディターメニューから割り当てられたアセットをビルドに挿入するために、必要なビルド前処理手順を有効にします。[カスタムビルド環境](/ja/guide/custom-build-environment.md) を使用している場合、または独自のビルドフックをアタッチしている場合にのみ、これを無効にしてください。[addressable system](https://docs.unity3d.com/Packages/com.unity.addressables@latest) がインストール済みだと、`Use Addressables` を有効にした時にアセット処理ステップが最適化され、ビルド時間が改善されます。同時に `Auto Build Bundles` を有効にすると、プレーヤーのビルド時にアセットバンドルが自動的にコンパイルされます。
+`Enable Build Processing` は、エディターメニューから割り当てられたアセットをビルドに挿入するために、必要なビルド前処理手順を有効にします。[カスタムビルド環境](/ja/guide/custom-build-environment) を使用している場合、または独自のビルドフックをアタッチしている場合にのみ、これを無効にしてください。[addressable system](https://docs.unity3d.com/Packages/com.unity.addressables@latest) がインストール済みだと、`Use Addressables` を有効にした時にアセット処理ステップが最適化され、ビルド時間が改善されます。同時に `Auto Build Bundles` を有効にすると、プレーヤーのビルド時にアセットバンドルが自動的にコンパイルされます。
 
 コンフィグメニューの他のプロパティはプロバイダー固有であり、以下で説明します。
 
@@ -68,7 +68,7 @@ Local プロバイダーは、ローカルファイルシステムの任意の�
 
 ![](https://i.gyazo.com/eb435b782cfb9df6c403702e8f6124df.png)
 
-スクリプト構成のパスプリフィックスが `Scripts` に設定され、ローカルプロバイダーがリストに追加されたとします。スクリプトナビゲーター（[コンソールコマンド](/ja/guide/development-console.md)) の `nav` からアクセス可能）は、 フォルダ下に保存された ".nani" テキストファイルを取得するはずです。
+スクリプト構成のパスプリフィックスが `Scripts` に設定され、ローカルプロバイダーがリストに追加されたとします。スクリプトナビゲーター（[コンソールコマンド](/ja/guide/development-console)) の `nav` からアクセス可能）は、 フォルダ下に保存された ".nani" テキストファイルを取得するはずです。
 
 ![](https://i.gyazo.com/df8ad31d30b5c10c9a918e69a4543567.png)
 
@@ -92,7 +92,7 @@ UnityGoogleDrive パッケージをインストールして構成すると、関
 
 `Google Drive Request Limit` プロパティを使用すると、Google Drive API にアクセスするときに許可される同時リクエストの最大数を設定できます。これは、Googleドライブのパーソナルプランを使用している場合に通信エラーを防止するために必要です。パーソナルプランでは許可される同時リクエスト数が制限されています。
 
-`Google Drive Cache Policy` は、ダウンロードしたリソースのキャッシュ動作を指示します。`Smart`は、[Changes API](https://developers.google.com/drive/api/v3/reference/changes) を使用して、リクエストされた（キャッシュされた）リソースがダウンロードされる前にリモートフォルダーで変更されているかどうかを確認します。`Purge All On Init` は、エンジンの初期化時にキャッシュをパージし、最初のダウンロード後は常にキャッシュされたバージョンを使用します。キャッシュは、[コンソールコマンド](/ja/guide/development-console.md) `purge` でいつでも手動でパージできます。
+`Google Drive Cache Policy` は、ダウンロードしたリソースのキャッシュ動作を指示します。`Smart`は、[Changes API](https://developers.google.com/drive/api/v3/reference/changes) を使用して、リクエストされた（キャッシュされた）リソースがダウンロードされる前にリモートフォルダーで変更されているかどうかを確認します。`Purge All On Init` は、エンジンの初期化時にキャッシュをパージし、最初のダウンロード後は常にキャッシュされたバージョンを使用します。キャッシュは、[コンソールコマンド](/ja/guide/development-console) `purge` でいつでも手動でパージできます。
 
 取得したいリソースプロバイダーのリストに、Googleドライブを追加するのを忘れないでください。たとえば、次のようにすると、スクリプトマネージャーは Addressable と Project に加えて、Googleドライブからスクリプトを検索します:
 

@@ -1,6 +1,6 @@
 # Custom Commands
 
-Command represents a single operation, that controls what happens on the scene; e.g., it can be used to change a background, move a character or load another naninovel script. Parametrized command sequences defined in [naninovel scripts](/guide/naninovel-scripts.md) effectively controls the game flow. You can find available built-in commands in the [API reference](/api/). In code, all the built-in script command implementations are defined under `Naninovel.Commands` namespace.
+Command represents a single operation, that controls what happens on the scene; e.g., it can be used to change a background, move a character or load another naninovel script. Parametrized command sequences defined in [naninovel scripts](/guide/naninovel-scripts) effectively controls the game flow. You can find available built-in commands in the [API reference](/api/). In code, all the built-in script command implementations are defined under `Naninovel.Commands` namespace.
 
 ## Adding Custom Command
 
@@ -10,7 +10,7 @@ To add your own custom script command, create a new C# class derived from `Comma
 When adding custom implementation types under a non-predefined assembly (via [assembly definitions](https://docs.unity3d.com/Manual/ScriptCompilationAssemblyDefinitionFiles.html)), add the assembly name to the `Type Assemblies` list found in the engine configuration menu. Otherwise, the engine won't be able to locate your custom types.
 :::
 
-`ExecuteAsync` is an async method invoked when the command is executed by the scripts player; put the command logic there. Use [engine services](/guide/engine-services.md) to access the engine built-in systems. Naninovel script execution will halt until this method returns a completed task in case `Wait` parameter is `true`.
+`ExecuteAsync` is an async method invoked when the command is executed by the scripts player; put the command logic there. Use [engine services](/guide/engine-services) to access the engine built-in systems. Naninovel script execution will halt until this method returns a completed task in case `Wait` parameter is `true`.
 
 To expose a command parameter to naninovel scripts, add a public field to the command class with one of the supported types:
 
@@ -40,9 +40,9 @@ To make parameter required (causing an error to be logged when it's not specifie
 
 All the parameter types have `HasValue` property, which you can use to test whether the parameter has been assigned in naninovel script; optionally, you can use `Assigned()` static method, which takes a parameter instance and returns true when the provided parameter is not null and has a value assigned.
 
-In case execution of the command requires loading some resources, implement `Command.IPreloadable` interface to preload the required resources when the game is loading; find more about memory management in the [resource providers guide](/guide/resource-providers.md#memory-management).
+In case execution of the command requires loading some resources, implement `Command.IPreloadable` interface to preload the required resources when the game is loading; find more about memory management in the [resource providers guide](/guide/resource-providers#memory-management).
 
-In case the command has parameters that can be localized (text directly presented to the user, usually), implement `Command.ILocalizable` interface to add the command to the generated [script localization](/guide/localization.md#scripts-localization) documents.
+In case the command has parameters that can be localized (text directly presented to the user, usually), implement `Command.ILocalizable` interface to add the command to the generated [script localization](/guide/localization#scripts-localization) documents.
 
 You can find scripts with all the built-in command implementations at `Naninovel/Runtime/Commands` package folder; feel free to use them as a reference when implementing your own custom commands.
 
@@ -106,7 +106,7 @@ public override async UniTask ExecuteAsync (AsyncToken asyncToken = default)
 
 ## Overriding Built-In Command
 
-In some cases it could be useful to override built-in Naninovel commands. For example, you may want to change how [@print] commands work without adding a custom one, so that the change will also affect [generic text lines](/guide/naninovel-scripts.md#generic-text-lines) (text from the generic lines is parsed into the print commands under the hood).
+In some cases it could be useful to override built-in Naninovel commands. For example, you may want to change how [@print] commands work without adding a custom one, so that the change will also affect [generic text lines](/guide/naninovel-scripts#generic-text-lines) (text from the generic lines is parsed into the print commands under the hood).
 
 To override a built-in command, add a custom one and apply the same alias built-in command has. Reimport the naninovel scripts (right-click over a folder they're stored at, then click "Reimport") after overriding a command in order for the changes to take effect. The custom command will then automatically be used instead of the built-in one when playing a naninovel script.
 

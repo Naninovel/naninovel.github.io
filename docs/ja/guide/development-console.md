@@ -23,13 +23,13 @@ public static void ToggleDebugInfo () => UI.DebugInfoGUI.Toggle();
 コマンド | 説明
 --- | ---
 nav | NaninovelスクリプトナビゲーターUIを切り替え。
-debug | [naninovelスクリプトデバッグ](/ja/guide/naninovel-scripts.md#スクリプトデバッグ) ウィンドウを切り替え。
-var | [カスタム変数エディター](/ja/guide/custom-variables.md#変数のデバッグ) ウィンドウを切り替え。
-purge | [Google Drive プロバイダー](/ja/guide/resource-providers.md#google-drive)が使用されている場合、ダウンロードされたリソースキャッシュをパージ。
+debug | [naninovelスクリプトデバッグ](/ja/guide/naninovel-scripts#スクリプトデバッグ) ウィンドウを切り替え。
+var | [カスタム変数エディター](/ja/guide/custom-variables#変数のデバッグ) ウィンドウを切り替え。
+purge | [Google Drive プロバイダー](/ja/guide/resource-providers#google-drive)が使用されている場合、ダウンロードされたリソースキャッシュをパージ。
 play | ロード中のnaninovelスクリプトの実行を開始。
 stop | ロード中のnaninovelスクリプトの実行を停止。
 rewind (int) | ロード中のnaninovelスクリプトを指定された行番号まで巻き戻し。行はコマンドまたは一般テキストのいずれかである必要があります。巻き戻し時には、行はロールバックスタックに存在する必要があります。
-reload | ロード中のnaninovelスクリプトの[ホットリロード](/ja/guide/naninovel-scripts.md#ホットリロード) を実行。Unityエディターでのみ機能します。
+reload | ロード中のnaninovelスクリプトの[ホットリロード](/ja/guide/naninovel-scripts#ホットリロード) を実行。Unityエディターでのみ機能します。
 
 ## コマンドの実行
 

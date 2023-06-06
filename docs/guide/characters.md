@@ -1,10 +1,10 @@
 # Characters
 
-Characters are actors used to represent scene entities that are placed on top of the [backgrounds](/guide/backgrounds.md).
+Characters are actors used to represent scene entities that are placed on top of the [backgrounds](/guide/backgrounds).
 
 A character actor is defined with a name, appearance, visibility, transform (position, rotation, scale) and look direction. It can change appearance, visibility, transform and look direction over time.
 
-Characters' behavior can be configured using `Naninovel -> Configuration -> Characters` context menu; for available options see [configuration guide](/guide/configuration.md#characters). The characters' resources manager can be accessed using `Naninovel -> Resources -> Characters` context menu.
+Characters' behavior can be configured using `Naninovel -> Configuration -> Characters` context menu; for available options see [configuration guide](/guide/configuration#characters). The characters' resources manager can be accessed using `Naninovel -> Resources -> Characters` context menu.
 
 ![Add Character](https://i.gyazo.com/c8a4f7f987621831b4a2ecb3145a4a07.png)
 
@@ -12,7 +12,7 @@ In case you have a lot of characters and/or appearances per character and it's i
 
 [!!2YP-36THHvk]
 
-It's possible to use [addressable asset system](/guide/resource-providers.md#addressable) to associate resources with actor records without using editor menus. Eg, to associate a "Happy" appearance with "Kohaku" character, assign the texture asset following address: `Naninovel/Characters/Kohaku/Happy` and assign `Naninovel` label to the asset in addressable group configuration. Be aware, that addressable provider is not used in editor by default; you can allow it by enabling `Allow Addressable In Editor` property in resource provider configuration menu. Find more info on using addressable provider in the [resource providers documentation](/guide/resource-providers.md#addressable).
+It's possible to use [addressable asset system](/guide/resource-providers#addressable) to associate resources with actor records without using editor menus. Eg, to associate a "Happy" appearance with "Kohaku" character, assign the texture asset following address: `Naninovel/Characters/Kohaku/Happy` and assign `Naninovel` label to the asset in addressable group configuration. Be aware, that addressable provider is not used in editor by default; you can allow it by enabling `Allow Addressable In Editor` property in resource provider configuration menu. Find more info on using addressable provider in the [resource providers documentation](/guide/resource-providers#addressable).
 
 In naninovel scripts, characters are mostly controlled with [@char] command:
 
@@ -104,7 +104,7 @@ Player: You can call me {PlayerName}.
 
 The content of the curly braces is actually treated as a full-fledged [script expression](/guide/script-expressions), allowing complex scenarios for evaluating the display name. For example, you may want to keep a pre-defined localizable display name for a character until some point and then let the player pick a custom name.
 
-Let's say the character in questions has "Char1" ID, pre-defined name is stored as "T_PredefinedName" [managed text record](/guide/managed-text.md#script-text), the value entered by the player will be stored as "name" [custom variable](/guide/custom-variables) and "nameSet" variable will be set to "true" when player has set the name. Assign the following expression to the `Display Name` property: `{ nameSet ? name : T_PredefinedName }`.
+Let's say the character in questions has "Char1" ID, pre-defined name is stored as "T_PredefinedName" [managed text record](/guide/managed-text#script-text), the value entered by the player will be stored as "name" [custom variable](/guide/custom-variables) and "nameSet" variable will be set to "true" when player has set the name. Assign the following expression to the `Display Name` property: `{ nameSet ? name : T_PredefinedName }`.
 
 ![](https://i.gyazo.com/b4bed71310ae8d0f80aff11d910d6e5b.png)
 
@@ -178,7 +178,7 @@ The **avatars are not directly connected with character appearances** and should
 
 ## Speaker Highlight
 
-When enabled in the character configuration, will set specified [poses](/guide/characters.md#poses) to the character based on whether the last printed message is associated with it. The video below demonstrates the feature with a previous version of Naninovel, where it was possible to apply only tint color for speakers; setup with the current version is similar, but instead tint color, specify a pose name.
+When enabled in the character configuration, will set specified [poses](/guide/characters#poses) to the character based on whether the last printed message is associated with it. The video below demonstrates the feature with a previous version of Naninovel, where it was possible to apply only tint color for speakers; setup with the current version is similar, but instead tint color, specify a pose name.
 
 [!!gobowgagdyE]
 
@@ -190,7 +190,7 @@ Animatable character implementations (generic, layered, Live2D, etc) provide `On
 
 [!!fx_YS2ZQGHI]
 
-When [auto voicing](/guide/voicing.md#auto-voicing) feature is enabled, the events will be driven by the voice-over; otherwise, printed text messages will activate the events. In the latter case, you'll probably want to manually mute the events (eg, to prevent mouth animation when punctuation marks are printed); for such cases, use [@lipSync] command.
+When [auto voicing](/guide/voicing#auto-voicing) feature is enabled, the events will be driven by the voice-over; otherwise, printed text messages will activate the events. In the latter case, you'll probably want to manually mute the events (eg, to prevent mouth animation when punctuation marks are printed); for such cases, use [@lipSync] command.
 
 ### Audio Driven
 
@@ -200,7 +200,7 @@ By having access to a dedicated audio source component used for character voice,
 
 ## Linked Printer
 
-It's possible to associate a [text printer](/guide/text-printers.md) with a character using `Linked Printer` property.
+It's possible to associate a [text printer](/guide/text-printers) with a character using `Linked Printer` property.
 
 ![](https://i.gyazo.com/50ca6b39cd7f708158678339244b1dc4.png)
 
@@ -447,7 +447,7 @@ In order to be able to use this implementation you have to first install [Spine 
 
 Then download and import Naninovel's [Spine extension package](https://github.com/Naninovel/Spine/raw/main/NaninovelSpine.unitypackage).
 
-Spine character prefab used as the resource for the implementation should have a `Spine Controller` component attached to the root object. Appearance changes from naninovel scripts commands (such as `@char`) are routed to the controller's `On Appearance Changed` events similar to [generic implementation](/guide/characters.md#generic-characters). You can handle the events as you wish; for example, use Spine's `SetAnimation` method or invoke a trigger in Unity's animator controller.
+Spine character prefab used as the resource for the implementation should have a `Spine Controller` component attached to the root object. Appearance changes from naninovel scripts commands (such as `@char`) are routed to the controller's `On Appearance Changed` events similar to [generic implementation](/guide/characters#generic-characters). You can handle the events as you wish; for example, use Spine's `SetAnimation` method or invoke a trigger in Unity's animator controller.
 
 ![](https://i.gyazo.com/6a2772a3e4137413a7c1587788c54c41.png)
 
@@ -458,7 +458,7 @@ It's possible to use a custom component inherited from `Spine Controller`. This 
 Internally, Spine model is rendered to a texture, which is then projected to the screen. This is required to prevent semi-transparency overdraw artifacts when fading the character. To specify the texture size, use `Render Canvas` component (attached automatically when adding `Spine Controller`). Enable [gizmos](https://docs.unity3d.com/Manual/GizmosMenu.html) to preview current the size while in prefab mode. Be aware, that larger the size, the more memory will the texture consume, so keep it as small, as possible.
 
 ::: info NOTE
-Spine's [Skeleton Render Separator](https://github.com/pharan/spine-unity-docs/blob/master/spine-unity-skeletonrenderseparator.md) (multi-render) workflow is not supported; to integrate that workflow with Naninovel, create a custom character implementation.
+Spine's [Skeleton Render Separator](https://github.com/pharan/spine-unity-docs/blob/master/spine-unity-skeletonrenderseparator) (multi-render) workflow is not supported; to integrate that workflow with Naninovel, create a custom character implementation.
 :::
 
 ::: tip EXAMPLE

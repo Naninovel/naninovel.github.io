@@ -154,6 +154,10 @@ pre {
     display: none !important;
 }
 
+.aside-curtain {
+    display: none !important;
+}
+
 .fill {
     background: transparent !important;
 }

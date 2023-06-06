@@ -2,7 +2,7 @@
 
 文本打印机是用于随时间显示文字的演出元素。
 
-文本打印机表现可以在菜单`Naninovel -> Configuration -> Printers`中配置。可用选项参考[配置说明](/zh/guide/configuration.md#文本打字机)。 资源配置管理在`Naninovel -> Resources -> Printers` 菜单内。
+文本打印机表现可以在菜单`Naninovel -> Configuration -> Printers`中配置。可用选项参考[配置说明](/zh/guide/configuration#文本打字机)。 资源配置管理在`Naninovel -> Resources -> Printers` 菜单内。
 
 在脚本中，文本打印机，大多由[@print] 和 [@printer]命令控制：
 
@@ -66,7 +66,7 @@ Felix: Lorem ipsum dolor sit amet.
 
 ## 宽屏打字机
 
-宽屏打字机和对话打字机很类似，仅仅时面板布局调整为宽屏布局，但时支持[人物头像](/zh/guide/characters.md#头像贴图)特性。
+宽屏打字机和对话打字机很类似，仅仅时面板布局调整为宽屏布局，但时支持[人物头像](/zh/guide/characters#头像贴图)特性。
 
 ![Wide Printer](https://i.gyazo.com/83c091c08846fa1cab8764a8d4dddeda.png)
 
@@ -104,7 +104,7 @@ Morbi ultrices dictum diam, in gravida neque vulputate in.
 
 ## 聊天窗口打字机
 
-聊天窗口打字机，是像手机APP一样按照聊天气泡垂直滚动，来显示文本内容的。除了显示角色对话，还会在文字显示的时候显示"author is typing"（正在输入）提示。该特性支持[人物头像](/zh/guide/characters.md#头像贴图)特性 。
+聊天窗口打字机，是像手机APP一样按照聊天气泡垂直滚动，来显示文本内容的。除了显示角色对话，还会在文字显示的时候显示"author is typing"（正在输入）提示。该特性支持[人物头像](/zh/guide/characters#头像贴图)特性 。
 
 
 ![Chat Printer](https://i.gyazo.com/3c04aecabe7f754ffc9ce5452eeba270.png)
@@ -149,7 +149,7 @@ You can add custom text printers based on the built-in templates or create new p
 使用菜单`Create -> Naninovel -> Text Printers -> Dialogue`创建新的对话预制体存放在Naninovel的目录之外。比如：`Assets/TextPrinters`目录下。
 Use `Create -> Naninovel -> Text Printers -> Dialogue` asset context menu to create a dialogue prefab somewhere outside of the Naninovel package, e.g. at the `Assets/TextPrinters` folder.
 
-编辑该预制体：改变字体，贴图，添加动画，等等。关于uGUI的使用参考[unity的uGUI文档](https://docs.unity3d.com/Packages/com.unity.ugui@latest).和[UI使用引导](/zh/guide/user-interface.md#UI自定义) ，内附示例及演示视频。
+编辑该预制体：改变字体，贴图，添加动画，等等。关于uGUI的使用参考[unity的uGUI文档](https://docs.unity3d.com/Packages/com.unity.ugui@latest).和[UI使用引导](/zh/guide/user-interface#UI自定义) ，内附示例及演示视频。
 
 
 在菜单`Naninovel -> Resources -> Printers`下绑定好创建好的预制体。按`+`添加新条目，输入该打字机元素的ID，然后双击该条目来打开该打字机的相关配置，将预制体拖拽到`Resource`处。
@@ -165,10 +165,10 @@ Use `Create -> Naninovel -> Text Printers -> Dialogue` asset context menu to cre
 ```
 
 ::: 示例
-也可参考[演示项目](/zh/guide/getting-started.md#演示项目) ，该打字机存储在`Assets/Prefabs/PimpedPrinter.prefab`。在Kohaku-chan使用时调用了。
+也可参考[演示项目](/zh/guide/getting-started#演示项目) ，该打字机存储在`Assets/Prefabs/PimpedPrinter.prefab`。在Kohaku-chan使用时调用了。
 :::
 
-也可以通过接口`ITextPrinterActor`来从零开始创建你的自定义打字机。相关功能实现参考[自定义元素实现](/zh/guide/custom-actor-implementations.md) 。
+也可以通过接口`ITextPrinterActor`来从零开始创建你的自定义打字机。相关功能实现参考[自定义元素实现](/zh/guide/custom-actor-implementations) 。
 
 当编辑文本组件的时候注意，行高小于 1.0 的时候不支持（渲染行高会覆盖该设置，导致不能应用出现效果）。考虑修改文本字体来减少行间距。
 
@@ -195,7 +195,7 @@ Use `Create -> Naninovel -> Text Printers -> Dialogue` asset context menu to cre
 
 由于显示音效会被经常播放（取决于消息显示速度），同一音效反复播放会影响效果，所以确保你的配置音效简短连续（在开头没有任何停顿或空白）。
 
-如果显示文本声效不工作（比如，声音太长），考虑使用`TextPrinterManager` [引擎支持](/zh/guide/engine-services.md) 的`OnPrintTextStarted`和`OnPrintTextFinished`事件来开始/停止音效循环。这些事件也对playmaker公开，如果你想使用[可视化编程](/zh/guide/playmaker.md)。
+如果显示文本声效不工作（比如，声音太长），考虑使用`TextPrinterManager` [引擎支持](/zh/guide/engine-services) 的`OnPrintTextStarted`和`OnPrintTextFinished`事件来开始/停止音效循环。这些事件也对playmaker公开，如果你想使用[可视化编程](/zh/guide/playmaker)。
 
 
 ## TextMesh Pro

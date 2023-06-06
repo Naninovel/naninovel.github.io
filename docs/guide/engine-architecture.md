@@ -12,7 +12,7 @@ The following root objects are used, depending on the environment:
 - `Naninovel<Runtime>` for runtime (builds and editor play mode);
 - `Naninovel<Editor>` for editor (outside of play mode).
 
-All the required game objects are created on engine initialization, which is executed automatically and asynchronously when the application starts (right after entering play mode or running a build) via a [RuntimeInitializeOnLoadMethod]( https://docs.unity3d.com/ScriptReference/RuntimeInitializeOnLoadMethodAttribute.html) method. To customize the initialization scenario, see [manual initialization guide](/guide/integration-options.md#manual-initialization).
+All the required game objects are created on engine initialization, which is executed automatically and asynchronously when the application starts (right after entering play mode or running a build) via a [RuntimeInitializeOnLoadMethod]( https://docs.unity3d.com/ScriptReference/RuntimeInitializeOnLoadMethodAttribute.html) method. To customize the initialization scenario, see [manual initialization guide](/guide/integration-options#manual-initialization).
 
 ::: info NOTE
 In case the scene independent design is not working for you, just disable `Scene Independent` option in the engine configuration menu and all the Naninovel-related objects will become part of the Unity scene where the engine was initialized and will be destroyed when the scene is unloaded.
@@ -28,7 +28,7 @@ In case you wish to interact with an engine system, you'll most likely want to u
 var player = Engine.GetService<IScriptPlayer>();
 player.Stop();
 ```
-You can find list of all the currently available engine services and information on how to override/add custom ones in the [engine services guide](/guide/engine-services.md).
+You can find list of all the currently available engine services and information on how to override/add custom ones in the [engine services guide](/guide/engine-services).
 
 ## High-Level Concept
 

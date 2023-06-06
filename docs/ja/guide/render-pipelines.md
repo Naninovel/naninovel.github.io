@@ -20,4 +20,4 @@ HDRPで実行している場合は、カラースペースをリニアに変更�
 
 ## 制限
 
-組み込みのエフェクトと機能の一部（Depth Of Field、Digital Glitch、[@startTrans] 、 [@finishTrans] コマンドなど）は、必要なレンダリング機能がないため、SRPでは機能しません。さまざまなハックにより、Naninovelのソースコードやパッケージコンテンツを変更せずに、欠落しているエフェクトや機能のほとんどを置き換えて使用することが可能です。そのようなエンジンの拡張についての詳細は、 [特殊エフェクトガイド](/ja/guide/special-effects.md#カスタムエフェクトの追加) と [カスタムコマンド](/ja/guide/custom-commands.md) をご覧ください。
+組み込みのエフェクトと機能の一部（Depth Of Field、Digital Glitch、[@startTrans] 、 [@finishTrans] コマンドなど）は、必要なレンダリング機能がないため、SRPでは機能しません。さまざまなハックにより、Naninovelのソースコードやパッケージコンテンツを変更せずに、欠落しているエフェクトや機能のほとんどを置き換えて使用することが可能です。そのようなエンジンの拡張についての詳細は、 [特殊エフェクトガイド](/ja/guide/special-effects#カスタムエフェクトの追加) と [カスタムコマンド](/ja/guide/custom-commands) をご覧ください。

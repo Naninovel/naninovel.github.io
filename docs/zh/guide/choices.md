@@ -33,7 +33,7 @@ goto:.Epilogue
 
 选择处理器元素用于处理 [@choice]命令。可以使用可通过`Naninovel -> Resources -> Choice Handlers` 菜单访问的选择管理器来添加，编辑和删除选择处理器。
 
-可以使用 `Naninovel -> Configuration -> Choice Handlers` 菜单配置选择处理程序的行为。有关可用选项的信息，请参阅 [属性配置](/zh/guide/configuration.md#选择处理器) 。
+可以使用 `Naninovel -> Configuration -> Choice Handlers` 菜单配置选择处理程序的行为。有关可用选项的信息，请参阅 [属性配置](/zh/guide/configuration#选择处理器) 。
 
 ## 选择按钮
 
@@ -104,4 +104,4 @@ Don't forget about cucumbers!
 @choice "Choice summary text." handler:MyNewHandler
 ```
 
-也可以通过手动实现 `IChoiceHandlerActor` 接口从头创建选择处理程序。有关更多信息，请参见有关[自定义元素实现](/zh/guide/custom-actor-implementations.md) 。
+也可以通过手动实现 `IChoiceHandlerActor` 接口从头创建选择处理程序。有关更多信息，请参见有关[自定义元素实现](/zh/guide/custom-actor-implementations) 。

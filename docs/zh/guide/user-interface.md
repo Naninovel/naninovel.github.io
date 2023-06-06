@@ -2,7 +2,7 @@
 
 naninovel由许多内置UI构成：标题菜单，游戏设置，保存加载菜单，回看面板，CG回顾，提示面板等。
 
-每个内置UI都可以关闭或是自定义修改；参考[UI自定义](/zh/guide/user-interface.md#UI自定义) 。
+每个内置UI都可以关闭或是自定义修改；参考[UI自定义](/zh/guide/user-interface#UI自定义) 。
 
 
 ## 自适应UI布局
@@ -25,7 +25,7 @@ UI切换特性，能让用户整体隐藏/显示游戏内UI。
 
 UI自定义特性允许用户添加自建UI，或使其替代任何内置UI元素，如标题菜单，设置菜单，回看面板等。
 
-注意，文本打字机和选择处理器，是不同的元素交互，非UI范围内的定制。参考说明[文本打字机](/zh/guide/text-printers.md)和 [选择处理器](/zh/guide/choices.md)。
+注意，文本打字机和选择处理器，是不同的元素交互，非UI范围内的定制。参考说明[文本打字机](/zh/guide/text-printers)和 [选择处理器](/zh/guide/choices)。
 
 
 ::: warning
@@ -46,7 +46,7 @@ UI自定义特性允许用户添加自建UI，或使其替代任何内置UI元�
 
 要添加新的自定义UI，通过菜单`Create -> Naninovel -> Custom UI`来添加，并将其添加到资源列表内。这样它就会随引擎初始化时进行初始化。
 
-以下视频教程，展示了如何添加用户自定义的日历UI，并使用特殊的出现/隐藏的动画。该日历会根据[自定义变量](/zh/guide/custom-variables.md) （可通过Naninovel来控制并随游戏保存）来显示。并且日历会随数据变化而同步更新。这些功能实现都不需要C#代码来实现。
+以下视频教程，展示了如何添加用户自定义的日历UI，并使用特殊的出现/隐藏的动画。该日历会根据[自定义变量](/zh/guide/custom-variables) （可通过Naninovel来控制并随游戏保存）来显示。并且日历会随数据变化而同步更新。这些功能实现都不需要C#代码来实现。
 
 [!!wrAm-cwPXy4]
 
@@ -82,7 +82,7 @@ UI自定义特性允许用户添加自建UI，或使其替代任何内置UI元�
 
 `Save Visibility State`开启时，会对UI可见度状态做持久化保存，在下次加载游戏时，UI会保持和之前退出时一样的状态。
 
-`Block Input When Visible`允许在UI可见时关闭[输入](/zh/guide/input-processing.md)。 这有助于防止玩家在与UI交互时使用各种快捷键（隐藏UI，继续阅读等）。`Allowed Samplers` 允许使用的快捷键。比如，你可以将`ToggleUI` 输入添加到此，能让玩家使用该功能的快捷键，而其他所有快捷键都将无效化。
+`Block Input When Visible`允许在UI可见时关闭[输入](/zh/guide/input-processing)。 这有助于防止玩家在与UI交互时使用各种快捷键（隐藏UI，继续阅读等）。`Allowed Samplers` 允许使用的快捷键。比如，你可以将`ToggleUI` 输入添加到此，能让玩家使用该功能的快捷键，而其他所有快捷键都将无效化。
 
 启用`Modal UI`会使所有其他UI在可见时都忽略交互。这类似于`Block Input When Visible`，但是会影响基于事件的交互（鼠标单击，触摸，UI导航），而不影响直接输入处理。
 
@@ -130,8 +130,8 @@ ITitleUI | 游戏的标题（主）菜单。
 IExternalScriptsUI | 外部脚本浏览器UI (社区修改功能)。
 IVariableInputUI | 用于输入将任意文本分配给自定义状态变量 ([@input] 命令调用).
 IConfirmationUI | 用于确认重要命令的UI面板 (例如，退出标题菜单或删除保存的游戏时)。
-ICGGalleryUI | 解锁 [CG 画廊](/zh/guide/unlockable-items.md#CG画廊) 窗口。
-ITipsUI | 解锁 [提示](/zh/guide/unlockable-items.md#提示) 窗口。
+ICGGalleryUI | 解锁 [CG 画廊](/zh/guide/unlockable-items#CG画廊) 窗口。
+ITipsUI | 解锁 [提示](/zh/guide/unlockable-items#提示) 窗口。
 IRollbackUI | 状态回滚功能的指示器。
 IContinueInputUI | 全屏不可见的UI层，位于UI层的底部，在点击或触击时激活`continue input`的触发。
 

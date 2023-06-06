@@ -1,10 +1,10 @@
 # 背景
 
-和[角色](/zh/guide/characters.md) 相反，背景是用来表示场景*置后层*的元素：位置，风景或应始终出现在角色*后面*的任何东西。
+和[角色](/zh/guide/characters) 相反，背景是用来表示场景*置后层*的元素：位置，风景或应始终出现在角色*后面*的任何东西。
 
 背景元素使用名称，外观，可见性和变换（位置，旋转，比例）定义。它们可以随着时间改变其外观，可见性和各种形态改变。
 
-通过 `Naninovel -> Configuration -> Backgrounds` 菜单来配置背景行为表现，相关配置信息参考[属性配置](/zh/guide/configuration.md#背景)。 可以使用`Naninovel -> Resources -> Backgrounds`菜单访问背景的资源配置管理器。
+通过 `Naninovel -> Configuration -> Backgrounds` 菜单来配置背景行为表现，相关配置信息参考[属性配置](/zh/guide/configuration#背景)。 可以使用`Naninovel -> Resources -> Backgrounds`菜单访问背景的资源配置管理器。
 
 ![](https://i.gyazo.com/cccd08280dac72d199ea3465bc167a22.gif)
 
@@ -12,7 +12,7 @@
 
 你也可以通过子文件夹来管理相应资源。脚本中需要使用(`/`)调用。比如`Resources/Naninovel/Backgrounds/MainBackground/Events/CG251`的资源，脚本中的调用为：`Events/CG251`。
 
-使用[可寻址资源系统](/zh/guide/resource-providers.md#寻址资源系统) 来手动公开资源也是可以的。公开资源地址和上述相同，但是需要省略"Resources/"部分。比如将"Beach"注册到"MainBackground"背景下，地址为`Naninovel/Backgrounds/MainBackground/Beach`。注意，该系统默认不启用你可以通过资源配置菜单的`Enable Addressable In Editor`属性来启用。
+使用[可寻址资源系统](/zh/guide/resource-providers#寻址资源系统) 来手动公开资源也是可以的。公开资源地址和上述相同，但是需要省略"Resources/"部分。比如将"Beach"注册到"MainBackground"背景下，地址为`Naninovel/Backgrounds/MainBackground/Beach`。注意，该系统默认不启用你可以通过资源配置菜单的`Enable Addressable In Editor`属性来启用。
 
 在naninovel脚本中，背景大部分由[@back] 命令控制：
 
@@ -128,7 +128,7 @@ Encoding settings : cabac=1 / ref=3 / deblock=1:0:0 / analyse=0x3:0x113 / me=hex
 要创建该类型背景，使用
 To create a layered background prefab, use `Create -> Naninovel -> Background -> Layered` 菜单，进入[预制体编辑模式](https://docs.unity3d.com/Manual/EditingInPrefabMode.html) 来组合图层。默认会创建有多个图层，你可以使用或直接删除这些添加自己的。
 
-多图层背景和[多图层人物](/zh/guide/characters.md#分层式人物) 类似。关于如何设置和通过脚本调用，可以参考上述链接。
+多图层背景和[多图层人物](/zh/guide/characters#分层式人物) 类似。关于如何设置和通过脚本调用，可以参考上述链接。
 
 不要忘了[@back]命令的无名参数是默认为外观和过渡效果类型（而非和[@char]命令一样的ID和外观），所以如下所示的方式来指定相应资源表现：
 

@@ -139,17 +139,17 @@ Given the above implementation, our custom character data will now draw as follo
 ![](https://i.gyazo.com/294a9e2812d33ea3c863f9f53906b327.png)
 
 ::: tip
-It's also possible to override built-in configuration editors as a whole; see [custom configuration](/guide/custom-configuration.md#overriding-built-in-editors) guide for more information and examples.
+It's also possible to override built-in configuration editors as a whole; see [custom configuration](/guide/custom-configuration#overriding-built-in-editors) guide for more information and examples.
 :::
 
 ## Custom State
 
-To override or extend state type for your custom actor, you'll have to also [override the actor's manager](/guide/engine-services.md#overriding-built-in-services), as the state is serialized and applied to the managed actors there.
+To override or extend state type for your custom actor, you'll have to also [override the actor's manager](/guide/engine-services#overriding-built-in-services), as the state is serialized and applied to the managed actors there.
 
 ::: info NOTE
 This applies for custom actor implementations of one of the built-in `IActor` interface derivatives (characters, backgrounds, text printers and choice handlers); if you've inherited your custom actor directly from `IActor`, there's no need to override the built-in managers to use a custom state — just create your own.
 
-In case you're looking to add a custom state for other systems (eg, UIs, game objects or components for various game mechanics outside of Naninovel), see [state management guide](/guide/state-management.md#custom-state).
+In case you're looking to add a custom state for other systems (eg, UIs, game objects or components for various game mechanics outside of Naninovel), see [state management guide](/guide/state-management#custom-state).
 :::
 
 Below is an example on extending choice handler state by adding a `LastChoiceTime` field, which stores time of the last added choice. The time is printed to the console when the custom choice handler is shown.

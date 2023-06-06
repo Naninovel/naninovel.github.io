@@ -2,7 +2,7 @@
 
 Naninovel comes with multiple built-in UIs: title (main) menu, game settings, save-load menu, backlog panel, CG gallery, tips and many others.
 
-Each of the built-in UIs can be disabled or customized; see [UI customization](/guide/user-interface.md#ui-customization) guide for more information.
+Each of the built-in UIs can be disabled or customized; see [UI customization](/guide/user-interface#ui-customization) guide for more information.
 
 ## Adaptive UI Layout
 
@@ -26,7 +26,7 @@ When UI is hidden, `Continue` input or clicking (touching) the screen will also 
 
 UI customization feature allows to add a custom UI and modify or completely replace any of the built-in UI elements, like title menu, settings menu, printer backlog, etc.
 
-Be aware, that text printers and choice handlers are implemented via actors interface and are customized in a different way; see the corresponding documentation ([text printers](/guide/text-printers.md), [choice handlers](/guide/choices.md)) for more info.
+Be aware, that text printers and choice handlers are implemented via actors interface and are customized in a different way; see the corresponding documentation ([text printers](/guide/text-printers), [choice handlers](/guide/choices)) for more info.
 
 ::: warning
 Before attempting to create custom UIs or modify existing ones first make sure you're familiar with [Unity's UI system](https://docs.unity3d.com/Packages/com.unity.ugui@latest) (uGUI). While there are video tutorials and example projects for UI customization available below, please be aware that we won't be able to provide any additional guidance or support for Unity's built-in tools; consult the [support page](/support/#unity-support) for more information.
@@ -39,7 +39,7 @@ To add a custom UI or modify (disable) a built-in one, use UI resources manager 
 When the engine is initializing it'll instantiate all the UI prefabs assigned in the resources manager.
 
 ::: info NOTE
-Some features (eg, [UI toggling](/guide/user-interface.md#ui-toggling)) require the UIs to be rendered in `Screen Space - Camera` mode. For best compatibility, make sure your custom UIs have the correct render mode selected and render camera field is empty (UI manager will assign the camera automatically).
+Some features (eg, [UI toggling](/guide/user-interface#ui-toggling)) require the UIs to be rendered in `Screen Space - Camera` mode. For best compatibility, make sure your custom UIs have the correct render mode selected and render camera field is empty (UI manager will assign the camera automatically).
 
 ![](https://i.gyazo.com/d62bed3ba0c85972b12e759cc7b44c91.png)
 :::
@@ -50,7 +50,7 @@ To show or hide any of the UIs listed in the resources manager use [@showUI] and
 
 To add a new custom UI, create a prefab via `Create -> Naninovel -> Custom UI` asset context menu and add it to the UI resources list. It'll then be instantiated along with the other UI prefabs on the engine initialization.
 
-Following video tutorial shows how to add a custom calendar UI with special reveal and hide animations. The calendar will display a date based on a [custom variable](/guide/custom-variables.md), which can be changed via naninovel scripts and is saved with the game. The calendar will automatically update when the variable is changed. All this is achieved without any C# scripting.
+Following video tutorial shows how to add a custom calendar UI with special reveal and hide animations. The calendar will display a date based on a [custom variable](/guide/custom-variables), which can be changed via naninovel scripts and is saved with the game. The calendar will automatically update when the variable is changed. All this is achieved without any C# scripting.
 
 [!!wrAm-cwPXy4]
 
@@ -82,7 +82,7 @@ When `Hide On Load` is enabled, the UI will automatically be hidden when the eng
 
 Enabling `Save Visibility State` will make the visibility state of the UI persistent, so that when player loads a saved game, the UI will be in the same state (visible or  hidden) as it was when the game was saved.
 
-`Block Input When Visible` allows disabling [input processing](/guide/input-processing.md) when the UI is visible. This is useful to prevent the player from using various hotkeys (hiding the UI, continue reading, etc) while he's interacting with the UI. `Allowed Samplers` allows adding exceptions to the blocked inputs; eg, you can add `ToggleUI` input name to the list, allowing player to toggle the UI while still preventing activation of any other inputs.
+`Block Input When Visible` allows disabling [input processing](/guide/input-processing) when the UI is visible. This is useful to prevent the player from using various hotkeys (hiding the UI, continue reading, etc) while he's interacting with the UI. `Allowed Samplers` allows adding exceptions to the blocked inputs; eg, you can add `ToggleUI` input name to the list, allowing player to toggle the UI while still preventing activation of any other inputs.
 
 Enabling `Modal UI` makes all other UIs ignore interaction while the UI is visible. This is similar to `Block Input When Visible`, but affects event-based interaction (mouse clicks, touches, UI navigation) instead of direct input processing.
 
@@ -95,7 +95,7 @@ You are free to modify or remove any of the above components as you see fit.
 
 ### Changing Font
 
-To specify, which text elements should be affected by font and text size changes set in [game settings](/guide/game-settings.md), use `Font Change Configuration` property of `Custom UI` and derived components.
+To specify, which text elements should be affected by font and text size changes set in [game settings](/guide/game-settings), use `Font Change Configuration` property of `Custom UI` and derived components.
 
 ![](https://i.gyazo.com/f8e8b03580940cce72de9e9970512902.png)
 
@@ -115,7 +115,7 @@ Specific text font options available in the game settings menu are set up in the
 
 ![](https://i.gyazo.com/31a9b81dae56fb114a75e25211d26126.png)
 
-`Font Resource` should specify [resources path](/guide/resource-providers.md) to `TMPro Font` asset. By default, Naninovel will use addressable and project resource providers to look for font assets; use `Font Loader` to change the behaviour. The simplest way to expose font asset while using default settings is to place the font inside `Resources/Naninovel/Fonts` folder; then you can use the font's asset name as the font resource path. Consult Unity's TextMesh Pro documentation for more info on how to create and configure the fonts.
+`Font Resource` should specify [resources path](/guide/resource-providers) to `TMPro Font` asset. By default, Naninovel will use addressable and project resource providers to look for font assets; use `Font Loader` to change the behaviour. The simplest way to expose font asset while using default settings is to place the font inside `Resources/Naninovel/Fonts` folder; then you can use the font's asset name as the font resource path. Consult Unity's TextMesh Pro documentation for more info on how to create and configure the fonts.
 
 To change the font outside of `Custom UI` objects (eg, on choice handler button prefab), use `Font Changer` component. It has the same font configuration option and can be applied to any game object.
 
@@ -153,8 +153,8 @@ ITitleUI | Title (main) menu of the game.
 IExternalScriptsUI | External scripts browser UI (community modding feature).
 IVariableInputUI | Input form for assigning an arbitrary text to a custom state variable (used by [@input] command).
 IConfirmationUI | UI panel used to confirm important commands (eg, when exiting to the title menu or deleting saved game slot).
-ICGGalleryUI | Unlockable [CG gallery](/guide/unlockable-items.md#cg-gallery) items browser.
-ITipsUI | Unlockable [tips](/guide/unlockable-items.md#tips) browser.
+ICGGalleryUI | Unlockable [CG gallery](/guide/unlockable-items#cg-gallery) items browser.
+ITipsUI | Unlockable [tips](/guide/unlockable-items#tips) browser.
 IRollbackUI | Indicator for state rollback feature.
 IContinueInputUI | A fullscreen invisible UI layer positioned at the bottom of the UI stack and used to activate a `continue input` trigger when clicked or touched.
 IToastUI | A general-purpose UI for self-hiding popup notifications aka "toasts"; can be used from naninovel scripts with [@toast] command.

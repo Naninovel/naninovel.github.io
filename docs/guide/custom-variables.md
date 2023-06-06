@@ -6,7 +6,7 @@ Custom variables feature allows creating user-specified variables, modify and us
 Variable name should start with a letter and can contain only latin characters, numbers and underscores, eg: `name`, `Char1Score`, `my_score`; the names are case-insensitive, eg: `myscore` is equal to `MyScore`.
 :::
 
-Custom variables can be created, modified and used both in naninovel scripts via [@set] and [@if] commands and in the C# scripts using `ICustomVariableManager` [engine service](/guide/engine-services.md).
+Custom variables can be created, modified and used both in naninovel scripts via [@set] and [@if] commands and in the C# scripts using `ICustomVariableManager` [engine service](/guide/engine-services).
 
 For example, the following script command will assign a different value to `score` custom variable, based on the choice:
 
@@ -34,7 +34,7 @@ You can set pre-defined custom variables (both global and local) with initial va
 Global pre-defined variables are initialized on first application start, while the locals do so on each state reset. Notice, that the value field in the menu expects a valid script expression and not a raw value string.
 
 ::: tip
-In case you want to make a kind of global counter, that will only increment once, even when re-played (eg, with rollback or after restarting the game), use `HasPlayed()` [expression function](/guide/script-expressions.md#expression-functions):
+In case you want to make a kind of global counter, that will only increment once, even when re-played (eg, with rollback or after restarting the game), use `HasPlayed()` [expression function](/guide/script-expressions#expression-functions):
 ```nani
 @set g_GlobalCounter++ if:!HasPlayed()
 ```
@@ -74,7 +74,7 @@ You can inject the custom variables to any parameter values as long as the type 
 
 ## Variable Triggers
 
-When building a [custom UI](/guide/user-interface.md#ui-customization) or other systems, you may want to listen (react) for events when a variable value is changed. For example, when building a character stats screen, you want make the text to change with the variables. While the conventional way to implement such behavior would be using a C# script, you can also make use of `Custom Variable Trigger` component. The component will invoke Unity events when a variable with specified name is changed. You can bind compatible commands with those events, such as updating the text values.
+When building a [custom UI](/guide/user-interface#ui-customization) or other systems, you may want to listen (react) for events when a variable value is changed. For example, when building a character stats screen, you want make the text to change with the variables. While the conventional way to implement such behavior would be using a C# script, you can also make use of `Custom Variable Trigger` component. The component will invoke Unity events when a variable with specified name is changed. You can bind compatible commands with those events, such as updating the text values.
 
 ![](https://i.gyazo.com/22eddd109e76d4e63c461e9d75b20ceb.png)
 
@@ -88,7 +88,7 @@ Find example on using variable triggers to drive availability of map locations i
 
 While the game is running it's possible to view all the existing variables and change their values for debugging purposes.
 
-Open [development console](/guide/development-console.md) and enter `var` command to open the variables editor window.
+Open [development console](/guide/development-console) and enter `var` command to open the variables editor window.
 
 ![](https://i.gyazo.com/d1812668c0776b01f3a82c5ddcba0145.png)
 
@@ -98,7 +98,7 @@ The variables list is automatically updated when the custom variables are change
 
 ## Using Custom Variables in C#
 
-The custom variables can be accessed in C# via `ICustomVariableManager` [engine service](/guide/engine-services.md).
+The custom variables can be accessed in C# via `ICustomVariableManager` [engine service](/guide/engine-services).
 
 To get a variable value use `GetVariableValue(name)` method and `SetVariableValue(name, value)` to set variable value; eg, given a "MyVariable" custom string variable exists, the below code will retrieve it, append "Hello!" string to the value and set it back.
 

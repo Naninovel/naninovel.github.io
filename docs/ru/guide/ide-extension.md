@@ -1,6 +1,6 @@
 ﻿# Поддержка IDE
 
-IDE features, like syntax highlighting, error checking, auto-completion and interactive documentation could significantly increase productivity when writing [naninovel scripts](/guide/naninovel-scripts.md). We've made an extension for a free and open-source [VS Code editor](https://code.visualstudio.com) (available for Windows, MacOS and Linux), which provides the essential IDE support for NaniScript syntax.
+IDE features, like syntax highlighting, error checking, auto-completion and interactive documentation could significantly increase productivity when writing [naninovel scripts](/guide/naninovel-scripts). We've made an extension for a free and open-source [VS Code editor](https://code.visualstudio.com) (available for Windows, MacOS and Linux), which provides the essential IDE support for NaniScript syntax.
 
 [!https://i.gyazo.com/c07e4a512dec21b2dfdf582e73cc3b10.mp4]
 
@@ -16,7 +16,7 @@ The IDE extension requires .NET Core 3.1 runtime in order to work correctly. VS 
 
 ## Spell Check
 
-To enable spell checking in the naninovel scripts, install a spell checker extension, eg. [Code Spell Check](https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker) and turn on the checking for `naniscript` language; see the [settings section](/guide/ide-extension.md#vs-code-settings) below for an example on how to enable naniscript language for the Code Spell Check extension.
+To enable spell checking in the naninovel scripts, install a spell checker extension, eg. [Code Spell Check](https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker) and turn on the checking for `naniscript` language; see the [settings section](/guide/ide-extension#vs-code-settings) below for an example on how to enable naniscript language for the Code Spell Check extension.
 
 ![](https://i.gyazo.com/f66f7adcae6b366dfced8ec08f24cff9.png)
 

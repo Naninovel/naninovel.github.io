@@ -16,10 +16,10 @@ Actor is an abstract entity and can't exist directly; instead, specialized versi
 
 Actor Type | Additional Parameters | Description
 --- | --- | ---
-[Character](/guide/characters.md) | Look Direction | Represents a character on scene.
-[Background](/guide/backgrounds.md) | None | Represents a background on scene; placed behind character actors by default.
-[Text Printer](/guide/text-printers.md) | Text, Author ID, Reveal Progress | Gradually reveals (prints) text messages over time.
-[Choice Handler](/guide/choices.md) | Choices | Allows player to pick one of the available choices.
+[Character](/guide/characters) | Look Direction | Represents a character on scene.
+[Background](/guide/backgrounds) | None | Represents a background on scene; placed behind character actors by default.
+[Text Printer](/guide/text-printers) | Text, Author ID, Reveal Progress | Gradually reveals (prints) text messages over time.
+[Choice Handler](/guide/choices) | Choices | Allows player to pick one of the available choices.
 
 Consider a typical visual novel setup, with a character portrayed on top of a background. In Naninovel terms, it will be represented in the following way.
 
@@ -27,13 +27,13 @@ Consider a typical visual novel setup, with a character portrayed on top of a ba
 
 Now, let's say you want to make "Kohaku" character look happy. You have several textures (images) of that character, each portraying different emotion. In Naninovel such textures are called *appearances* of an actor. To achieve the goal, we have to change appearance of the character actor. Similarly, to make "MainBackground" display something else, we have to change appearance of that background actor.
 
-Actors and their parameters are controlled (directed) via commands specified in [naninovel scripts](/guide/naninovel-scripts.md).
+Actors and their parameters are controlled (directed) via commands specified in [naninovel scripts](/guide/naninovel-scripts).
 
-Another widely used concept is [user interface](/guide/user-interface.md) (UI). UIs are used by player to interact with actors and the rest of the game. This includes various menus (title, save-load, settings, etc) and control panels (toggle auto read mode, skip text, etc). UI elements are positioned on top of actors by default.
+Another widely used concept is [user interface](/guide/user-interface) (UI). UIs are used by player to interact with actors and the rest of the game. This includes various menus (title, save-load, settings, etc) and control panels (toggle auto read mode, skip text, etc). UI elements are positioned on top of actors by default.
 
 Text printers and choice handlers are considered both actors and UI elements, meaning they share actor qualities and can be controlled via naninovel scripts, while, at the same time, used by players to interact with the game.
 
-In case you're familiar with programming, take a look at the [engine architecture](/guide/engine-architecture.md) to get a grasp on how it's designed from a software perspective.
+In case you're familiar with programming, take a look at the [engine architecture](/guide/engine-architecture) to get a grasp on how it's designed from a software perspective.
 
 ## Create New Unity Project
 
@@ -102,7 +102,7 @@ The first line will print the text "Hello World!" when the game is run and the s
 Enter play mode and start a new game to see the result.
 
 ::: info NOTE
-All the available built-in script commands, supported parameters and usage examples are listed in the [API reference](/api/). It's also possible to add custom commands; see [the guide](/guide/custom-commands.md) for more information.
+All the available built-in script commands, supported parameters and usage examples are listed in the [API reference](/api/). It's also possible to add custom commands; see [the guide](/guide/custom-commands) for more information.
 :::
 
 In case "NEW GAME" button of the title menu is not active, make sure `Start Game Script` property in the script configuration (`Naninovel -> Configuration -> Scripts`) is equal to the name of the created script. The property is populated automatically when creating the first script via create asset menu, but this may not work if you copy some existing script to the project.
@@ -173,7 +173,7 @@ Let’s assume the added background appearance sprite is named "City". To show a
 @back City
 ```
 
-When switching between backgrounds a cross-fade [transition effect](/guide/transition-effects.md) will be used by default. To change the effect, specify transition type after the appearance name:
+When switching between backgrounds a cross-fade [transition effect](/guide/transition-effects) will be used by default. To change the effect, specify transition type after the appearance name:
 
 ```nani
 @back City

@@ -14,7 +14,7 @@ Add `Elringus.Naninovel.Runtime` library to the `Node Library` list found in "Vi
 
 ![](https://i.gyazo.com/38afd2ea477fcf0921114e3847de6c85.png)
 
-The Visual Scripting doesn't automatically expose all the available types in the libraries, so we additionally need to add the required Naninovel types to the `Type Options` list found in the same settings menu. In the example below we added `Engine` and `Script Player Interface`, but you'll probably need more types, like the other [engine service interfaces](/guide/engine-services.md), configurations, etc.
+The Visual Scripting doesn't automatically expose all the available types in the libraries, so we additionally need to add the required Naninovel types to the `Type Options` list found in the same settings menu. In the example below we added `Engine` and `Script Player Interface`, but you'll probably need more types, like the other [engine service interfaces](/guide/engine-services), configurations, etc.
 
 ![](https://i.gyazo.com/2e416a015d980cbedfa49d1589505e17.png)
 
@@ -28,7 +28,7 @@ When Naninovel library and types are added in the visual scripting settings, the
 
 ![](https://i.gyazo.com/505b019b76d568e06788b505040b36f1.png)
 
-In case you wish to send an event from a scenario script to a visual scripting graph or state machine, below is example of a [custom command](/guide/custom-commands.md), which will attempt to find a game object with the provided name and send an event with the specified name and arguments:
+In case you wish to send an event from a scenario script to a visual scripting graph or state machine, below is example of a [custom command](/guide/custom-commands), which will attempt to find a game object with the provided name and send an event with the specified name and arguments:
 
 ```csharp
 using Naninovel;

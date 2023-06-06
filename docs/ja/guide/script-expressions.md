@@ -15,7 +15,7 @@ One plus two equals {1 + 2}.
 ```
 — これは IDが "Kohaku" のキャラクターを、33.5度の双曲線コサインを3乗し、自然対数0.5で割ったもので拡大します:
 
-式はコマンドの実行時に評価され、式内で [カスタム変数](/ja/guide/custom-variables.md) を使用できます。
+式はコマンドの実行時に評価され、式内で [カスタム変数](/ja/guide/custom-variables) を使用できます。
 
 ```nani
 @input color summary:"What's your favorite color?"

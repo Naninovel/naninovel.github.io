@@ -1,10 +1,10 @@
 # Backgrounds
 
-Opposed to [characters](/guide/characters.md), backgrounds are actors used to represent a *back* layer of the scene: locations, sceneries, landscapes or anything that should always appear *behind* the characters.
+Opposed to [characters](/guide/characters), backgrounds are actors used to represent a *back* layer of the scene: locations, sceneries, landscapes or anything that should always appear *behind* the characters.
 
 A background actor is defined with a name, appearance, visibility and transform (position, rotation, scale). It can change appearance, visibility and transform over time.
 
-Backgrounds' behavior can be configured using `Naninovel -> Configuration -> Backgrounds` context menu; for available options see [configuration guide](/guide/configuration.md#backgrounds). The backgrounds' resources manager can be accessed using `Naninovel -> Resources -> Backgrounds` context menu.
+Backgrounds' behavior can be configured using `Naninovel -> Configuration -> Backgrounds` context menu; for available options see [configuration guide](/guide/configuration#backgrounds). The backgrounds' resources manager can be accessed using `Naninovel -> Resources -> Backgrounds` context menu.
 
 ![](https://i.gyazo.com/cccd08280dac72d199ea3465bc167a22.gif)
 
@@ -12,7 +12,7 @@ In case you have a lot of backgrounds and/or appearances per background and it's
 
 [!!2YP-36THHvk]
 
-It's possible to use [addressable asset system](/guide/resource-providers.md#addressable) to associate resources with actor records without using editor menus. Eg, to associate a "Beach" appearance with "MainBackground" background, assign the texture asset following address: `Naninovel/Backgrounds/MainBackground/Beach` and assign `Naninovel` label to the asset in addressable group configuration. Be aware, that addressable provider is not used in editor by default; you can allow it by enabling `Allow Addressable In Editor` property in resource provider configuration menu. Find more info on using addressable provider in the [resource providers documentation](/guide/resource-providers.md#addressable).
+It's possible to use [addressable asset system](/guide/resource-providers#addressable) to associate resources with actor records without using editor menus. Eg, to associate a "Beach" appearance with "MainBackground" background, assign the texture asset following address: `Naninovel/Backgrounds/MainBackground/Beach` and assign `Naninovel` label to the asset in addressable group configuration. Be aware, that addressable provider is not used in editor by default; you can allow it by enabling `Allow Addressable In Editor` property in resource provider configuration menu. Find more info on using addressable provider in the [resource providers documentation](/guide/resource-providers#addressable).
 
 In naninovel scripts, backgrounds are mostly controlled with [@back] command:
 
@@ -96,7 +96,7 @@ Choose file formats that are most comfortable for your development workflow. Whe
 
 Initial (unscaled) size of the sprite background mesh on scene depends on the reference resolution (camera configuration), background's `Pixel Per Unit` property (set for each background actor in the configuration menu) and source texture resolution.
 
-Naninovel will attempt to make the backgrounds cover the whole camera frustum by default, so make sure to size the source textures so that the aspect ratio is equal to the reference resolution; see [match mode guide](/guide/backgrounds.md#match-mode) for more information on how to change or disable this behaviour.
+Naninovel will attempt to make the backgrounds cover the whole camera frustum by default, so make sure to size the source textures so that the aspect ratio is equal to the reference resolution; see [match mode guide](/guide/backgrounds#match-mode) for more information on how to change or disable this behaviour.
 
 ::: tip
 Define reference resolution with your team before starting the work on the art assets (both characters and backgrounds). This way the artists will be able to author the assets with the correct dimensions and you won't have to edit them later.
@@ -167,7 +167,7 @@ The layered implementation allows composing backgrounds from multiple sprites (l
 
 To create a layered background prefab, use `Create -> Naninovel -> Background -> Layered` asset context menu. Enter [prefab editing mode](https://docs.unity3d.com/Manual/EditingInPrefabMode.html) to compose the layers. Several layers and groups will be created by default. You can use them or delete and add your own.
 
-The layered backgrounds are very similar to [layered characters](/guide/characters.md#layered-characters); consult the documentation for more info on how to set up and control them via naninovel scripts.
+The layered backgrounds are very similar to [layered characters](/guide/characters#layered-characters); consult the documentation for more info on how to set up and control them via naninovel scripts.
 
 Don't forget that nameless parameter in [@back] command is expecting appearance and transition type (not ID and appearance as with [@char] command), so specify layer composition expressions in the following way:
 
@@ -233,4 +233,4 @@ When composing backgrounds with Unity scenes, consider adding [custom commands](
 
 ## Render to Texture
 
-It's possible to render character and background actors of all the implementations (except generic) to a texture asset, which can then can be assigned to a custom UI, printer, material or any other compatible source. Setting up background actor render to texture is very similar to that of a character; [check the guide](/guide/characters.md#render-to-texture) for more info and examples.
+It's possible to render character and background actors of all the implementations (except generic) to a texture asset, which can then can be assigned to a custom UI, printer, material or any other compatible source. Setting up background actor render to texture is very similar to that of a character; [check the guide](/guide/characters#render-to-texture) for more info and examples.

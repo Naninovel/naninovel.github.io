@@ -12,7 +12,7 @@ Swipes | Список свайпов (сенсорный экран), актив
 
 Для конкретных значений см. руководство по вводу Unity: [docs.unity3d.com/Manual/ConventionalGameInput](https://docs.unity3d.com/Manual/ConventionalGameInput.html).
 
-Вы можете настроить встроенные привязки ввода и добавить новые приёмники с помощью контекстного меню `Naninovel -> Configuration -> Input`; доступные параметры см. в [руководстве по конфигурации](/ru/guide/configuration.md#input).
+Вы можете настроить встроенные привязки ввода и добавить новые приёмники с помощью контекстного меню `Naninovel -> Configuration -> Input`; доступные параметры см. в [руководстве по конфигурации](/ru/guide/configuration#input).
 
 ![Управление вводом](https://i.gyazo.com/2f97539323c9fc36124e286856a36f84.png)
 

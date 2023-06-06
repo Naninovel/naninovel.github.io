@@ -310,7 +310,7 @@ Fade-out time | Decimal | 3 | パーティクルシステムは、指定され�
 焦点の合ったオブジェクトだけが鮮明で、他の画像がボケた状態にする際の、被写界深度（別名DOF、ボケ）効果をシミュレートします。
 
 ::: tip
-1 つのオブジェクト（アクター）だけをぼかしたい場合は、代わりに「[ぼかしエフェクト](/ja/guide/special-effects.md#blur)」の使用を検討してください。
+1 つのオブジェクト（アクター）だけをぼかしたい場合は、代わりに「[ぼかしエフェクト](/ja/guide/special-effects#blur)」の使用を検討してください。
 :::
 
 [!https://i.gyazo.com/616a023c46f207b4a3a33d3d3fd9fbc9.mp4]
@@ -389,7 +389,7 @@ Stop Duration | Decimal | 1 | エフェクトのフェードオフ（無効化�
 
 大量のスポーンプレハブがありエディターメニューから割り当てるのが大変な場合は、 `Resources/Naninovel/Spawn` フォルダーにドロップするだけで自動的にスクリプトで使用できるようになります。必要に応じて、さらにサブフォルダで整理することもできます。この場合、naninovelスクリプトで参照する場合はスラッシュ (`/`) を使用します。たとえば、 `Resources/Naninovel/Spawn/Explosions/Boom01` として保存されたプレハブは、 `Explosions/Boom01` としてスクリプトから参照できます。
 
-[addressable asset system](/ja/guide/resource-providers.md#addressable) を使用して手動でリソースを公開することもできます。アセットを公開するには、使用するパスと同じアドレスを "Resources/" の部分を除いて、上記の方法で割り当てます。たとえば、"Boom01" プレハブアセットを公開するには、次のアドレスにアセットを割り当てます: `Naninovel/Spawn/Boom01`。Addressable 機能はデフォルトではエディターで使用できないことに注意してください。リソースプロバイダーのコンフィグメニューで `Enable Addressable In Editor` プロパティを有効にすることで許可できます。
+[addressable asset system](/ja/guide/resource-providers#addressable) を使用して手動でリソースを公開することもできます。アセットを公開するには、使用するパスと同じアドレスを "Resources/" の部分を除いて、上記の方法で割り当てます。たとえば、"Boom01" プレハブアセットを公開するには、次のアドレスにアセットを割り当てます: `Naninovel/Spawn/Boom01`。Addressable 機能はデフォルトではエディターで使用できないことに注意してください。リソースプロバイダーのコンフィグメニューで `Enable Addressable In Editor` プロパティを有効にすることで許可できます。
 
 実装の参考として、`Naninovel/Prefabs/FX` に保存されている組み込みのエフェクトプレハブをご覧ください。
 

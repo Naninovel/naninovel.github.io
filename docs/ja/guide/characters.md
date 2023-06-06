@@ -1,10 +1,10 @@
 # キャラクター
 
-キャラクターアクターはシーンの中で[背景](/ja/guide/backgrounds.md) の上に存在するアクターです。
+キャラクターアクターはシーンの中で[背景](/ja/guide/backgrounds) の上に存在するアクターです。
 
 キャラクターアクターは、名前、外観、可視性、および形状（位置、回転、スケール）および視線の向きで定義されます。外観、可視性、変形、および視線の向きを時間をかけて変化させることもできます。
 
-キャラクターの動きはコンテキストメニューの `Naninovel -> Configuration AM-> Characters` で設定できます。利用可能なオプションについては [コンフィグガイド](/ja/guide/configuration.md#characters) をご覧ください。キャラクターのリソースマネージャーはコンテキストメニューの `Naninovel -> Resources -> Characters` からアクセスできます。
+キャラクターの動きはコンテキストメニューの `Naninovel -> Configuration AM-> Characters` で設定できます。利用可能なオプションについては [コンフィグガイド](/ja/guide/configuration#characters) をご覧ください。キャラクターのリソースマネージャーはコンテキストメニューの `Naninovel -> Resources -> Characters` からアクセスできます。
 
 ![Add Character](https://i.gyazo.com/c8a4f7f987621831b4a2ecb3145a4a07.png)
 
@@ -12,7 +12,7 @@
 
 必要に応じて、外観リソースをサブフォルダで整理できます。 その場合、naninovelスクリプトで参照するにはスラッシュ (`/`) を使用します。 たとえば、`Resources/Naninovel/Characters/Kohaku/Casual/Angry` に保存された外観テクスチャは、 `Casual/Angry` でスクリプトから参照できます。
 
-[addressable asset system](/ja/guide/resource-providers.md#addressable) を使用して手動でリソースを公開することもできます。アセットを公開するには、使用するパスと同じアドレスを "Resources/" の部分を除いて、上記の方法で割り当てます。例えば、"Happy" の外観を "Kohaku" キャラクターで公開するには, 次のアドレスにテクスチャアセットを割り当てます: `Naninovel/Characters/Kohaku/Happy`. addressable 機能はデフォルトではエディターで使用できないことに注意してください。リソースプロバイダーのコンフィグメニューで `Enable Addressable In Editor` プロパティを有効にすることで許可できます。
+[addressable asset system](/ja/guide/resource-providers#addressable) を使用して手動でリソースを公開することもできます。アセットを公開するには、使用するパスと同じアドレスを "Resources/" の部分を除いて、上記の方法で割り当てます。例えば、"Happy" の外観を "Kohaku" キャラクターで公開するには, 次のアドレスにテクスチャアセットを割り当てます: `Naninovel/Characters/Kohaku/Happy`. addressable 機能はデフォルトではエディターで使用できないことに注意してください。リソースプロバイダーのコンフィグメニューで `Enable Addressable In Editor` プロパティを有効にすることで許可できます。
 
 naninovel スクリプトでは、キャラクターは基本的に [@char] コマンドで操作します:
 
@@ -131,17 +131,17 @@ Player: You can call me {PlayerName}.
 
 ## 口パク
 
-[一般](/ja/guide/characters.md#一般キャラクター) と [Live2D](/ja/guide/characters.md#live2d-キャラクター) のキャラクター実装では、いわゆる "口パク" を利用できます。イベントを送ることで、表示メッセージを発しているキャラクターの口パクアニメーションを動作させることが出来ます。
+[一般](/ja/guide/characters#一般キャラクター) と [Live2D](/ja/guide/characters#live2d-キャラクター) のキャラクター実装では、いわゆる "口パク" を利用できます。イベントを送ることで、表示メッセージを発しているキャラクターの口パクアニメーションを動作させることが出来ます。
 
 [!!fx_YS2ZQGHI]
 
-[自動ボイス再生](/ja/guide/voicing.md#自動ボイス再生) 機能が有効になっていると、口パクイベントはボイスオーバーによって起動します。それ以外の場合は、表示テキストメッセージによってイベントがアクティブになります。後者の場合、手動で口パクを開始または停止したい場合があると思います（句読点のときに口パクアニメーションを停止する時など）。その場合は、[@lipSync] コマンドを使用してください。
+[自動ボイス再生](/ja/guide/voicing#自動ボイス再生) 機能が有効になっていると、口パクイベントはボイスオーバーによって起動します。それ以外の場合は、表示テキストメッセージによってイベントがアクティブになります。後者の場合、手動で口パクを開始または停止したい場合があると思います（句読点のときに口パクアニメーションを停止する時など）。その場合は、[@lipSync] コマンドを使用してください。
 
-口パクを設定する方法について詳しくは、 [一般](/ja/guide/characters.md#一般キャラクター) と [Live2D](/ja/guide/characters.md#live2d-キャラクター) のキャラクター実装についてのドキュメントをご覧ください。
+口パクを設定する方法について詳しくは、 [一般](/ja/guide/characters#一般キャラクター) と [Live2D](/ja/guide/characters#live2d-キャラクター) のキャラクター実装についてのドキュメントをご覧ください。
 
 ## プリンターのリンク
 
-`Linked Printer` プロパティを使用して、 [テキストプリンター](/ja/guide/text-printers.md) をキャラクターに関連付けることができます。
+`Linked Printer` プロパティを使用して、 [テキストプリンター](/ja/guide/text-printers) をキャラクターに関連付けることができます。
 
 ![](https://i.gyazo.com/50ca6b39cd7f708158678339244b1dc4.png)
 
@@ -280,7 +280,7 @@ Player: You can call me {PlayerName}.
 
 テンプレートから一般キャラクタープレハブを作成するには、コンテキストメニューから `Create -> Naninovel -> Character -> Generic` を使用してください。
 
-一般キャラクターで口パク機能を利用するには、 `CharacterActorBehaviour` コンポーネントの `On Started Speaking` と `On Finished Speaking` Unityイベントを使用してください。そのキャラクターが表示メッセージを話始める時（またはメッセージが完全に表示された時）イベントが呼び出され、そのキャラクターの口パクアニメーションの開始や停止などのカスタムロジックをトリガーできます。これはUIの `On Show` イベントと `On Hide` イベントの仕組みに似ています。 [UIカスタマイズガイド](/ja/guide/user-interface.md#カスタムUIの追加)でカスタムアニメーションの駆動に使用する方法を見つけてください。
+一般キャラクターで口パク機能を利用するには、 `CharacterActorBehaviour` コンポーネントの `On Started Speaking` と `On Finished Speaking` Unityイベントを使用してください。そのキャラクターが表示メッセージを話始める時（またはメッセージが完全に表示された時）イベントが呼び出され、そのキャラクターの口パクアニメーションの開始や停止などのカスタムロジックをトリガーできます。これはUIの `On Show` イベントと `On Hide` イベントの仕組みに似ています。 [UIカスタマイズガイド](/ja/guide/user-interface#カスタムUIの追加)でカスタムアニメーションの駆動に使用する方法を見つけてください。
 
 次の動画は、3Dリグモデルを一般キャラクターとして設定し、[Animator](https://docs.unity3d.com/Manual/class-AnimatorController.html) コンポーネントでリグアニメーションの外観の変更をルーティングする例です。
 
@@ -343,7 +343,7 @@ Spine キャラクターの実装は、[Spine](http://esotericsoftware.com) と�
 
 次に、Naninovel の [Spine 拡張パッケージ](https://github.com/Naninovel/Spine/raw/main/NaninovelSpine.unitypackage)をダウンロードし、インポートします。
 
-実装のリソースとして使用される Spine キャラクターのプレハブは、ルートのオブジェクトに `Spine Controller` コンポーネントがアタッチされている必要があります。Naninovel スクリプトのコマンド（`@char` など）による外観の変更は、[一般キャラクターの実装](/guide/characters.md#generic-characters)と同様に、Controller の `On Appearance Changed` イベントにルーティングされます。Spine の `SetAnimation` メソッドを使用したり、Unity の Animator Controller のトリガーを起動したりといったように、自由にイベントを扱うことができます。
+実装のリソースとして使用される Spine キャラクターのプレハブは、ルートのオブジェクトに `Spine Controller` コンポーネントがアタッチされている必要があります。Naninovel スクリプトのコマンド（`@char` など）による外観の変更は、[一般キャラクターの実装](/guide/characters#generic-characters)と同様に、Controller の `On Appearance Changed` イベントにルーティングされます。Spine の `SetAnimation` メソッドを使用したり、Unity の Animator Controller のトリガーを起動したりといったように、自由にイベントを扱うことができます。
 
 ![](https://i.gyazo.com/6a2772a3e4137413a7c1587788c54c41.png)
 

@@ -13,7 +13,7 @@ Swipes | 激活输入的滑动列表（触摸屏）。
 
 有关特定值，请参见Unity的输入指南：[docs.unity3d.com/Manual/ConventionalGameInput](https://docs.unity3d.com/Manual/ConventionalGameInput.html).
 
-您可以使用 `Naninovel -> Configuration -> Input` 菜单配置内置的输入绑定并添加新的侦听器。有关可用选项的信息，请参阅[配置指南](/zh/guide/configuration.md#输入)。
+您可以使用 `Naninovel -> Configuration -> Input` 菜单配置内置的输入绑定并添加新的侦听器。有关可用选项的信息，请参阅[配置指南](/zh/guide/configuration#输入)。
 
 ![Manage Input](https://i.gyazo.com/2f97539323c9fc36124e286856a36f84.png)
 

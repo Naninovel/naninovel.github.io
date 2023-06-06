@@ -20,4 +20,4 @@ URP和HDRP均不支持多台摄像机，因此需要在摄像机配置菜单中�
 
 ## 限制
 
-部分内置效果和特性（比如，景深，数字故障， [@startTrans] 和 [@finishTrans] 命令）不能在SRPs下正常工作因为缺少部分渲染特性。可用各种方法在不修改Naninovel源码或资源包内容的情况下，替换大多数丢失效果和特性。有关在这方面扩展引擎的更多信息，请参见[特殊效果](/zh/guide/special-effects.md#添加自定义效果)和[自定义命令](/zh/guide/custom-commands.md) 指南。
+部分内置效果和特性（比如，景深，数字故障， [@startTrans] 和 [@finishTrans] 命令）不能在SRPs下正常工作因为缺少部分渲染特性。可用各种方法在不修改Naninovel源码或资源包内容的情况下，替换大多数丢失效果和特性。有关在这方面扩展引擎的更多信息，请参见[特殊效果](/zh/guide/special-effects#添加自定义效果)和[自定义命令](/zh/guide/custom-commands) 指南。

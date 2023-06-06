@@ -26,13 +26,13 @@ public static void ToggleDebugInfo () => UI.DebugInfoGUI.Toggle();
 命令 | 描述
 --- | ---
 nav | 切换naninovel脚本导航器UI。
-debug | 切换[naninovel脚本调试](/zh/guide/naninovel-scripts.md#脚本Debug) 窗口。
-var | 切换[自定义变量编辑器](/zh/guide/custom-variables.md#变量debug) 窗口。
-purge | 使用[Google云端硬盘](/zh/guide/resource-providers.md#google-drive) 加载器时，将清除下载的资源缓存。
+debug | 切换[naninovel脚本调试](/zh/guide/naninovel-scripts#脚本Debug) 窗口。
+var | 切换[自定义变量编辑器](/zh/guide/custom-variables#变量debug) 窗口。
+purge | 使用[Google云端硬盘](/zh/guide/resource-providers#google-drive) 加载器时，将清除下载的资源缓存。
 play | 开始执行当前加载的naninovel脚本。
 stop | 暂停当前​​加载的naninovel脚本的执行。
 rewind (int) | 将当前加载的naninovel脚本回退到提供的行索引。该行应为命令或常规文本。当倒退时，该行应存在于回滚堆栈中。
-reload | 对当前播放的naninovel脚本执行 [热重载](/zh/guide/naninovel-scripts.md#热加载) 。仅在Unity编辑器中生效。
+reload | 对当前播放的naninovel脚本执行 [热重载](/zh/guide/naninovel-scripts#热加载) 。仅在Unity编辑器中生效。
 
 ## 执行命令
 

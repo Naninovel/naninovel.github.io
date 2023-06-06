@@ -17,7 +17,7 @@ One plus two equals {1 + 2}.
 
 — 将ID为 “Kohaku” 的角色缩放值为后面数学运算的结果值。
 
-在执行命令时对表达式进行求值，允许在表达式内部使用 [自定义变量](/zh/guide/custom-variables.md) ：
+在执行命令时对表达式进行求值，允许在表达式内部使用 [自定义变量](/zh/guide/custom-variables) ：
 
 ```nani
 @input color summary:"What's your favorite color?"

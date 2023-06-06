@@ -30,7 +30,7 @@
 
 大量のアイテムがありエディターメニューから割り当てるのが大変な場合は、`Resources/Naninovel/Inventory` フォルダーにドロップするだけで自動的にスクリプトで使用できるようになります。必要に応じて、さらにサブフォルダで整理することもできます。この場合、naninovelスクリプトで参照する場合はスラッシュ (`/`) を使用します。たとえば、`Resources/Naninovel/Inventory/Armor/FullPlate.prefab` として保存されたアイテムは、`Armor/FullPlate` としてスクリプトから参照できます。
 
-[addressable asset system](/ja/guide/resource-providers.md#addressable) を使用して手動でリソースを公開することもできます。アセットを公開するには、使用するパスと同じアドレスを "Resources/" の部分を除いて、上記の方法で割り当てます。例えば、アイテム "FullPlate.prefab" を公開するには、次のアドレスにプレハブアセットを割り当てます: `Naninovel/Inventory/FullPlate`。addressable 機能はデフォルトではエディターで使用できないことに注意してください。リソースプロバイダーのコンフィグメニューで `Enable Addressable In Editor` プロパティを有効にすることで許可できます。
+[addressable asset system](/ja/guide/resource-providers#addressable) を使用して手動でリソースを公開することもできます。アセットを公開するには、使用するパスと同じアドレスを "Resources/" の部分を除いて、上記の方法で割り当てます。例えば、アイテム "FullPlate.prefab" を公開するには、次のアドレスにプレハブアセットを割り当てます: `Naninovel/Inventory/FullPlate`。addressable 機能はデフォルトではエディターで使用できないことに注意してください。リソースプロバイダーのコンフィグメニューで `Enable Addressable In Editor` プロパティを有効にすることで許可できます。
 
 各アイテムには、同じタイプのアイテムを1つのインベントリスロットにスタックできる数を制限する `Stack Count Limit` プロパティと、アイテムが使用されたとき（`@useItem` コマンドまたはユーザーがインベントリ内のアイテムをクリックしたとき）に呼び出される `On Item Used` Unityイベントがあります。以下の例は、`Play Script` コンポーネントを使用してイベントを設定し、一度使用したアイテムを削除し、グリッチの特殊効果を生成してテキストメッセージを出力する方法です。
 
@@ -38,7 +38,7 @@
 
 `@addItem` コマンドでアイテムをインベントリに追加し、`@removeItem`(または`@removeItemAt`、`@removeAllItems`）でアイテムを削除できます。アイテムIDは、アイテムのプレハブ名と同じです。 インベントリスロットIDはグリッドスロットインデックスと同じです（たとえば、最初のスロットは0、2番目は1）。
 
-カスタム [関数式](/ja/guide/script-expressions.md#関数式) `ItemExist()` と `ItemCount()` でアイテムが在庫に存在するかどうか、および既存のアイテムの数を確認でき、便利です。
+カスタム [関数式](/ja/guide/script-expressions#関数式) `ItemExist()` と `ItemCount()` でアイテムが在庫に存在するかどうか、および既存のアイテムの数を確認でき、便利です。
 
 以下は、サンプルプロジェクトのスクリプトです:
 

@@ -91,8 +91,8 @@ Managed text localization process resemble the one for naninovel scripts:
 
 要更新托管文本和其对应的本地文件，在`Resources/Naninovel/Text` 目录运行本地化实用程序，然后选择`Resources/Naninovel/Localization/{Locale}` 文件夹。他们会尝试保存所有已有的修改（托管文本记录和其翻译），因此你不必每次都重头开始编辑所有内容。
 
-有关如何使用本地化实用程序的更多信息，请参见[本地化](/zh/guide/localization.md) 。
+有关如何使用本地化实用程序的更多信息，请参见[本地化](/zh/guide/localization) 。
 
  ::: tip EXAMPLE
- 可以参考本地化示例（包含托管文本）[演示项目](/zh/guide/getting-started.md#演示项目)。 如果你在自己的项目中遇到问题，请用做参考。
+ 可以参考本地化示例（包含托管文本）[演示项目](/zh/guide/getting-started#演示项目)。 如果你在自己的项目中遇到问题，请用做参考。
 :::

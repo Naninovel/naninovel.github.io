@@ -33,7 +33,7 @@ When `goto` parameter is not specified, current script will continue executing f
 
 Choice handler actors are used to process the [@choice] commands. You can add, edit and remove choice handlers using the choice manager accessible via `Naninovel -> Resources -> Choice Handlers` context menu.
 
-Choice handlers behavior can be configured using `Naninovel -> Configuration -> Choice Handlers` context menu; for available options see [configuration guide](/guide/configuration.md#choice-handlers).
+Choice handlers behavior can be configured using `Naninovel -> Configuration -> Choice Handlers` context menu; for available options see [configuration guide](/guide/configuration#choice-handlers).
 
 ## Choice Button
 
@@ -54,7 +54,7 @@ If you don't want to store the choice button prefabs in `Resources` folder or ne
 
 When `button` parameter of the [@choice] command is not specified, default button prefab is used.
 
-To change choice button used by default, create a [custom choice handler](/guide/choices.md#adding-custom-choice-handlers) and assign the prefab to `Default Button Prefab` property of `Choice Handler Panel` component or use a custom component.
+To change choice button used by default, create a [custom choice handler](/guide/choices#adding-custom-choice-handlers) and assign the prefab to `Default Button Prefab` property of `Choice Handler Panel` component or use a custom component.
 
 ![](https://i.gyazo.com/0972b2725ed043d050804d3833a83b73.png)
 
@@ -95,7 +95,7 @@ Find a more advanced implementation of interactive map with Naninovel in the Map
 
 ## ChatReply Choice Handler
 
-Used by [chat text printer](/guide/text-printers.md#chat-printer) to represent reply choices. Example:
+Used by [chat text printer](/guide/text-printers#chat-printer) to represent reply choices. Example:
 
 ```nani
 @printer Chat
@@ -129,4 +129,4 @@ You can now use the new choice handler by specifying its ID in `handler` paramet
 Find an example on creating a custom choice handler with a particle system in the following project on GitHub: [github.com/Naninovel/CustomUIExample](https://github.com/Naninovel/CustomUIExample).
 :::
 
-It's also possible to create a choice handler from scratch by manually implementing `IChoiceHandlerActor` interface. See the guide on [custom actor implementations](/guide/custom-actor-implementations.md) for more information.
+It's also possible to create a choice handler from scratch by manually implementing `IChoiceHandlerActor` interface. See the guide on [custom actor implementations](/guide/custom-actor-implementations) for more information.

@@ -12,7 +12,7 @@ Before exporting the project data, always generate localization data with the lo
 
 ![](https://i.gyazo.com/047d43250a941b918de65205a19b2d78.png)
 
-For more information on how to use the tool, see [localization guide](/guide/localization.md).
+For more information on how to use the tool, see [localization guide](/guide/localization).
 
 When the localization data is up-to-date, open spreadsheet tool with `Naninovel -> Tools -> Spreadsheet` editor menu.
 
@@ -20,7 +20,7 @@ When the localization data is up-to-date, open spreadsheet tool with `Naninovel 
 
 Specify the required folders:
 - Input Script Folder — folder where you store source naninovel scenario scripts (`.nani`); usually in our example projects we store them under `Assets/Scripts` folder.
-- Input Text Folder — folder where [managed text documents](/guide/managed-text.md) are generated to; it's `Assets/Resources/Naninovel/Text` by default. Make sure to generate managed text documents via associated tool in case the folder is missing.
+- Input Text Folder — folder where [managed text documents](/guide/managed-text) are generated to; it's `Assets/Resources/Naninovel/Text` by default. Make sure to generate managed text documents via associated tool in case the folder is missing.
 - Input Localization Folder — localization root where resources for all the different locales are stored; `Assets/Resources/Naninovel/Localization` by default.
 - Output Folder — folder where to store generated or import edited sheets from.
 

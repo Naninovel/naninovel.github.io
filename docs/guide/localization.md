@@ -13,7 +13,7 @@ Be aware, that you don't have to create a sub-folder in the *localization resour
 *Localization resources root* specific path can be changed in the localization configuration menu via `Loader > Path Prefix` property. Notice, that the configured path is relative to a "Resources" folder (not the "Assets"). The resources folders are [handled in a special way](https://docs.unity3d.com/Manual/LoadingResourcesatRuntime.html) by Unity; you can have multiple such folders stored anywhere inside the project assets for organization purposes.
 
 ::: info NOTE
-Like with any other type of resources, instead of using `Resources` folder you can opt for a different resource provider; for example, with [addressables](/guide/resource-providers.md#addressable) provider you can bundle locale-specific resources independently of the main game package and download them on-demand.
+Like with any other type of resources, instead of using `Resources` folder you can opt for a different resource provider; for example, with [addressables](/guide/resource-providers#addressable) provider you can bundle locale-specific resources independently of the main game package and download them on-demand.
 :::
 
 To specify which locale is selected by default when player first runs the game use `Default Locale` property in the localization configuration menu. When the property is not specified, the game will start in *source locale* by default.
@@ -32,7 +32,7 @@ The resources localization scheme described above works with all the resource ty
 
 ![](https://i.gyazo.com/fb39cd0d10bfc8dbf5a3a5ae8be694c4.png)
 
-First, pick `Scripts Folder (input)` — project directory where Naninovel scenario scripts (`.nani`) are stored (eg, `Assets/Scripts`). Optionally, to generate localization documents for [managed text](/guide/managed-text.md) as well, pick `Text Folder (input)` — directory where the managed text documents are stored (`Assets/Resources/Naninovel/Text` by default).
+First, pick `Scripts Folder (input)` — project directory where Naninovel scenario scripts (`.nani`) are stored (eg, `Assets/Scripts`). Optionally, to generate localization documents for [managed text](/guide/managed-text) as well, pick `Text Folder (input)` — directory where the managed text documents are stored (`Assets/Resources/Naninovel/Text` by default).
 
 Alternatively, in case you wish to generate localization documents not on the source locale, but on a previously generated documents for another locale, instead of source scenario scripts folder pick text folder with existing localization documents for another locale, eg `Assets/Resources/Naninovel/Localization/ja-JP/Text`.
 
@@ -68,7 +68,7 @@ You're expected to put the actual translation right after the comment line with 
 ```
 
 ::: tip EXAMPLE
-Find example localization setup in the [demo project](/guide/getting-started.md#demo-project). Consider using it as a reference in case having issues setting up localization in your own project.
+Find example localization setup in the [demo project](/guide/getting-started#demo-project). Consider using it as a reference in case having issues setting up localization in your own project.
 :::
 
 ::: tip
@@ -79,11 +79,11 @@ In case looking for an option to compile all the project scenario script and man
 
 ## UI Localization
 
-To localize both custom and built-in UIs, use [managed text provider](/guide/managed-text.md#managed-text-provider) component. It can also be used to localize any other custom game objects (prefabs). For more information on how to use managed text records and localize them, refer to the managed text guide.
+To localize both custom and built-in UIs, use [managed text provider](/guide/managed-text#managed-text-provider) component. It can also be used to localize any other custom game objects (prefabs). For more information on how to use managed text records and localize them, refer to the managed text guide.
 
 ## Fonts
 
-To display text in some languages, you'll need a compatible font. [Google's Roboto](https://fonts.google.com/specimen/Roboto) is used by default, which supports all Latin, Cyrillic, and Greek characters in Unicode 7.0. You can change the font used in any of the built-in UIs with [UI customization](/guide/user-interface.md#ui-customization) feature; for the printed text messages, [create custom printers](/guide/text-printers.md#adding-custom-printers) and set the desired font.
+To display text in some languages, you'll need a compatible font. [Google's Roboto](https://fonts.google.com/specimen/Roboto) is used by default, which supports all Latin, Cyrillic, and Greek characters in Unicode 7.0. You can change the font used in any of the built-in UIs with [UI customization](/guide/user-interface#ui-customization) feature; for the printed text messages, [create custom printers](/guide/text-printers#adding-custom-printers) and set the desired font.
 
 ::: tip
 In case you're aiming to support multiple languages with a single font, check out [Noto fonts](https://www.google.com/get/noto/).

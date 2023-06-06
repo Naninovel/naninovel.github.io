@@ -411,7 +411,7 @@ It's possible to add a completely custom transition effect via a custom actor [s
 该板块需要Unity中的图形学编程技能。我们不提供有关编写自定义着色器的任何支持或教程。请自行参阅[技术支持](/zh/support/#unity-支持)页面以获取更多信息。
 :::
 
-创建一个新的着色器，并将其分配给要使用新的自定义过渡效果的元素；参考[自定义元素着色器](/zh/guide/custom-actor-shader.md) 以获取更多关于如何创建绑定自定义元素着色器的信息。
+创建一个新的着色器，并将其分配给要使用新的自定义过渡效果的元素；参考[自定义元素着色器](/zh/guide/custom-actor-shader) 以获取更多关于如何创建绑定自定义元素着色器的信息。
 
 在脚本命令中指定过渡名称后，元素使用的具有相同[着色器关键字](https://docs.unity3d.com/ScriptReference/Shader.EnableKeyword.html) （前缀`NANINOVEL_TRANSITION_`）的名字的材质将会被启用。
 

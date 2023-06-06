@@ -33,7 +33,7 @@ Unityの設計はシーンとプレハブ構成を促進できますが、ビジ
 var player = Engine.GetService<IScriptPlayer>();
 player.Stop();
 ```
-[エンジンサービスガイド](/ja/guide/engine-services.md) で、現在利用可能なすべてのエンジンサービスのリストと、カスタムサービスを上書き/追加する方法を見ることができます。
+[エンジンサービスガイド](/ja/guide/engine-services) で、現在利用可能なすべてのエンジンサービスのリストと、カスタムサービスを上書き/追加する方法を見ることができます。
 
 ## High-Level Concept
 

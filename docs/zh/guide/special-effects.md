@@ -336,7 +336,7 @@ Stop Duration | Decimal | 1 | 关闭景深效果，渐隐到目标值的持续�
 ```
 大量添加预制体的时候可以在`Resources/Naninovel/Spawn`目录下直接放入预制体，它们会被自动注册至脚本，你也可以放在其中的子文件夹里分类，此时的调用方法需要添加(`/`)。比如要调用的资源存储目录为`Resources/Naninovel/Spawn/Explosions/Boom01`，脚本调用时使用`Explosions/Boom01`。
 
-你也可以使用[可寻址资源系统](/zh/guide/resource-providers.md#寻址资源系统)
+你也可以使用[可寻址资源系统](/zh/guide/resource-providers#寻址资源系统)
 来绑定你的资源位置，像说明一样记得省略"Resources/"部分。比如，前面资源的目录地址就绑定为：`Naninovel/Spawn/Boom01` 。注意该资源系统默认是关闭的，记得将资源加载配置菜单的`Enable Addressable In Editor`属性启用。
 
 参考`Naninovel/Prefabs/FX`内置预制体效果来构建你的自定义效果。

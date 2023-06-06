@@ -33,7 +33,7 @@ goto:.Epilogue
 
  [@choice] コマンドを処理するために、選択肢ハンドラアクターが使用されます。 `Naninovel -> Resources -> Choice Handlers` コンテキストメニューから選択肢マネージャーを使用して、選択肢ハンドラーの追加、編集、削除ができます。
 
-選択肢ハンドラーの挙動はコンテキストメニュー `Naninovel -> Configuration -> Choice Handlers` から設定できます。可能なオプションについては [コンフィグガイド](/ja/guide/configuration.md#choice-handlers) をご覧ください。
+選択肢ハンドラーの挙動はコンテキストメニュー `Naninovel -> Configuration -> Choice Handlers` から設定できます。可能なオプションについては [コンフィグガイド](/ja/guide/configuration#choice-handlers) をご覧ください。
 
 ## 選択ボタン
 
@@ -102,4 +102,4 @@ Don't forget about cucumbers!
 @choice "Choice summary text." handler:MyNewHandler
 ```
 
-`IChoiceHandlerActor` インターフェイスを手動で実装することで、選択肢ハンドラを最初から作成することもできます。詳細は、[カスタムアクターの実装](/ja/guide/custom-actor-implementations.md) のガイドを参照してください。
+`IChoiceHandlerActor` インターフェイスを手動で実装することで、選択肢ハンドラを最初から作成することもできます。詳細は、[カスタムアクターの実装](/ja/guide/custom-actor-implementations) のガイドを参照してください。

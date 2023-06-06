@@ -4,17 +4,17 @@ Configuration objects are used to initialize and configure services and other en
 
 By default, configuration objects are serialized as [scriptable object](https://docs.unity3d.com/Manual/class-ScriptableObject.html) assets and stored at `NaninovelData/Resources/Naninovel/Configuration` project directory. The assets are automatically generated when opening corresponding configuration menus (`Naninovel -> Configuration`) in the Unity editor for the first time.
 
-To access configuration objects via C# use `Engine.GetConfiguration<T>()` static method, where `T` is type of the configuration object you wish to access. For example, the following example demonstrates how to access [audio configuration](/guide/configuration.md#audio) object:
+To access configuration objects via C# use `Engine.GetConfiguration<T>()` static method, where `T` is type of the configuration object you wish to access. For example, the following example demonstrates how to access [audio configuration](/guide/configuration#audio) object:
 
 ```csharp
 var audioConfig = Engine.GetConfiguration<AudioConfiguration>();
 ```
 
 ::: info NOTE
-The engine initialization procedure is asynchronous, so even when automatic initialization is enabled, engine APIs (eg, `GetConfiguration` method) may not be available right after Unity loads a scene (eg, in `Awake`, `Start` and `OnEnable` [MonoBehaviour](https://docs.unity3d.com/ScriptReference/MonoBehaviour.html) methods); see [accessing engine API](/guide/integration-options.md#accessing-engine-api) guide for more info.
+The engine initialization procedure is asynchronous, so even when automatic initialization is enabled, engine APIs (eg, `GetConfiguration` method) may not be available right after Unity loads a scene (eg, in `Awake`, `Start` and `OnEnable` [MonoBehaviour](https://docs.unity3d.com/ScriptReference/MonoBehaviour.html) methods); see [accessing engine API](/guide/integration-options#accessing-engine-api) guide for more info.
 :::
 
-While `Engine.GetConfiguration` method can only be used when the engine is initialized, as it requires a [configuration provider](/guide/custom-configuration.md#configuration-provider) object, which is specified when initializing the engine to allow custom serving scenarios at runtime, it's possible to access a configuration asset via default provider even when the engine is not initialized with `ProjectConfigurationProvider`, eg:
+While `Engine.GetConfiguration` method can only be used when the engine is initialized, as it requires a [configuration provider](/guide/custom-configuration#configuration-provider) object, which is specified when initializing the engine to allow custom serving scenarios at runtime, it's possible to access a configuration asset via default provider even when the engine is not initialized with `ProjectConfigurationProvider`, eg:
 
 ```csharp
 var audioConfig = ProjectConfigurationProvider.LoadOrDefault<AudioConfiguration>();
@@ -48,7 +48,7 @@ public static class ModifyConfigAtRuntime
 ```
 
 ::: info NOTE
-Naninovel doesn't expect configurations to change while the engine is initialized, so you may need to apply the modifications before initializing the engine with either `ProjectConfigurationProvider` or a [custom provider](/guide/custom-configuration.md#configuration-provider) in order for some changes to take effect.
+Naninovel doesn't expect configurations to change while the engine is initialized, so you may need to apply the modifications before initializing the engine with either `ProjectConfigurationProvider` or a [custom provider](/guide/custom-configuration#configuration-provider) in order for some changes to take effect.
 :::
 
 ## Adding Configuration

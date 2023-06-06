@@ -2,7 +2,7 @@
 
 テキストプリンターはテキストメッセージを表示するためのアクターで、時間をかけて表示させることができます。
 
-プリンターの動作はコンテキストメニューの `Naninovel -> Configuration -> Printers` で設定できます。利用可能なオプションについては、[コンフィグガイド](/ja/guide/configuration.md#printers) をご覧ください。プリンターのリソースマネージャーへは、コンテキストメニューの `Naninovel -> Resources -> Printers` からアクセスできます。
+プリンターの動作はコンテキストメニューの `Naninovel -> Configuration -> Printers` で設定できます。利用可能なオプションについては、[コンフィグガイド](/ja/guide/configuration#printers) をご覧ください。プリンターのリソースマネージャーへは、コンテキストメニューの `Naninovel -> Resources -> Printers` からアクセスできます。
 
 naninovelスクリプトでは、テキストプリンターは基本的に [@print] コマンドと [@printer] コマンドで制御します:
 
@@ -61,7 +61,7 @@ Felix: Lorem ipsum dolor sit amet.
 
 ## ワイドプリンター
 
-ワイドプリンターは、ダイアログプリンターによく似ていますが、ワイドディスプレイ用に調整されたパネルレイアウトが一部変更されています。ワイドプリンターは、[キャラクターアバター](/ja/guide/characters.md#アバターテクスチャ) 機能もサポートしています。
+ワイドプリンターは、ダイアログプリンターによく似ていますが、ワイドディスプレイ用に調整されたパネルレイアウトが一部変更されています。ワイドプリンターは、[キャラクターアバター](/ja/guide/characters#アバターテクスチャ) 機能もサポートしています。
 
 ![Wide Printer](https://i.gyazo.com/83c091c08846fa1cab8764a8d4dddeda.png)
 
@@ -98,7 +98,7 @@ Morbi ultrices dictum diam, in gravida neque vulputate in.
 
 ## チャットプリンター
 
-チャットプリンターはウィンドウ内の吹き出し内にテキストを表示します。コンテンツは垂直方向にスクロール可能で、モバイルメッセージアプリに似ています。キャラクターごとにテキストを表示するのではなく、"タイプ中" アニメーションを一定時間かけてエフェクトで表示し、即座にメッセージを表示します。チャットプリンターは [キャラクターアバター](/ja/guide/characters.md#アバターテクスチャ) をサポートしています。
+チャットプリンターはウィンドウ内の吹き出し内にテキストを表示します。コンテンツは垂直方向にスクロール可能で、モバイルメッセージアプリに似ています。キャラクターごとにテキストを表示するのではなく、"タイプ中" アニメーションを一定時間かけてエフェクトで表示し、即座にメッセージを表示します。チャットプリンターは [キャラクターアバター](/ja/guide/characters#アバターテクスチャ) をサポートしています。
 
 ![Chat Printer](https://i.gyazo.com/3c04aecabe7f754ffc9ce5452eeba270.png)
 
@@ -128,7 +128,7 @@ Nanikun: Integer nec maximus elit, eget posuere risus.
 
 アセットコンテキストメニューの `Create -> Naninovel -> Text Printers -> Dialogue` から、ダイアログプレハブを、Naninovelパッケージの外に作ります。例えば `Assets/TextPrinters` フォルダーなど。
 
-プレハブを編集: フォント、テクスチャの変更、アニメーションの追加など。利用可能なUIビルディングツールについては [uGUIのUnityドキュメント](https://docs.unity3d.com/Packages/com.unity.ugui@latest) をご覧ください。[UIカスタムガイド](/ja/guide/user-interface.md#カスタムUI) にチュートリアル動画と、uGUIの操作に関するサンプルプロジェクトもいくつかあります。
+プレハブを編集: フォント、テクスチャの変更、アニメーションの追加など。利用可能なUIビルディングツールについては [uGUIのUnityドキュメント](https://docs.unity3d.com/Packages/com.unity.ugui@latest) をご覧ください。[UIカスタムガイド](/ja/guide/user-interface#カスタムUI) にチュートリアル動画と、uGUIの操作に関するサンプルプロジェクトもいくつかあります。
 
 プリンタのマネージャGUIを使用して、プレハブをエンジンリソースに公開します。コンテキストメニューの `Naninovel -> Resources -> Printers` からアクセスできます。`+` (プラス)ボタンで新しいレコードを追加し、アクターID(プレハブ名により変わります)を入力し、レコードをダブルクリックしてアクター設定を開きます。プリンタープレハブを `Resource` フィールドにドラッグアンドドロップします。
 
@@ -141,10 +141,10 @@ Nanikun: Integer nec maximus elit, eget posuere risus.
 ```
 
 ::: tip EXAMPLE
-カスタムプリンターの追加は、[デモプロジェクト](/ja/guide/getting-started.md#デモプロジェクト) をご覧ください。プレハブは `Assets/Prefabs/PimpedPrinter.prefab` として保存されます。Kohakuちゃんが自分でプリンターを作成しようとすると、プリンターがデモに表示されます。
+カスタムプリンターの追加は、[デモプロジェクト](/ja/guide/getting-started#デモプロジェクト) をご覧ください。プレハブは `Assets/Prefabs/PimpedPrinter.prefab` として保存されます。Kohakuちゃんが自分でプリンターを作成しようとすると、プリンターがデモに表示されます。
 :::
 
-また、`ITextPrinterActor` インターフェイスを手動で実装することにより、プリンターをスクラッチで作成することもできます。詳細については、[カスタムアクターの実装](/ja/guide/custom-actor-implementations.md) ガイドを参照してください。
+また、`ITextPrinterActor` インターフェイスを手動で実装することにより、プリンターをスクラッチで作成することもできます。詳細については、[カスタムアクターの実装](/ja/guide/custom-actor-implementations) ガイドを参照してください。
 
 テキストコンポーネントを変更するときは、1.0未満の高さのラインはサポートされないことに注意してください（この場合、レンダリングされたラインが重なり、表示エフェクトを適用できなくなります）。垂直方向のクリアを減らしたい場合は、テキストフォント自体を編集することを検討してください。
 
@@ -168,7 +168,7 @@ Nanikun: Integer nec maximus elit, eget posuere risus.
 
 テキスト表示サウンドは非常に高頻度に再生され（メッセージ表示スピードによって異なります）、同じサウンドが再生されるとクリップされます。そのため、対応するオーディオクリップは非常に短くてシャープなものにしてください（最初に一時停止/無音がないこと）。
 
-表示サウンドがうまくいかない場合（たとえば、サウンドが各文字表示で再生できるほど短くない）、`TextPrinterManager` [エンジンサービス](/ja/guide/engine-services.md) の `OnPrintTextStarted` と `OnPrintTextFinished` イベントで、表示に合わせて再生/停止させてみてください。[ビジュアルスクリプティング](/ja/guide/playmaker.md) ソリューションを利用したい方は、これらのイベントも PlayMaker に公開されます。
+表示サウンドがうまくいかない場合（たとえば、サウンドが各文字表示で再生できるほど短くない）、`TextPrinterManager` [エンジンサービス](/ja/guide/engine-services) の `OnPrintTextStarted` と `OnPrintTextFinished` イベントで、表示に合わせて再生/停止させてみてください。[ビジュアルスクリプティング](/ja/guide/playmaker) ソリューションを利用したい方は、これらのイベントも PlayMaker に公開されます。
 
 ## TextMesh Pro
 
