@@ -1,7 +1,6 @@
 {
     "name": "naniscript-theme",
     "comment": "Based on https://github.com/shikijs/shiki/blob/main/packages/shiki/themes/dark-plus.json",
-    "comment2": "That should be the default VSCode Dark Theme",
     "semanticHighlighting": true,
     "tokenColors": [
         {
@@ -159,7 +158,7 @@
         {
             "scope": "constant.language",
             "settings": {
-                "foreground": "#569cd6"
+                "foreground": "#A8D0EC"
             }
         },
         {
@@ -182,7 +181,7 @@
         {
             "scope": "entity.name.tag",
             "settings": {
-                "foreground": "#569cd6"
+                "foreground": "#A8D0EC"
             }
         },
         {
@@ -194,7 +193,7 @@
         {
             "scope": "entity.other.attribute-name",
             "settings": {
-                "foreground": "#9cdcfe"
+                "foreground": "#D4D4D4"
             }
         },
         {
@@ -228,14 +227,14 @@
             "scope": "markup.bold",
             "settings": {
                 "fontStyle": "bold",
-                "foreground": "#569cd6"
+                "foreground": "#A8D0EC"
             }
         },
         {
             "scope": "markup.heading",
             "settings": {
                 "fontStyle": "bold",
-                "foreground": "#569cd6"
+                "foreground": "#A8D0EC"
             }
         },
         {
@@ -259,13 +258,13 @@
         {
             "scope": "markup.deleted",
             "settings": {
-                "foreground": "#ce9178"
+                "foreground": "#E7D3AB"
             }
         },
         {
             "scope": "markup.changed",
             "settings": {
-                "foreground": "#569cd6"
+                "foreground": "#A8D0EC"
             }
         },
         {
@@ -283,7 +282,7 @@
         {
             "scope": "markup.inline.raw",
             "settings": {
-                "foreground": "#ce9178"
+                "foreground": "#E7D3AB"
             }
         },
         {
@@ -296,13 +295,13 @@
         {
             "scope": ["meta.preprocessor", "entity.name.function.preprocessor"],
             "settings": {
-                "foreground": "#569cd6"
+                "foreground": "#A8D0EC"
             }
         },
         {
             "scope": "meta.preprocessor.string",
             "settings": {
-                "foreground": "#ce9178"
+                "foreground": "#E7D3AB"
             }
         },
         {
@@ -314,49 +313,49 @@
         {
             "scope": "meta.structure.dictionary.key.python",
             "settings": {
-                "foreground": "#9cdcfe"
+                "foreground": "#D4D4D4"
             }
         },
         {
             "scope": "meta.diff.header",
             "settings": {
-                "foreground": "#569cd6"
+                "foreground": "#A8D0EC"
             }
         },
         {
             "scope": "storage",
             "settings": {
-                "foreground": "#569cd6"
+                "foreground": "#A8D0EC"
             }
         },
         {
             "scope": "storage.type",
             "settings": {
-                "foreground": "#569cd6"
+                "foreground": "#A8D0EC"
             }
         },
         {
             "scope": ["storage.modifier", "keyword.operator.noexcept"],
             "settings": {
-                "foreground": "#569cd6"
+                "foreground": "#A8D0EC"
             }
         },
         {
             "scope": ["string", "meta.embedded.assembly"],
             "settings": {
-                "foreground": "#ce9178"
+                "foreground": "#E7D3AB"
             }
         },
         {
             "scope": "string.tag",
             "settings": {
-                "foreground": "#ce9178"
+                "foreground": "#E7D3AB"
             }
         },
         {
             "scope": "string.value",
             "settings": {
-                "foreground": "#ce9178"
+                "foreground": "#E7D3AB"
             }
         },
         {
@@ -373,7 +372,7 @@
                 "punctuation.section.embedded"
             ],
             "settings": {
-                "foreground": "#569cd6"
+                "foreground": "#A8D0EC"
             }
         },
         {
@@ -393,19 +392,19 @@
                 "source.coffee.embedded"
             ],
             "settings": {
-                "foreground": "#9cdcfe"
+                "foreground": "#D4D4D4"
             }
         },
         {
             "scope": "keyword",
             "settings": {
-                "foreground": "#569cd6"
+                "foreground": "#A8D0EC"
             }
         },
         {
             "scope": "keyword.control",
             "settings": {
-                "foreground": "#569cd6"
+                "foreground": "#A8D0EC"
             }
         },
         {
@@ -428,7 +427,7 @@
                 "keyword.operator.wordlike"
             ],
             "settings": {
-                "foreground": "#569cd6"
+                "foreground": "#A8D0EC"
             }
         },
         {
@@ -443,13 +442,13 @@
                 "punctuation.section.embedded.end.php"
             ],
             "settings": {
-                "foreground": "#569cd6"
+                "foreground": "#A8D0EC"
             }
         },
         {
             "scope": "support.function.git-rebase",
             "settings": {
-                "foreground": "#9cdcfe"
+                "foreground": "#D4D4D4"
             }
         },
         {
@@ -473,7 +472,7 @@
             "name": "this.self",
             "scope": "variable.language",
             "settings": {
-                "foreground": "#569cd6"
+                "foreground": "#A8D0EC"
             }
         },
         {
@@ -486,7 +485,7 @@
                 "entity.name.operator.custom-literal"
             ],
             "settings": {
-                "foreground": "#DCDCAA"
+                "foreground": "#D4D4D4"
             }
         },
         {
@@ -526,7 +525,7 @@
                 "storage.type.primitive.groovy"
             ],
             "settings": {
-                "foreground": "#4EC9B0"
+                "foreground": "#E28D65"
             }
         },
         {
@@ -540,7 +539,7 @@
                 "entity.other.inherited-class"
             ],
             "settings": {
-                "foreground": "#4EC9B0"
+                "foreground": "#E28D65"
             }
         },
         {
@@ -554,7 +553,7 @@
                 "entity.name.operator"
             ],
             "settings": {
-                "foreground": "#C586C0"
+                "foreground": "#A8D0EC"
             }
         },
         {
@@ -567,7 +566,7 @@
                 "constant.other.placeholder"
             ],
             "settings": {
-                "foreground": "#9CDCFE"
+                "foreground": "#D4D4D4"
             }
         },
         {
@@ -581,7 +580,7 @@
             "name": "Object keys, TS grammar specific",
             "scope": ["meta.object-literal.key"],
             "settings": {
-                "foreground": "#9CDCFE"
+                "foreground": "#D4D4D4"
             }
         },
         {
@@ -596,7 +595,7 @@
                 "support.constant.color"
             ],
             "settings": {
-                "foreground": "#CE9178"
+                "foreground": "#E7D3AB"
             }
         },
         {
@@ -611,7 +610,7 @@
                 "support.other.parenthesis.regexp"
             ],
             "settings": {
-                "foreground": "#CE9178"
+                "foreground": "#E7D3AB"
             }
         },
         {
@@ -631,7 +630,7 @@
                 "keyword.control.anchor.regexp"
             ],
             "settings": {
-                "foreground": "#DCDCAA"
+                "foreground": "#FFC66D"
             }
         },
         {
@@ -643,7 +642,7 @@
         {
             "scope": ["constant.character", "constant.other.option"],
             "settings": {
-                "foreground": "#569cd6"
+                "foreground": "#A8D0EC"
             }
         },
         {
@@ -660,9 +659,9 @@
         }
     ],
     "semanticTokenColors": {
-        "newOperator": "#C586C0",
-        "stringLiteral": "#ce9178",
-        "customLiteral": "#DCDCAA",
+        "newOperator": "#A8D0EC",
+        "stringLiteral": "#E7D3AB",
+        "customLiteral": "#FFC66D",
         "numberLiteral": "#b5cea8"
     },
     "colors": {
