@@ -8,7 +8,7 @@ The inventory is not a standalone product and/or part of Naninovel. Use it to le
 
 Example project shows how to make a custom inventory UI with grid layout, pagination and drag-drop window, add custom engine service and related configuration menu, add input bindings, use state outsourcing, author custom scenario commands and expression functions.
 
-[!86c577f007daf4ec5d79c0e91db7bc10]
+[!https://i.gyazo.com/86c577f007daf4ec5d79c0e91db7bc10.mp4]
 
 You can [clone the project repository with a Git client](https://help.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository) or [download it as a zip archive](https://github.com/Naninovel/Inventory/archive/master.zip).
 

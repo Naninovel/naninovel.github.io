@@ -161,7 +161,7 @@ Player: You can call me {PlayerName}.
 
 Установите пакет через [менеджер пакетов Unity](https://docs.unity3d.com/Manual/upm-ui.html): откройте окно менеджера пакетов (Window -> Package Manager), нажмите кнопку "+", выберите "Add package from git URL", введите `https://github.com/Elringus/SpriteDicing.git#package` в поле ввода и нажмите кнопку "Add".
 
-[!b54e9daa9a483d9bf7f74f0e94b2d38a]
+[!https://i.gyazo.com/b54e9daa9a483d9bf7f74f0e94b2d38a.mp4]
 
 Ассеты `DicedSpriteAtlas`, содержащие внешности персонажей, используются в качестве ресурсов для нарезанных спрайтов персонажей. Каждая внешность сопоставляется по имени с нарезкой спрайтов, содержащихся в атласе.
 

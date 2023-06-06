@@ -47,7 +47,7 @@ Naninovel は Unity の[新しい入力システム](https://blogs.unity3d.com/2
 
 サポートされている最小入力システムパッケージは1.1で、現在プレビュー中です。プロジェクトをインストールするには、Package Manager側で `preview packages` を有効にする必要があります。
 
-[!1a662215459f936d1a3b49d9089e8357]
+[!https://i.gyazo.com/1a662215459f936d1a3b49d9089e8357.mp4]
 :::
 
 ::: warning

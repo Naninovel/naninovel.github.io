@@ -8,13 +8,13 @@ Naninovelには様々な組み込みUIが付属しています。タイトル画
 
 すべての組み込みUIは、アダプティブレイアウトで実装されています。これにより、画面の解像度に関係なく、すべてのプラットフォームでUIをそのまま使用できます。
 
-[!b6bddf8a0c6f2ba68dcdc1bc65db0c09]
+[!https://i.gyazo.com/b6bddf8a0c6f2ba68dcdc1bc65db0c09.mp4]
 
 ## UI切替
 
 UI切り替え機能により、ユーザーはゲーム内UI全体を非表示/表示にできます。
 
-[!e267c4ab3654efbfaf611011502de79f]
+[!https://i.gyazo.com/e267c4ab3654efbfaf611011502de79f.mp4]
 
 `ToggleUI` 入力（スタンドアロン入力モジュールのデフォルトでは `Space` キー）を実行するか、コントロールパネルの `HIDE` ボタンを使用してUIを非表示/表示します。
 

@@ -169,7 +169,7 @@ Player: You can call me {PlayerName}.
 
 [Unityパッケージマネージャー](https://docs.unity3d.com/Manual/upm-ui.html) でパッケージをインストールします: パッケージマネージャーを開く (Window -> Package Manager)、 "+" ボタンをクリック、 "Add package from git URL" を選択、入力欄に `https://github.com/Elringus/SpriteDicing.git#package` と入力し、 "Add" をクリック。
 
-[!b54e9daa9a483d9bf7f74f0e94b2d38a]
+[!https://i.gyazo.com/b54e9daa9a483d9bf7f74f0e94b2d38a.mp4]
 
 キャラクターの外観を含む `DicedSpriteAtlas` アセットは、分解スプライトキャラクターのリソースとして使用されます。各外観は、アトラスに含まれている分解スプライトに名前でマップされます。
 
@@ -337,7 +337,7 @@ Live2Dの `CubismLookController` および `CubismMouthController` コンポー�
 
 Spine キャラクターの実装は、[Spine](http://esotericsoftware.com) という 2D モデリング・アニメーションソフトで制作されたアセットを使用します。
 
-[!08b04de115d97427d152cb5f37065d2d]
+[!https://i.gyazo.com/08b04de115d97427d152cb5f37065d2d.mp4]
 
 この実装を使用するためには、最初に [Spine runtime for Unity](http://esotericsoftware.com/spine-unity-download) をインストールします。インストール方法や使用方法については、[公式ドキュメント](http://esotericsoftware.com/spine-unity)を参照してください。
 

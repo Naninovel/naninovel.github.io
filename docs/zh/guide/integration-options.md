@@ -2,7 +2,7 @@
 
 尽管Naninovel专注于传统视觉小说游戏，引擎仍然可以与现有项目集成。如果你在制作3D冒险游戏，RPG或任何其他类型的游戏，你仍然可以将Naninovel引入用作嵌入式对话（长篇文字）系统。
 
-[!b1b6042db4a91b3a8cee74236b33c17c]
+[!https://i.gyazo.com/b1b6042db4a91b3a8cee74236b33c17c.mp4]
 
 有多种方式可以将Naninovel整合到你的项目，取决于你想要通过Naninovel实现什么样的效果。在之后的文档中，我们会展示多种配置选项和API来保证Naninovel和一个游戏的匹配。在你开始前，请先参考[引擎设计](/zh/guide/engine-architecture.md) 来更好理解引擎如何在设计概念上实现这些。
 

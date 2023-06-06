@@ -32,7 +32,7 @@ Felix: Lorem ipsum dolor sit amet.
 该特性会在使用 [`i`](/zh/api/#i) 命令时，自动执行脚本。
 
 
-[!e6f58f861fa18bd62591db9794e7641b]
+[!https://i.gyazo.com/e6f58f861fa18bd62591db9794e7641b.mp4]
 
 使用 [`i`](/zh/api/#i) 命令可以停止脚本执行，当玩家由键入输入操作时继续执行。一般在文本中间插入使用。停止间隔时长取决于之前显示的文本长度，以及游戏中的 "Print speed"设置。
 
@@ -44,7 +44,7 @@ Felix: Lorem ipsum dolor sit amet.
 
 跳过文本特性，能够快速执行[@print] 命令，显著加快文本显示速度。
 
-[!9605a5c8cd1911217350d77712f47e7d]
+[!https://i.gyazo.com/9605a5c8cd1911217350d77712f47e7d.mp4]
 
 跳过功能能够通过控制面板上的 "SKIP" 按钮或`Ctrl`键（PC默认配置）来开启。
 
@@ -54,7 +54,7 @@ Felix: Lorem ipsum dolor sit amet.
 
 对话回顾时允许玩家回顾之前已读文本内容的功能。
 
-[!4bde6752b676aa1acedb54d2af075ced]
+[!https://i.gyazo.com/4bde6752b676aa1acedb54d2af075ced.mp4]
 
 玩家可以通过控制面板的"LOG"按钮或`L`键（PC默认配置）来开启。
 
@@ -90,15 +90,15 @@ Felix: Lorem ipsum dolor sit amet.
 @printer Fullscreen
 
 ; 以下内容将会在同一个窗口显示，由两个空行分割。
-Lorem ipsum dolor sit amet. Proin ultricies in leo id scelerisque. 
-Praesent vel orci luctus, tincidunt nisi et, fringilla arcu. In a metus orci. 
+Lorem ipsum dolor sit amet. Proin ultricies in leo id scelerisque.
+Praesent vel orci luctus, tincidunt nisi et, fringilla arcu. In a metus orci.
 Maecenas congue nunc quis lectus porttitor, eget commodo massa congue.
 
 ; 清空当前窗口
 @resetText
 
 ; 继续输入显示更多文字行
-Morbi ultrices dictum diam, in gravida neque vulputate in. 
+Morbi ultrices dictum diam, in gravida neque vulputate in.
 ...
 ```
 
@@ -144,10 +144,10 @@ Nanikun: Integer nec maximus elit, eget posuere risus.
 ## 添加自定义打字机
 
 你可以根据内置模板或者从零开始创建自己的打字机。现在我们以内置的普通对话打字机为例来添加一个自定义打字机。
-You can add custom text printers based on the built-in templates or create new printers from scratch. For example, let's customize the built-in `Dialogue` template. 
+You can add custom text printers based on the built-in templates or create new printers from scratch. For example, let's customize the built-in `Dialogue` template.
 
 使用菜单`Create -> Naninovel -> Text Printers -> Dialogue`创建新的对话预制体存放在Naninovel的目录之外。比如：`Assets/TextPrinters`目录下。
-Use `Create -> Naninovel -> Text Printers -> Dialogue` asset context menu to create a dialogue prefab somewhere outside of the Naninovel package, e.g. at the `Assets/TextPrinters` folder. 
+Use `Create -> Naninovel -> Text Printers -> Dialogue` asset context menu to create a dialogue prefab somewhere outside of the Naninovel package, e.g. at the `Assets/TextPrinters` folder.
 
 编辑该预制体：改变字体，贴图，添加动画，等等。关于uGUI的使用参考[unity的uGUI文档](https://docs.unity3d.com/Packages/com.unity.ugui@latest).和[UI使用引导](/zh/guide/user-interface.md#UI自定义) ，内附示例及演示视频。
 
@@ -155,7 +155,7 @@ Use `Create -> Naninovel -> Text Printers -> Dialogue` asset context menu to cre
 在菜单`Naninovel -> Resources -> Printers`下绑定好创建好的预制体。按`+`添加新条目，输入该打字机元素的ID，然后双击该条目来打开该打字机的相关配置，将预制体拖拽到`Resource`处。
 
 
-[!3f51881fa554720b7a4092dca42fd15e]
+[!https://i.gyazo.com/3f51881fa554720b7a4092dca42fd15e.mp4]
 
 现在你就可以通过[@printer] 命令加你定义的ID来调用该打字机了，如下：
 
@@ -232,7 +232,7 @@ TMpro的打字机支持更多的文字效果，参考[官方手册](http://digit
 
 
 ```nani
-Lorem <ruby="VERY">ipsum</ruby> dolor sit amet. 
+Lorem <ruby="VERY">ipsum</ruby> dolor sit amet.
 ```
 — "VERY" 标注文字就会在 "ipsum"显示的时候，标注在其上方。
 

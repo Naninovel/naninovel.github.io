@@ -8,7 +8,7 @@ Each of the built-in UIs can be disabled or customized; see [UI customization](/
 
 All the built-in UIs are implemented with adaptive layout. This allows the UI to remain usable on all the platforms, no matter the screen resolution.
 
-[!b6bddf8a0c6f2ba68dcdc1bc65db0c09]
+[!https://i.gyazo.com/b6bddf8a0c6f2ba68dcdc1bc65db0c09.mp4]
 
 In case you wish to change how the UIs adapt to the screen resolution and/or aspect ratio or building custom UIs and want to configure the adaptive layout, see the Unity guides and tutorials on uGUI for the available options, eg: [Designing UI for Multiple Resolutions](https://docs.unity3d.com/Packages/com.unity.ugui@1.0/manual/HOWTO-UIMultiResolution.html).
 
@@ -16,7 +16,7 @@ In case you wish to change how the UIs adapt to the screen resolution and/or asp
 
 UI toggling feature allows user to hide/show the in-game UI as a whole.
 
-[!e267c4ab3654efbfaf611011502de79f]
+[!https://i.gyazo.com/e267c4ab3654efbfaf611011502de79f.mp4]
 
 Activate `ToggleUI` input (`Space` key by default for standalone input module) or use `HIDE` button on the control panel to hide/show the UI.
 

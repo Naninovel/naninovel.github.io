@@ -94,7 +94,7 @@ Don't forget about cucumbers!
 
 エディターのコンテキストメニューから `Naninovel -> Resources -> Choice Handlers` へアクセスし、選択ハンドラーマネージャーGUIを使用して、ハンドラーをエンジンリソースに公開します。  `+` （プラス）ボタンで新しいレコードを追加し、アクターID（プレハブ名とは異なる場合があります）を入力し、レコードをダブルクリックしてアクター設定を開きます。ハンドラープレハブを`Resource` フィールドにドラッグアンドドロップします。
 
-[!cb3a0ff7f22b22cec6546acb388719fc]
+[!https://i.gyazo.com/cb3a0ff7f22b22cec6546acb388719fc.mp4]
 
 これで [@choice] の `handler` パラメーターにIDを指定して、新しい選択肢ハンドラーを利用できます。
 

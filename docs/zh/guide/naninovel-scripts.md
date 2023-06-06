@@ -8,8 +8,8 @@ Naninovel脚本时文本文件 (`.nani` 后缀扩展名) 用于控制场景种�
 表达的类型由每行前面的前缀符号定义，如下所示：
 
 
-前缀符号 | 表达类型 
-:---: | --- 
+前缀符号 | 表达类型
+:---: | ---
 @ | [命令行](#命令行)
 # | [标签行](#标签行)
 ; | [注释行](#注释行)
@@ -37,7 +37,7 @@ Naninovel脚本时文本文件 (`.nani` 后缀扩展名) 用于控制场景种�
 @Save
 @AutoSave
 @autosave
-``` 
+```
 
 ### 命令参数及参数别名
 
@@ -45,7 +45,7 @@ Naninovel脚本时文本文件 (`.nani` 后缀扩展名) 用于控制场景种�
 
 基本格式如下：
 ```nani
-@commandId paramId:paramValue 
+@commandId paramId:paramValue
 @命令名 参数名:参数值
 ```
 如[@hideChars]命令，用于隐藏所有场景中可见角色，有如下使用方式：
@@ -74,7 +74,7 @@ Naninovel脚本时文本文件 (`.nani` 后缀扩展名) 用于控制场景种�
 
 ### 参数值类型
 
-Depending on the command parameter, it could expect one of the following value types: 
+Depending on the command parameter, it could expect one of the following value types:
 
 类型 | 描述
 --- | ---
@@ -108,7 +108,7 @@ List<>|  上述参数值类型组成的参数列表型，由逗号分隔，比�
 ### 命令API参照
 
 
-当前可用命令，参数以及示例参考 [命令API参照](/zh/api/). 
+当前可用命令，参数以及示例参考 [命令API参照](/zh/api/).
 
 ## 普通内容文本行
 
@@ -264,7 +264,7 @@ Lorem ipsum dolor sit amet. [if score>10]Duis efficitur imperdiet nunc. [else]Ve
 
 你可以使用内置可视化编辑器来编辑naninovel脚本，在资源文件中选中脚本是，属性面板会自动打开相应脚本。
 
-[!ba57b9f78116e57408125325bdf66be9]
+[!https://i.gyazo.com/ba57b9f78116e57408125325bdf66be9.mp4]
 
 在右侧编辑器内按右键insert或者Ctrl+Space以插入新行 (可以之后再输入配置菜单自定义快捷键) 然后选择想要的命令行，过直接输入左边的编号，或是直接拖拽来重新排序已有的行，在右侧编辑器内按右键remove移除已有行。
 
@@ -275,7 +275,7 @@ Lorem ipsum dolor sit amet. [if score>10]Duis efficitur imperdiet nunc. [else]Ve
 运行时，你可以通过可视化编辑器看到当前执行行，或者右击跳转到相应行。这个功能需要在资源管理菜单内配置的资源ID名字相同。
 
 
-[!b6e04d664ce4b513296b378b7c25be03]
+[!https://i.gyazo.com/b6e04d664ce4b513296b378b7c25be03.mp4]
 
 当前执行的行，会有绿色高亮提示，当脚本执行到会需要等待玩家进行输入操作时，则为黄色提示。
 
@@ -291,7 +291,7 @@ Lorem ipsum dolor sit amet. [if score>10]Duis efficitur imperdiet nunc. [else]Ve
 当在进行大量文本的非线性剧本开发时，有可视化表现故事流程会让开发流程变得简单，此时就需要用到可视化编程工具。
 
 
-[!0dd3ec2393807fb03d501028e1526895]
+[!https://i.gyazo.com/0dd3ec2393807fb03d501028e1526895.mp4]
 
 要使用该工具窗口，打开`Naninovel -> Script Graph` ，你可以将该窗口嵌入任何面板。
 
@@ -360,4 +360,3 @@ rewind 12
 当前使用的脚本名，行号，内联脚本目录，都会显示在窗口标题上，当[自动语音](/zh/guide/voicing.md#自动语音) 打开时，播放的语音名字也会显示出来。可以点击标题拖拽窗口。 "Stop" 按钮会停止脚本执行，"Play"会重新开始执行，"Close"按钮关闭debug窗口。
 
 debug窗口在编辑器下和发布项目都可以使用。
-

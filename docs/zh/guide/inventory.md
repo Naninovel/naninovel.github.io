@@ -4,7 +4,7 @@
 
 示例演示了如何为背包应用网格布局，页码和拖拽窗口，添加自定义引擎服务和相关配置菜单，添加按键绑定，使用状态外包，自定义的特定作者预设命令和表达式方法。
 
-[!86c577f007daf4ec5d79c0e91db7bc10]
+[!https://i.gyazo.com/86c577f007daf4ec5d79c0e91db7bc10.mp4]
 
 你可以使用git客户端[克隆存储库](https://help.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository) 或是 [下载为zip存档](https://github.com/Naninovel/Demo/archive/master.zip) 。
 

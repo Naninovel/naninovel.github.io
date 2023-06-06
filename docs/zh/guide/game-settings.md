@@ -1,9 +1,9 @@
 # 游戏设置
 
-游戏设置可以随时通过设置菜单改变。 
+游戏设置可以随时通过设置菜单改变。
 
 
-[!8ef1044cb0b8429298af05e6275ff14d]
+[!https://i.gyazo.com/8ef1044cb0b8429298af05e6275ff14d.mp4]
 
 修改语言设置会重启后生效，其他设置立即生效。
 
@@ -15,6 +15,3 @@
 在WebGL中，设置则按跨浏览器[索引数据库 API](https://en.wikipedia.org/wiki/Indexed_Database_API) 序列化。
 
 菜单UI可以按[UI自定义](/zh/guide/user-interface.md#UI自定义)来修改或是完全替换。
-
-
-

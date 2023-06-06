@@ -90,7 +90,7 @@ Don't forget about cucumbers!
 ::: tip EXAMPLE
 Find a more advanced implementation of interactive map with Naninovel in the Map example project on GitHub: [github.com/Naninovel/Map](https://github.com/Naninovel/Map).
 
-[!4987b1c53cd275f3fa56b533f53f3d8c]
+[!https://i.gyazo.com/4987b1c53cd275f3fa56b533f53f3d8c.mp4]
 :::
 
 ## ChatReply Choice Handler
@@ -105,7 +105,7 @@ Kohaku: Where're you right now?
 @stop
 ```
 
-[!338f8519b3a1656059a407fe0232b376]
+[!https://i.gyazo.com/338f8519b3a1656059a407fe0232b376.mp4]
 
 ## Adding Custom Choice Handlers
 
@@ -117,7 +117,7 @@ Edit the handler: change font, textures, add animations, etc. For more informati
 
 Expose the handler to engine resources using choice handler manager GUI, which can be accessed with `Naninovel -> Resources -> Choice Handlers` editor context menu. Add a new record using `+` (plus) button, enter actor ID (can differ from the prefab name) and double click the record to open actor settings. Drag-drop handler prefab to the `Resource` field.
 
-[!cb3a0ff7f22b22cec6546acb388719fc]
+[!https://i.gyazo.com/cb3a0ff7f22b22cec6546acb388719fc.mp4]
 
 You can now use the new choice handler by specifying its ID in `handler` parameter of the [@choice] commands.
 

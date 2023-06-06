@@ -1,15 +1,14 @@
 import { defineConfig } from "vitepress";
-import { Override, Locale, NaniScript, configureMarkdown } from "./ext";
+import { Locales, Markdown, Vite } from "./ext";
 
 // https://vitepress.dev/reference/site-config
 
 export default defineConfig({
     title: "Naninovel",
-    appearance: "dark",
     cleanUrls: true,
     lastUpdated: true,
     head: [
-        ["link", { rel: "icon", sizes: "any", href: "/assets/img/nani-logo.svg" }],
+        ["link", { rel: "icon", href: "/favicon.svg" }],
         ["meta", { name: "theme-color", content: "#1baeea" }],
         ["meta", { name: "og:image", content: "/assets/img/og.jpg" }],
         ["meta", { name: "twitter:card", content: "summary_large_image" }]
@@ -21,7 +20,7 @@ export default defineConfig({
                 appId: "4PDIF5MCBA",
                 apiKey: "61d68d300d7651efc10f2ff65fbbc047",
                 indexName: "naninovel",
-                locales: Locale.Search
+                locales: Locales.Search
             }
         },
         socialLinks: [
@@ -30,13 +29,7 @@ export default defineConfig({
             { icon: "twitter", link: "https://twitter.com/naniengine" }
         ]
     },
-    locales: Locale.Config,
-    vite: { resolve: { alias: [Override.NavBarTitle, Override.NotFound] } },
-    // disable markdown attributes due to https://github.com/vuejs/vitepress/issues/2440
-    markdown: {
-        config: configureMarkdown,
-        languages: [NaniScript],
-        theme: "../../../docs/.vitepress/theme/naniscript-theme",
-        attrs: { disable: false },
-    },
+    locales: Locales.Config,
+    markdown: Markdown,
+    vite: Vite
 });

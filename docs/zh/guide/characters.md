@@ -179,7 +179,7 @@ Player: You can call me {PlayerName}.
 
 通过unity内置的[Unity package manager](https://docs.unity3d.com/Manual/upm-ui.html) 来安装该资源包。打开该窗口，(Window -> Package Manager)点击“+”按钮，选择"Add package from git URL"，输入地址：`https://github.com/Elringus/SpriteDicing.git#package`点击“Add”导入。参考下图来安装：
 
-[!b54e9daa9a483d9bf7f74f0e94b2d38a]
+[!https://i.gyazo.com/b54e9daa9a483d9bf7f74f0e94b2d38a.mp4]
 
 `切片精灵人物`资源包含用于人物表现的切片精灵，每个外观都由名字来切分出其包含在图集中的精灵。
 

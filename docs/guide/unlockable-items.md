@@ -143,7 +143,7 @@ To unlock a tip record, use [@unlock] and [@lock] to lock the record back follow
 
 It's possible to automatically unlock tips when associated text is printed via a [TMPro printer](/guide/text-printers.md#textmesh-pro); additionally, when such text is clicked by player `ITipsUI` UI will be automatically shown with the associated tip record selected.
 
-[!3c0d761576c351066022be32b8595e6d]
+[!https://i.gyazo.com/3c0d761576c351066022be32b8595e6d.mp4]
 
 To associate printed text with a tip, use `<tip>` tags, eg:
 

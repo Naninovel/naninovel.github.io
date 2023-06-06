@@ -31,14 +31,14 @@ Command identifiers are case-insensitive; all the following statements are valid
 @Save
 @AutoSave
 @autosave
-``` 
+```
 
 ### Command Parameters
 
 Most of the commands have a number of parameters that define the effect of the command. Parameter is a key-value expression defined after the command literal separated by a column (`:`). Parameter identifier (key) could be either name of the corresponding parameter field of the command implementation class or the parameter's alias (if defined via `alias` property of `CommandParameter` attribute).
 
 ```nani
-@commandId paramId:paramValue 
+@commandId paramId:paramValue
 ```
 
 Consider a [@hideChars] command, which is used to hide all visible characters on the scene. It could be used as follows:
@@ -204,18 +204,18 @@ While the script are executed in a linear fashion by default, you can introduce 
 ; If `dead` variable is a bool and equal to `false`, execute the print command.
 @print text:"I'm still alive." if:!dead
 
-; If `glitch` is a bool and equals `true` or random function in 1 to 10 range 
+; If `glitch` is a bool and equals `true` or random function in 1 to 10 range
 ; returns 5 or more, execute `@spawn` command.
 @spawn GlitchCamera if:"glitch || Random(1, 10) >= 5"
 
-; If `score` value is in 7 to 13 range or `lucky` variable is a bool and equals 
+; If `score` value is in 7 to 13 range or `lucky` variable is a bool and equals
 ; `true`, load `LuckyEnd` script.
 @goto LuckyEnd if:"(score >= 7 && score <= 13) || lucky"
 
 ; You can also use conditionals in the inlined commands.
 Lorem sit amet. [style bold if:score>=10]Consectetur elit.[style default]
 
-; When using double quotes inside the expression itself, 
+; When using double quotes inside the expression itself,
 ; don't forget to escape them.
 @print {remark} if:remark=="Saying \"Stop the car\" was a mistake."
 ```
@@ -253,7 +253,7 @@ For more information on the conditional expression format and available operator
 Some script commands require loading resources in order to work: audio track for [@bgm], character prefab and/or appearance textures for [@char], video clip for [@movie] and so on. Naninovel takes care of preloading and unloading most of the resources depending on `Resource Policy` setting found in resource provider configuration:
 
 Policy | Description
-:---: | --- 
+:---: | ---
 Static | All the resources required for script execution are preloaded when starting the playback (usually on [@goto]) and unloaded when the script has finished playing. The loading operation is masked with loading UI. This policy is default and recommended for most cases.
 Dynamic | Only the resources required for the next `Dynamic Policy Steps` commands are preloaded during script execution and all the unused resources are unloaded immediately. Use this mode when targeting platforms with strict memory limitations and it's impossible to properly organize naninovel scripts. Expect hiccups when the resources are loaded in background while the game is progressing.
 
@@ -304,7 +304,7 @@ The script can also be used to invoke commands when player clicks "NEW GAME", "E
 
 # OnNewGame
 ; Following commands will be executed when player clicks "NEW GAME".
-; Notice, that we're waiting for the stopBgm command, 
+; Notice, that we're waiting for the stopBgm command,
 ; so that the currently played music is fully stopped before new game begin to load.
 @sfx NewGameSoundEffect wait:false
 @stopBgm
@@ -328,7 +328,7 @@ The script can also be used to invoke commands when player clicks "NEW GAME", "E
 
 You can use visual script editor to edit the naninovel scripts. Select a script asset and you'll see the visual editor automatically open in the inspector window.
 
-[!ba57b9f78116e57408125325bdf66be9]
+[!https://i.gyazo.com/ba57b9f78116e57408125325bdf66be9.mp4]
 
 To add a new line to the script, either right-click the place, where you want to insert the line, or press `Ctrl+Space` (you can change the default key bindings in the input configuration menu) and select the desired line or command type. To re-order lines, drag them using their number labels. To remove a line, right-click it and choose "Remove".
 
@@ -338,7 +338,7 @@ The visual editor will automatically sync edited script if you update it externa
 
 During the playmode, you can use visual editor to track which script line is currently being played and use context menu (or click a line while holding `Shift`) to rewind the playback. This feature requires the script to have equal resource ID (when assigned in the resources manager menu) and asset name.
 
-[!b6e04d664ce4b513296b378b7c25be03]
+[!https://i.gyazo.com/b6e04d664ce4b513296b378b7c25be03.mp4]
 
 Currently played line will be highlighted with green color; when script playback is halted due waiting for user input, played line will be highlighted with yellow instead.
 
@@ -352,7 +352,7 @@ You can tweak the editor behavior and looks in the scripts configuration menu.
 
 When working with large amount of scripts and non-linear stories, it could become handy to have some kind of visual representation of the story flow. This is where script graph tool comes in handy.
 
-[!0dd3ec2393807fb03d501028e1526895]
+[!https://i.gyazo.com/0dd3ec2393807fb03d501028e1526895.mp4]
 
 To open the graph window use `Naninovel -> Script Graph` editor menu. You can dock the window as any other editor panel if you like to.
 

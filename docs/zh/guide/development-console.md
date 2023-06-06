@@ -19,7 +19,7 @@ public static void ToggleDebugInfo () => UI.DebugInfoGUI.Toggle();
 在控制台中，键入完整的方法名称或快捷调用（如果已应用），然后`Enter`键以执行该方法。
 
 
-[!bd41a9a8fff91eb575b235a6b641dcce]
+[!https://i.gyazo.com/bd41a9a8fff91eb575b235a6b641dcce.mp4]
 
 当前可以使用以下命令：
 

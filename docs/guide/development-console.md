@@ -15,7 +15,7 @@ public static void ToggleDebugInfo () => UI.DebugInfoGUI.Toggle();
 
 In the console, type either full method name or the shortcut (if applied) and press `Enter` key to execute the method.
 
-[!bd41a9a8fff91eb575b235a6b641dcce]
+[!https://i.gyazo.com/bd41a9a8fff91eb575b235a6b641dcce.mp4]
 
 Following commands are currently available:
 

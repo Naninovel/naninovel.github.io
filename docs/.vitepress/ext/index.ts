@@ -1,5 +1,3 @@
-﻿export * as Locale from "./locale";
-export * as Override from "./override";
-export * from "./language";
+﻿export * as Locales from "./locales";
 export * from "./markdown";
-export * from "./sidebars";
+export * from "./vite";

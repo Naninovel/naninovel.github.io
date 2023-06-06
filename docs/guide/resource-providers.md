@@ -36,8 +36,8 @@ The [Addressable Asset system](https://docs.unity3d.com/Packages/com.unity.addre
 
 Naninovel will automatically use addressables when the package is installed in the project and `Use Addressables` property is enabled in resource provider configuration. No additional setup is required. All the assets assigned in the Naninovel's configuration menus (eg, scenario scripts, character sprites, audio clips, etc) will be registered with the system (assigned an address) when building the player.
 
-::: info NOTE
-Make sure `Bundle Mode` in "Naninovel" addressable group settings is set to `Pack Separately`. Otherwise, the resources won't unload on release, as they all will be packed to a single bundle, while Addressable System can't unload single resources from a bundle.
+::: warning
+Due to a [Unity bug](https://github.com/Naninovel/Documentation/issues/159), addressable can't unload individual assets packed into a common bundle; for a temporary workaround, either distribute the assets between bundles or set `Bundle Mode` addressable group settings to `Pack Separately`.
 
 ![](https://i.gyazo.com/60a42ec15609d8dbc5258687d9045797.png)
 :::
@@ -60,6 +60,8 @@ Addressable provider is only used in runtime builds and is disabled in editor by
 
 ::: tip EXAMPLE
 Check the [example project](https://github.com/Naninovel/Addressables) on how to manually expose Naninovel resources to addressable provider (without using resource editor menus) and serve specific assets from a remote host.
+
+You may also find official Unity learning materials for addressable useful: https://learn.unity.com/course/get-started-with-addressables.
 :::
 
 ::: info NOTE

@@ -72,7 +72,7 @@ IDには任意の文字列を使用できます（上記のような数字、ま
 
 指定したIDまたはデフォルトのIDを持つプリンターを揺らします。
 
-[!f61fc35e318cce1949b00e5fe2448a80]
+[!https://i.gyazo.com/f61fc35e318cce1949b00e5fe2448a80.mp4]
 
 **パラメーター**
 
@@ -107,7 +107,7 @@ What a shaky situation!
 
 指定されたIDまたはメインの背景を揺らします。
 
-[!fcf1153a0ad3d9a153908206211f5f5f]
+[!https://i.gyazo.com/fcf1153a0ad3d9a153908206211f5f5f.mp4]
 
 **パラメーター**
 
@@ -136,7 +136,7 @@ Shake vertically | Boolean | true | アクターを垂直に（y軸で）揺ら�
 
 指定したIDまたは、表示されているキャラクターをランダムに揺らします。
 
-[!6001d3cfbee855c8a783d10e4a784042]
+[!https://i.gyazo.com/6001d3cfbee855c8a783d10e4a784042.mp4]
 
 **パラメーター**
 
@@ -171,7 +171,7 @@ Shake vertically | Boolean | true | アクターを垂直に（y軸で）揺ら�
 
 メインのNaninovelレンダーカメラをシェイクします。
 
-[!f9521fbcf959d0b72e449ae6e2191f9f]
+[!https://i.gyazo.com/f9521fbcf959d0b72e449ae6e2191f9f.mp4]
 
 **パラメーター**
 
@@ -199,13 +199,13 @@ Shake vertically | Boolean | true | アクターを垂直に（y軸で）揺ら�
 
 （アニメーション）アクターパラメータを直接変更したい場合は、[@animate] コマンドの使用を検討してください。
 
-[!a0494329c713c4309a52d57d0b297bee]
+[!https://i.gyazo.com/a0494329c713c4309a52d57d0b297bee.mp4]
 
 ## デジタルグリッチ
 
 デジタルビデオの歪みと乱れをシミュレートする後処理エフェクトを、メインカメラに適用します。
 
-[!94cb6db25c17956473db4de149281df5]
+[!https://i.gyazo.com/94cb6db25c17956473db4de149281df5.mp4]
 
 **パラメーター**
 
@@ -226,7 +226,7 @@ Intensity | Decimal | 1 | エフェクトの強さ。0.0から10.0の範囲で�
 
 雨をシミュレートするパーティクルシステムを生成します。
 
-[!74af9eec30f6517ea5b8453a9c86d33c]
+[!https://i.gyazo.com/74af9eec30f6517ea5b8453a9c86d33c.mp4]
 
 **パラメーター**
 
@@ -255,7 +255,7 @@ Fade-out time | Decimal | 5 | パーティクルシステムは、指定され�
 
 雪をシミュレートするパーティクルシステムを生成します。
 
-[!25a052444c561e40c8318272f51edf47]
+[!https://i.gyazo.com/25a052444c561e40c8318272f51edf47.mp4]
 
 **パラメーター**
 
@@ -282,7 +282,7 @@ Fade-out time | Decimal | 5 | パーティクルシステムは、指定され�
 
 太陽光線をシミュレートするパーティクルシステムを生成します。
 
-[!7edc4777699229abc508f2bdb404522e]
+[!https://i.gyazo.com/7edc4777699229abc508f2bdb404522e.mp4]
 
 **パラメーター**
 
@@ -313,7 +313,7 @@ Fade-out time | Decimal | 3 | パーティクルシステムは、指定され�
 1 つのオブジェクト（アクター）だけをぼかしたい場合は、代わりに「[ぼかしエフェクト](/ja/guide/special-effects.md#blur)」の使用を検討してください。
 :::
 
-[!616a023c46f207b4a3a33d3d3fd9fbc9]
+[!https://i.gyazo.com/616a023c46f207b4a3a33d3d3fd9fbc9.mp4]
 
 **パラメーター**
 
@@ -345,7 +345,7 @@ Stop Duration | Decimal | 1 | エフェクトパラメーターがデフォル�
 
 アクターにぼかしフィルタを適用します。サポートされているアクターは、スプライト、レイヤー、分解スプライト、Live2D、Spine、ビデオ、シーンなどの実装の背景とキャラクターです。デフォルト（第 1 パラメーターが指定されていない場合）では、エフェクトは `MainBackground` アクターに適用されます。
 
-[!067614d77783683e74ca79652099b58d]
+[!https://i.gyazo.com/067614d77783683e74ca79652099b58d.mp4]
 
 **パラメーター**
 

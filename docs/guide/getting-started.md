@@ -75,7 +75,7 @@ Naninovel scripts are text documents (`.nani` extension) where you control what 
 
 You can also use visual script editor to edit the naninovel scripts. Select the created script asset and you'll see the visual editor automatically open in the inspector window.
 
-[!ba57b9f78116e57408125325bdf66be9]
+[!https://i.gyazo.com/ba57b9f78116e57408125325bdf66be9.mp4]
 
 To add a new line to the script, either right-click the place, where you want to insert the line, or press `Ctrl+Space` (you can change the default key bindings in the input configuration menu) and select the desired line or command type. To re-order lines, drag them using their number labels. To remove a line, right-click it and choose "Remove".
 
