@@ -112,7 +112,7 @@ To make writing scripts with large amounts of text more comfortable generic text
 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 ```
 
-An author ID can be specified at the start of a generic text line separated by a column (`:`) and a space to associate printed text with a [character actor](/guide/characters.md):
+An author ID can be specified at the start of a generic text line separated by a column (`:`) and a space to associate printed text with a [character actor](/guide/characters):
 
 ```nani
 Felix: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -135,7 +135,7 @@ Felix: Lorem ipsum dolor sit amet.
 
 Sometimes, you may want to execute a command while revealing (printing) a text message, right after or before a specific character. For example, an actor would change their appearance (expression) when a specific word is printed or a particular sound effect would be played in reaction to some event described in the midst of a printed message. Command inlining feature allows to handle cases like that.
 
-All the commands (both [built-in](/api/) and [custom ones](/guide/custom-commands.md)) can be inlined (injected) to generic text lines using square brackets (`[`,`]`):
+All the commands (both [built-in](/api/) and [custom ones](/guide/custom-commands)) can be inlined (injected) to generic text lines using square brackets (`[`,`]`):
 
 ```nani
 Felix: Lorem ipsum[char Felix.Happy pos:0.75 wait:false] dolor sit amet, consectetur adipiscing elit.[i] Aenean tempus eleifend ante, ac molestie metus condimentum quis.[i][br 2] Morbi nunc magna, consequat posuere consectetur in, dapibus consectetur lorem. Duis consectetur semper augue nec pharetra.
@@ -246,7 +246,7 @@ The same works for generic text lines:
 Lorem ipsum dolor sit amet. [if score>10]Duis efficitur imperdiet nunc. [else]Vestibulum sit amet dolor non dolor placerat vehicula.[endif]
 ```
 
-For more information on the conditional expression format and available operators see the [script expressions](/guide/script-expressions.md) guide.
+For more information on the conditional expression format and available operators see the [script expressions](/guide/script-expressions) guide.
 
 ## Memory Management
 
@@ -286,7 +286,7 @@ Use [@hideAll] with `remove` parameter to hide and dispose all the existing acto
 
 ### Reset On Goto
 
-In case you don't need any [engine service](/guide/engine-services.md) state to persist between scripts (including currently played music, special effects, etc), enable `Reset On Goto` in state configuration. This way all the services will automatically dispose associated resources when navigating between naninovel scripts and you won't have to use any special commands to unload the resources.
+In case you don't need any [engine service](/guide/engine-services) state to persist between scripts (including currently played music, special effects, etc), enable `Reset On Goto` in state configuration. This way all the services will automatically dispose associated resources when navigating between naninovel scripts and you won't have to use any special commands to unload the resources.
 
 ## Title Script
 
@@ -366,7 +366,7 @@ You can re-position the nodes as you like and their positions will be automatica
 
 When changing scripts or adding new ones, click "Rebuild Graph" button to sync it.
 
-When [comment lines](/guide/naninovel-scripts.md#comment-lines) are present at the top of a script, associated graph node will show those as a synopsis. To disable that, uncheck `Show Synopsis` in the scripts configuration menu.
+When [comment lines](/guide/naninovel-scripts#comment-lines) are present at the top of a script, associated graph node will show those as a synopsis. To disable that, uncheck `Show Synopsis` in the scripts configuration menu.
 
 ![](https://i.gyazo.com/15682b202d37ad8f12b0f839063a530f.png)
 
@@ -380,7 +380,7 @@ In case hot reload is not working, make sure `Auto Refresh` is enabled and `Scri
 
 ![](https://i.gyazo.com/5d433783e1a12531c79fe6be80c92da7.png)
 
-To manually initiate hot reload of the currently played naninovel script (eg, when editing script file outside of Unity project), use `reload` [console command](/guide/development-console.md). The command is editor-only (won't work in builds).
+To manually initiate hot reload of the currently played naninovel script (eg, when editing script file outside of Unity project), use `reload` [console command](/guide/development-console). The command is editor-only (won't work in builds).
 
 ## IDE Support
 
@@ -388,13 +388,13 @@ IDE features, like syntax highlighting, error checking, auto-completion and inte
 
 ![](https://i.gyazo.com/b1f5c6845c04d1b18b2196aa29ea6c19.png)
 
-For more information on how to install and use the extension see the [IDE extension guide](/guide/ide-extension.md).
+For more information on how to install and use the extension see the [IDE extension guide](/guide/ide-extension).
 
 ## Scripts Debug
 
 When working with large naninovel scripts, it could become tedious to always play them from start in order to check how things work in particular parts of the script.
 
-Using [development console](/guide/development-console.md) you can instantly "rewind" currently played script to an arbitrary line:
+Using [development console](/guide/development-console) you can instantly "rewind" currently played script to an arbitrary line:
 
 ```
 rewind 12
@@ -406,18 +406,20 @@ To find out which script and line is currently playing, use debug window: type `
 
 ![Scripts Debug](https://i.gyazo.com/12772ecc7c14011bcde4a74c81e997b8.png)
 
-Currently played script name, line number and command (inline) index are displayed in the title of the window. When [auto voicing](/guide/voicing.md#auto-voicing) feature is enabled, name of the corresponding voice clip will also be displayed. You can re-position the window by dragging it by the title. "Stop" button will halt script execution; when script player is stopped "Play" button will resume the execution. You can close the debug window by pressing the "Close" button.
+Currently played script name, line number and command (inline) index are displayed in the title of the window. When [auto voicing](/guide/voicing#auto-voicing) feature is enabled, name of the corresponding voice clip will also be displayed. You can re-position the window by dragging it by the title. "Stop" button will halt script execution; when script player is stopped "Play" button will resume the execution. You can close the debug window by pressing the "Close" button.
 
 Debug window is available in both editor and player builds.
 
 ## Text Identification
 
-Features like [script localization](/guide/localization.md#scripts-localization) and [auto voicing](/guide/voicing.md#auto-voicing) require associating text written in Naninovel scenario scripts with other resources; for example translated text to show instead of the associated one or voice clip to play when associated text is printed. For this to work we have to assign each such text a unique identifier.
+Features like [script localization](/guide/localization#scripts-localization) and [auto voicing](/guide/voicing#auto-voicing) require associating text written in Naninovel scenario scripts with other resources; for example translated text to show instead of the associated one or voice clip to play when associated text is printed. For this to work we have to assign each such text a unique identifier.
 
 By default, Naninovel will automatically identify all the localizable text by its content hash when importing script assets. This works fine as long as you don't modify the text; but after you do, all the associations will break: you'll have to re-map auto voice clips or re-translate changed text statements.
 
-To prevent associations from breaking when editing text, enable `Stable Identification` under scripts configuration menu. When enabled, Naninovel will explicitly write unique IDs to each localizable text in imported scripts. The downside is that the script text will now have IDs appended to each localizable parameter (eg, `Kohaku: Hello!|#ID|`, `@choice "Option 1|#ID|`), but in return, as long as you don't remove or change the IDs, the associations won't break.
-
-To make text IDs less distracting, they are colored dim by the IDE extension and are hidden when editing scripts via standalone visual editor.
-
-![](https://i.gyazo.com/2892818b06f5fd8fe929d6d0a2b3a60f.png)
+To prevent associations from breaking when editing text, enable `Stable Identification` under scripts configuration menu. When enabled, Naninovel will explicitly write unique IDs to each localizable text in imported scripts. The downside is that the script text will now have IDs appended to each localizable parameter, eg:
+```nani
+Kohaku: Hey!|#1|[i] What's up?|#2|
+@choice "Option 1|#3|"
+@choice "Option 2|#4|"
+```
+— but in return, as long as you don't remove or change the IDs, the associations won't break. To make text IDs less distracting, they are colored dim by the IDE extension and are hidden when editing scripts via standalone visual editor.

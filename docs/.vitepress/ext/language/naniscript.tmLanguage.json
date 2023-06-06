@@ -2,7 +2,6 @@
     "name": "NaniScript",
     "scopeName": "source.naniscript",
     "fileTypes": ["nani"],
-
     "patterns": [
         {
             "include": "#command"
@@ -38,7 +37,6 @@
             "include": "#generic-text"
         }
     ],
-
     "repository": {
         "command": {
             "patterns": [
@@ -48,7 +46,6 @@
                     "name": "naniscript.command.parameter.value",
                     "captures": {
                         "1": {
-                            "comment": "@Command [remaining text]",
                             "patterns": [
                                 {
                                     "comment": "@Command",

@@ -1,11 +1,12 @@
 ﻿import { MarkdownRenderer, MarkdownEnv, MarkdownOptions } from "vitepress";
 import { AppendIconToExternalLinks } from "./md-link";
 import { Replacer } from "./md-replacer";
-import { NaniScript } from "./language";
+import { NaniScript } from "../language/language";
 
 export const Markdown: MarkdownOptions = {
     config: installPlugins,
     languages: [NaniScript],
+    theme: "../../../docs/.vitepress/ext/language/naniscript-theme",
     attrs: { disable: true } // https://github.com/vuejs/vitepress/issues/2440
 };
 

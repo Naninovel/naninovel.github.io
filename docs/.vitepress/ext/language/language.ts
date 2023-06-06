@@ -7,5 +7,5 @@ export const NaniScript: ILanguageRegistration = {
     id: "naniscript",
     aliases: ["nani"],
     scopeName: "source.naniscript",
-    path: resolve("./docs/.vitepress/ext/naniscript.tmLanguage.json")
+    path: resolve("./docs/.vitepress/ext/language/naniscript.tmLanguage.json")
 };

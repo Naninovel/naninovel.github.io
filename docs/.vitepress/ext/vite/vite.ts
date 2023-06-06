@@ -16,6 +16,6 @@ export const Vite: UserConfig = {
 function override(original: string, override: string): Alias {
     return {
         find: new RegExp(`^.*\\/${original}\\.vue$`),
-        replacement: fileURLToPath(new URL(`../theme/${override}.vue`, import.meta.url))
+        replacement: fileURLToPath(new URL(`../../theme/${override}.vue`, import.meta.url))
     };
 }
