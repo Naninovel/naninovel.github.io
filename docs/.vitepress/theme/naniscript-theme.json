@@ -5,7 +5,6 @@
     "semanticHighlighting": true,
     "tokenColors": [
         {
-            "name": "NaniScript - Comment",
             "scope": ["naniscript.comment"],
             "settings": {
                 "foreground": "#5d6470",
@@ -13,28 +12,41 @@
             }
         },
         {
-            "name": "NaniScript - Label",
             "scope": ["naniscript.label"],
             "settings": {
                 "foreground": "#9bc37c"
             }
         },
         {
-            "name": "NaniScript - Command",
+            "scope": [
+                "naniscript.label.missing",
+                "naniscript.label.spaceinlabel"
+            ],
+            "settings": {
+                "foreground": "#9bc37c",
+                "fontStyle": "underline italic"
+            }
+        },
+        {
             "scope": ["naniscript.command", "naniscript.command.inline"],
             "settings": {
                 "foreground": "#6cb2ed"
             }
         },
         {
-            "name": "NaniScript - Parameter",
+            "scope": ["naniscript.command.missing"],
+            "settings": {
+                "foreground": "#6cb2ed",
+                "fontStyle": "underline italic"
+            }
+        },
+        {
             "scope": ["naniscript.command.parameter.id"],
             "settings": {
                 "foreground": "#cd9769"
             }
         },
         {
-            "name": "NaniScript - Parameter Value",
             "scope": [
                 "naniscript.command.parameter.value",
                 "naniscript.quoted-text"
@@ -44,7 +56,13 @@
             }
         },
         {
-            "name": "NaniScript - Generic Text Line",
+            "scope": ["naniscript.command.parameter.missingvalue"],
+            "settings": {
+                "foreground": "#cd9769",
+                "fontStyle": "underline italic"
+            }
+        },
+        {
             "scope": [
                 "naniscript.generic-text",
                 "naniscript.generic-text.escaped-char"
@@ -54,17 +72,42 @@
             }
         },
         {
-            "name": "NaniScript - Expression",
             "scope": ["naniscript.expression"],
             "settings": {
                 "foreground": "#62b8c1"
             }
         },
         {
-            "name": "NaniScript - Text Identifier",
+            "scope": ["naniscript.expression.missingbody"],
+            "settings": {
+                "foreground": "#62b8c1",
+                "fontStyle": "underline italic"
+            }
+        },
+        {
             "scope": ["naniscript.textidentifier"],
             "settings": {
                 "foreground": "#5d6470"
+            }
+        },
+        {
+            "scope": ["naniscript.textidentifier.missingbody"],
+            "settings": {
+                "foreground": "#5d6470",
+                "fontStyle": "underline italic"
+            }
+        },
+        {
+            "scope": ["naniscript.author"],
+            "settings": {
+                "foreground": "#e2be7f"
+            }
+        },
+        {
+            "scope": ["naniscript.author.missingappearance"],
+            "settings": {
+                "foreground": "#e2be7f",
+                "fontStyle": "underline italic"
             }
         },
         {

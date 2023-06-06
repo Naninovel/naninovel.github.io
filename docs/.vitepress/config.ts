@@ -37,6 +37,6 @@ export default defineConfig({
         config: configureMarkdown,
         languages: [NaniScript],
         theme: "../../../docs/.vitepress/theme/naniscript-theme",
-        // attrs: { disable: false },
+        attrs: { disable: false },
     },
 });
