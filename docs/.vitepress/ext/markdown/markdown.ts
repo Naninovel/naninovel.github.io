@@ -40,7 +40,7 @@ function buildVideoTags(match: string[], _: MarkdownEnv) {
 
 function buildYouTubeTags(match: string[], _: MarkdownEnv) {
     const source = `https://www.youtube-nocookie.com/embed/${match[1]}`;
-    return `<span class="youtube"><iframe src="${source}" allowfullscreen></iframe></span>`;
+    return `<span class="youtube"><iframe src="${source}" allowfullscreen width="688" height="387"></iframe></span>`;
 }
 
 function getMediaSize(uri: string) {
