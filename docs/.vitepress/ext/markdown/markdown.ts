@@ -46,5 +46,5 @@ function buildYouTubeTags(match: string[], _: MarkdownEnv) {
 function getMediaSize(uri: string) {
     const start = uri.lastIndexOf("?");
     const url = new URL("https://domain.com" + uri.substring(start));
-    return { width: url.searchParams.get("width")!, height: url.searchParams.get("width")! };
+    return { width: url.searchParams.get("width")!, height: url.searchParams.get("height")! };
 }

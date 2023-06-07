@@ -1,6 +1,6 @@
 ﻿import { UserConfig, Alias } from "vite";
 import { fileURLToPath } from "url";
-import { EmbedRemoteAssets } from "./vite-remote";
+import { EmbedAssets } from "./vite-embed";
 
 export const Vite: UserConfig = {
     resolve: {
@@ -9,7 +9,7 @@ export const Vite: UserConfig = {
             override("NotFound", "not-found")
         ]
     },
-    plugins: [EmbedRemoteAssets()]
+    plugins: [EmbedAssets({ assetsDir: "./docs/.vitepress/cache/.remote-assets" })]
 };
 
 // https://vitepress.dev/guide/extending-default-theme#overriding-internal-components
