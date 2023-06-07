@@ -37,7 +37,7 @@ export type Options = {
      * @remarks Useful for injecting media size in HTML to optimize cumulative layout shift (CLS).
      * @default true
      */
-    appendMediaSize?: boolean;
+    resolveMediaSize?: boolean;
 }
 
 export const defaultOptions = {
@@ -46,7 +46,7 @@ export const defaultOptions = {
     downloadTimeout: 30,
     downloadRetryLimit: 3,
     downloadRetryDelay: 6,
-    appendMediaSize: true
+    resolveMediaSize: true
 };
 
 type MediaInfo = {
@@ -65,7 +65,7 @@ export const EmbedAssets = (options?: Options): Plugin => {
     const timeoutSeconds = options?.downloadTimeout ?? defaultOptions.downloadTimeout;
     const retryLimit = options?.downloadRetryLimit ?? defaultOptions.downloadRetryLimit;
     const maxRetryDelay = options?.downloadRetryDelay ?? defaultOptions.downloadRetryDelay;
-    const appendSize = options?.appendMediaSize ?? defaultOptions.appendMediaSize;
+    const appendSize = options?.resolveMediaSize ?? defaultOptions.resolveMediaSize;
     const downloads = new Map<string, Promise<void>>;
     const resolves = new Map<string, Promise<MediaInfo>>;
     const retries = new Map<string, number>;
@@ -131,8 +131,8 @@ export const EmbedAssets = (options?: Options): Plugin => {
     async function downloadWithRetries(url: string, filepath: string) {
         try { return await downloadTo(url, filepath); }
         catch (error) {
-            retries[filepath] = (retries.get(filepath) ?? 0) + 1;
-            if (retries[filepath] > retryLimit) {
+            retries.set(filepath, (retries.get(filepath) ?? 0) + 1);
+            if (retries.get(filepath) > retryLimit) {
                 fs.unlink(filepath, _ => {});
                 throw error;
             }
