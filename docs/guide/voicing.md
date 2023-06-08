@@ -44,12 +44,16 @@ When assigning the clips via voice map window, make sure to store the voice clip
 
 To associate voice clips for non-source locale, pick [script localization document](/guide/localization#scripts-localization) with `Localization Document` field. When valid document is picked, assigned voice clips will be automatically prefixed with the locale under which the document is stored and used whe corresponding [voice language](/guide/voicing#voice-language) is selected.
 
-In cases same author have equal text messages (in the same or a different script), both messages will be associated with the same voice clip. If that is not desired, add unique text identifier to one of the messages, eg:
+In cases same author have equal text messages (in the same script), both messages will be associated with the same voice clip. If that is not desired, add unique text identifier to one of the messages, eg:
 
 ```nani
 Hello.
 Hello.|#uniqueid|
 ```
+
+::: tip
+Enable `Stable Identification` under scripts configuration menu to make Naninovel automatically generate unique IDs for all localizable script text, including voiced lines. This way you won't have to manually assign IDs for duplicate lines and editing already mapped lines won't break the associations. See [text identification](/guide/naninovel-scripts#text-identification) for more info.
+:::
 
 To associate the clips without using voice map utility, expose the assets to a resource provider using text ID as the resource name prefixed by the voice loader prefix (`Voice` by default). To find text ID of a particular text, use [voiceover documents](/guide/voicing#voiceover-documents); the ID is displayed after voice's playback spot prefixed by `#`. For example, to associate a line with `2670eb4` ID with addressable resource provider, use the following address `Naninovel/Voice/2670eb4`.
 
