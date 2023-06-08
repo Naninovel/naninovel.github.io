@@ -48,7 +48,7 @@ In cases same author have equal text messages (in the same or a different script
 
 ```nani
 Hello.
-Hello.|uniqueid|
+Hello.|#uniqueid|
 ```
 
 To associate the clips without using voice map utility, expose the assets to a resource provider using text ID as the resource name prefixed by the voice loader prefix (`Voice` by default). To find text ID of a particular text, use [voiceover documents](/guide/voicing#voiceover-documents); the ID is displayed after voice's playback spot prefixed by `#`. For example, to associate a line with `2670eb4` ID with addressable resource provider, use the following address `Naninovel/Voice/2670eb4`.
