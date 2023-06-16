@@ -100,35 +100,35 @@ The variables list is automatically updated when the custom variables are change
 
 The custom variables can be accessed in C# via `ICustomVariableManager` [engine service](/guide/engine-services).
 
-To get a variable value use `GetVariableValue(name)` method and `SetVariableValue(name, value)` to set variable value; eg, given a "MyVariableName" custom string variable exists, the below code will retrieve it, append "Hello!" string to the value and set it back.
+To get a variable value use `GetVariableValue(name)` method and `SetVariableValue(name, value)` to set variable value; eg, given a "MyVarName" custom string variable exists, the below code will retrieve it, append "Hello!" string to the value and set it back.
 
 ```csharp
-var variableManager = Engine.GetService<ICustomVariableManager>();
-var myValue = variableManager.GetVariableValue("MyVariableName");
+var varManager = Engine.GetService<ICustomVariableManager>();
+var myValue = varManager.GetVariableValue("MyVarName");
 myValue += "Hello!";
-variableManager.SetVariableValue("MyVariableName", myValue);
+varManager.SetVariableValue("MyVarName", myValue);
 ```
 
 Be aware, that all the custom variable values are stored as strings. If you want to use them as other types (eg, integer, boolean, etc), you have to parse the returned string values to the desired type and cast them back to strings when setting the values. For most common data types extension methods are available, eg:
 
 ```csharp
-var variableManager = Engine.GetService<ICustomVariableManager>();
+var varManager = Engine.GetService<ICustomVariableManager>();
 
-variableManager.TryGetVariableValue<float>("MyFloatVariableName", out var floatValue);
+varManager.TryGetVariableValue<float>("MyFloatVarName", out var floatValue);
 Debug.Log($"My float variable value: {floatValue}");
 
-variableManager.TryGetVariableValue<int>("MyIntegerVariableName", out var intValue);
+varManager.TryGetVariableValue<int>("MyIntVarName", out var intValue);
 Debug.Log($"My integer variable value: {intValue}");
 
-variableManager.TryGetVariableValue<bool>("MyBooleanVariableName", out var boolValue);
+varManager.TryGetVariableValue<bool>("MyBoolVarName", out var boolValue);
 Debug.Log($"My boolean variable value: {boolValue}");
 
 floatValue += 10.5f;
-variableManager.TrySetVariableValue("MyFloatVariableName", floatValue);
+varManager.TrySetVariableValue("MyFloatVarName", floatValue);
 
 intValue = -55;
-variableManager.TrySetVariableValue("MyIntegerVariableName", intValue);
+varManager.TrySetVariableValue("MyIntVarName", intValue);
 
 boolValue = !boolValue;
-variableManager.TrySetVariableValue("MyBooleanVariableName", boolValue);
+varManager.TrySetVariableValue("MyBoolVarName", boolValue);
 ```
