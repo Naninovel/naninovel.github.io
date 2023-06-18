@@ -86,6 +86,10 @@ pre {
     display: none;
 }
 
+.custom-block a {
+    color: var(--vp-c-brand) !important;
+}
+
 /**
  * Component: Algolia Search
  * -------------------------------------------------------------------------- */
