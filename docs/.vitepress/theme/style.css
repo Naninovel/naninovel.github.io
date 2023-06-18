@@ -62,6 +62,7 @@ pre {
 @media (min-width: 961px) {
     .VPNavBarTitle.has-sidebar {
         background-color: var(--vp-c-bg-alt);
+        transition: background-color 0.5s;
     }
 }
 
