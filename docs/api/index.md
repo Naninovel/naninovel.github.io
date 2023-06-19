@@ -1,6 +1,6 @@
 # API Reference
 
-Script commands API reference. Use the side bar to quickly navigate between available commands.
+Script commands API reference. Use the side bar to quickly navigate between available commands. 
 
 ~~Strikethrough~~ indicates a nameless parameter, and **bold** stands for required parameter; other parameters should be considered optional. Consult [naninovel scripts guide](/guide/naninovel-scripts) in case you have no idea what's this all about.
 
@@ -8,9 +8,9 @@ The following parameters are supported by all the script commands:
 
 <div class="config-table">
 
-| Parameter | Type    | Description |
-| --- |---------| --- |
-| if | string  |  A boolean [script expression](/guide/script-expressions), controlling whether the command should execute. |
+| Parameter | Type | Description |
+| --- | --- | --- |
+| if | string |  A boolean [script expression](/guide/script-expressions), controlling whether the command should execute. |
 | wait | boolean | Whether the script player should wait for the async command to finish execution before executing the next one. Has no effect when the command is executed instantly. |
 
 </div>
@@ -358,8 +358,8 @@ Modifies a [character actor](/guide/characters).
 ; Same as above, but sets appearance to `Happy`.
 @char Sora.Happy
 
-; Same as above, but additionally positions the character 45% away
-; from the left border of the scene and 10% away from the bottom border;
+; Same as above, but additionally positions the character 45% away 
+; from the left border of the scene and 10% away from the bottom border; 
 ; also makes it look to the left.
 @char Sora.Happy look:left pos:45,10
 
@@ -973,10 +973,6 @@ This command is used under the hood when processing generic text lines, eg gener
 
 Modifies a [text printer actor](/guide/text-printers).
 
-::: info NOTE
-Be aware, that rotation is not supported by the text reveal effect; use `rotation` parameter only with printers, that doesn't make use of the effect (eg, chat or custom ones).
-:::
-
 <div class="config-table">
 
 | Parameter | Type | Description |
@@ -1186,8 +1182,8 @@ If a variable with the provided name doesn't exist, it will be automatically cre
 ; If `angle` is a number, assign its cosine to `foo` variable.
 @set foo=Cos(angle)
 
-; Get random number between -100 and 100, then raise to power of 4
-; and assign to `foo` variable. Quotes are required when whitespace
+; Get random number between -100 and 100, then raise to power of 4 
+; and assign to `foo` variable. Quotes are required when whitespace 
 ; is present inside the expression.
 @set "foo = Pow(Random(-100, 100), 4)"
 
@@ -1197,12 +1193,12 @@ If a variable with the provided name doesn't exist, it will be automatically cre
 ; If `foo` is a number, subtract 1 from its value (decrement).
 @set foo--
 
-; Assign `foo` variable value of the `bar` variable,
+; Assign `foo` variable value of the `bar` variable, 
 ; which is `Hello World!` string.
 @set bar="Hello World!"
 @set foo=bar
 
-; Defining multiple set expressions in one line;
+; Defining multiple set expressions in one line; 
 ; the result will be the same as above.
 @set bar="Hello World!";foo=bar
 
@@ -1787,3 +1783,4 @@ Jeez, what a disgusting noise. Shut it down![wait i5][skipInput]
 @wait {Random(3,8)} do:"@sfx Thunder, @shake Camera" wait:false
 The thunder might go off any second...
 ```
+
