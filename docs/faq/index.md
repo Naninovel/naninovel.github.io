@@ -73,7 +73,7 @@ First line.<br>Second line.
 
 Use [command inlining](/guide/naninovel-scripts#command-inlining).
 
-## Hot to run commands concurrently?
+## How to run commands concurrently?
 
 Use `wait` parameter, eg:
 ```nani
@@ -81,6 +81,8 @@ Use `wait` parameter, eg:
 @hideChars wait:false
 @hidePrinter
 ```
+
+Alternatively, disable `Wait By Default` option in script player configuration; this way all commands will execute concurrently by default, unless `wait` is set to "false".
 
 ## How to make actors appear in front of each other (z-sorting)?
 
