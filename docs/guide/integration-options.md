@@ -121,7 +121,7 @@ public class SwitchToNovelMode : Command
         controller.IsInputBlocked = true;
 
         // 2. Switch cameras.
-        var advCamera = GameObject.Find("AdventureCamera").GetComponent<Camera>();
+        var advCamera = GameObject.Find("AdvCamera").GetComponent<Camera>();
         advCamera.enabled = false;
         var naniCamera = Engine.GetService<ICameraManager>().Camera;
         naniCamera.enabled = true;
@@ -159,7 +159,7 @@ public class SwitchToAdventureMode : Command
         await stateManager.ResetStateAsync();
 
         // 4. Switch cameras.
-        var advCamera = GameObject.Find("AdventureCamera").GetComponent<Camera>();
+        var advCamera = GameObject.Find("AdvCamera").GetComponent<Camera>();
         advCamera.enabled = true;
         var naniCamera = Engine.GetService<ICameraManager>().Camera;
         naniCamera.enabled = false;
