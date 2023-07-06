@@ -1,5 +1,4 @@
 ﻿import { LocaleConfig, DefaultTheme } from "vitepress";
-import { DocSearchProps } from "vitepress/types/docsearch";
 import { EnGuideSidebar, JaGuideSidebar, ZnGuideSidebar, RuGuideSidebar } from "./sidebars";
 
 export const Config: LocaleConfig<DefaultTheme.Config> = {
@@ -9,7 +8,7 @@ export const Config: LocaleConfig<DefaultTheme.Config> = {
         description: "Writer-friendly visual novel engine.",
         themeConfig: {
             langMenuLabel: "Language",
-            lastUpdatedText: "Last Updated",
+            lastUpdated: { text: "Last Updated" },
             sidebarMenuLabel: "Menu",
             darkModeSwitchLabel: "Appearance",
             returnToTopLabel: "Return to top",
@@ -26,7 +25,7 @@ export const Config: LocaleConfig<DefaultTheme.Config> = {
         description: "Unityゲームエンジン用のフル機能を備えた、ライター向けで完全にカスタマイズ可能なビジュアルノベル拡張。",
         themeConfig: {
             langMenuLabel: "言語",
-            lastUpdatedText: "最終更新 日",
+            lastUpdated: { text: "最終更新 日" },
             sidebarMenuLabel: "メニュー",
             darkModeSwitchLabel: "外観",
             returnToTopLabel: "トップに戻る",
@@ -43,7 +42,7 @@ export const Config: LocaleConfig<DefaultTheme.Config> = {
         description: "功能齐全、易于编写且完全可自定义的Unity游戏引擎视觉小说插件。",
         themeConfig: {
             langMenuLabel: "语言",
-            lastUpdatedText: "最近更新时间",
+            lastUpdated: { text: "最近更新时间" },
             sidebarMenuLabel: "菜单",
             darkModeSwitchLabel: "外貌",
             returnToTopLabel: "返回顶部",
@@ -60,7 +59,7 @@ export const Config: LocaleConfig<DefaultTheme.Config> = {
         description: "Расширение игрового движка Unity для создания визуальных новелл.",
         themeConfig: {
             langMenuLabel: "Язык",
-            lastUpdatedText: "Обновлено",
+            lastUpdated: { text: "Обновлено" },
             sidebarMenuLabel: "Меню",
             darkModeSwitchLabel: "Оформление",
             returnToTopLabel: "Вернуться наверх",
@@ -73,7 +72,7 @@ export const Config: LocaleConfig<DefaultTheme.Config> = {
     }
 };
 
-export const Search: Record<string, Partial<DocSearchProps>> = {
+export const Search: Record<string, Partial<DefaultTheme.AlgoliaSearchOptions>> = {
     ja: {
         placeholder: "文書を検索する",
         translations: {
