@@ -218,7 +218,7 @@ The actor should have `IBlurable` interface implemented in order to support the 
 ; Blur main background with default parameters.
 @blur
 ; Remove blur from the main background.
-@blur 0
+@blur power:0
 
 ; Blur `Kohaku` actor with max power over 5 seconds.
 @blur Kohaku power:1 time:5
