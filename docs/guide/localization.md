@@ -83,7 +83,7 @@ To localize both custom and built-in UIs, use [managed text provider](/guide/man
 
 ## Fonts
 
-To display text in some languages, you'll need a compatible font. [Google's Roboto](https://fonts.google.com/specimen/Roboto) is used by default, which supports all Latin, Cyrillic, and Greek characters in Unicode 7.0. You can change the font used in any of the built-in UIs with [UI customization](/guide/user-interface#ui-customization) feature; for the printed text messages, [create custom printers](/guide/text-printers#adding-custom-printers) and set the desired font.
+To display text in some languages, you'll need a compatible font. [Google's Roboto](https://fonts.google.com/specimen/Roboto) is used by default, which supports all Latin, Cyrillic, and Greek characters in Unicode 7.0.
 
 ::: tip
 In case you're aiming to support multiple languages with a single font, check out [Noto fonts](https://www.google.com/get/noto/).
@@ -94,6 +94,8 @@ Right-to-left (RTL) languages (Arabic, Hebrew, Persian, etc) are supported by th
 To associate a font with a specific locale, use `Apply On Locale` property of font options found in UI configuration. When a locale is selected, the font will be automatically applied when that locale is selected in the game settings.
 
 ![](https://i.gyazo.com/52e1a5eaaf99f5b4415083d1c86e9c10.png)
+
+In order for the feature to work, make sure `Font Change Configuration` component is set up properly on the text printer. ([guide](/guide/user-interface#changing-font))
 
 ## Community Localization
 
