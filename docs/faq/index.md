@@ -44,18 +44,6 @@ Please read through the [getting started](/guide/getting-started) guide to get a
 
 For the UI part (changing/adding buttons or panel layout and style) [modify the built-in Title UI prefab](/guide/user-interface#modifying-built-in-ui); for everything else set `Title Script` at the scripts configuration menu (`Naninovel -> Configuration -> Scripts`) and use script commands to set up the scene just like when writing a scenario. The title script will be automatically played when entering the title menu. An example of the entire customization process is shown in the following video tutorial: [youtu.be/hqhfhXzQkdk](https://youtu.be/hqhfhXzQkdk).
 
-## How to remove a sky background appearing by default in all the Unity scenes?
-
-Remove `Skybox Material` in  `Window -> Rendering -> Lighting Settings` editor menu.
-
-When you remove the skybox, camera's background color will be used instead to fill the screen when no objects are visible. You can change that color (as well as other related settings) by creating a camera prefab and assigning it to `Custom Camera Prefab` property found inside `Naninovel -> Configuration -> Camera` menu.
-
-## How to change a font?
-
-Built-in UIs bundled with Naninovel use a single default font. While you can easily specify additional fonts for the player to choose from (via `Font Options` property in the UI configuration menu), you'd probably like to change the default font as well.
-
-Font is an individual property of a [text component](https://docs.unity3d.com/Packages/com.unity.ugui@1.0/manual/script-Text.html); all the text components are part of specific UI prefabs. When [adding custom UIs](/guide/user-interface#adding-custom-ui), you're free to set any fonts you like; they'll be used when "Default" font option is selected by the player in the game settings menu. In order to change a font in the specific text component of a built-in UI, [modify it](/guide/user-interface#modifying-built-in-ui).
-
 ## Why a background is cropped?
 
 Make sure aspect ratio of the background texture resolution is equal to the reference resolution set in the camera configuration. Also, ensure the texture is imported with the [correct settings](https://docs.unity3d.com/Manual/class-TextureImporter) (eg, `Max Size` is high enough).
@@ -111,3 +99,13 @@ Alternatively, check out [render actor to texture](/guide/characters#render-to-t
 ## How to run a custom C# code from naninovel scripts?
 
 To invoke a C# behaviour (eg, access a game object on scene), use [custom commands](/guide/custom-commands); to get value from a C# method and use it in naninovel script, use [expression functions](/guide/script-expressions#adding-custom-functions).
+
+## Can you make an internal method or property virtual, so I can override it?
+
+We've used to make most of the class members virtual, allowing users to override them in custom [engine services](/guide/engine-services), [actors](/guide/custom-actor-implementations), [commands](/guide/custom-commands), components, etc.
+
+While it didn't affect Naninovel's own code quality (we are not overriding those members internally), the inherit->override option was promoting bad practice among users, where, instead of taking ownership of  custom implementation of an interface or component, it's coupled to internal class.
+
+The internal classes (opposed to public interfaces) are subject to frequent changes both in API and behaviour; such changes will inevitably break user's implementation derived from them. Additionally, in some cases you may not even notice something has changed and leak the issues to production (published game).
+
+Instead of inheriting built-in class when authoring interface implementation or swapping component on a game object, copy-paste the class sources and perform the required changes. This will make your custom implementations less fragile when upgrading Naninovel package.
